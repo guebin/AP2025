@@ -81,10 +81,19 @@ $text-color: #555;
   }
 }
 
-/* 슬라이드 번호 스타일 */
+/* 슬라이드 번호 스타일 - 우측 하단에 명확하게 표시 */
 .reveal .slide-number {
-  color: $primary-color;
+  color: $primary-color !important;
   font-family: $accent-font;
+  font-size: 14px !important;
+  font-weight: bold !important;
+  background-color: rgba(255, 255, 255, 0.8) !important;
+  padding: 4px 8px !important;
+  border-radius: 4px !important;
+  bottom: 12px !important;
+  right: 12px !important;
+  position: fixed !important;
+  z-index: 1000 !important;
 }
 
 /* 진행 바 스타일 */

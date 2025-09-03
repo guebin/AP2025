@@ -23,12 +23,10 @@ format:
     toc-depth: 3
   revealjs:
     theme: [default, styles.scss]
-    incremental: true
+    incremental: false
     slide-number: true
     show-slide-number: all
     hash-type: number
     preview-links: auto
     chalkboard: true
     multiplex: false
-    footer: "고급확률론 (2025)"
-    logo: profile.jpg
