@@ -1,6 +1,6 @@
 project:
   type: website
-  output-dir: docs
+  # output-dir: docs  # 개발시 주석처리, 배포시 주석해제
 
 website:
   title: "AP2025"
@@ -22,9 +22,13 @@ format:
     highlight-style: github
     toc-depth: 3
   revealjs:
-    output-file: slides.html
-    output-dir: docs/slides
-    theme: simple
-    transition: slide
-    background-transition: fade
+    theme: [default, styles.scss]
     incremental: true
+    slide-number: true
+    show-slide-number: all
+    hash-type: number
+    preview-links: auto
+    chalkboard: true
+    multiplex: false
+    footer: "고급확률론 (2025)"
+    logo: profile.jpg
