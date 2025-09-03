@@ -21,3 +21,10 @@ format:
     toc-location: right
     highlight-style: github
     toc-depth: 3
+  revealjs:
+    output-file: slides.html
+    output-dir: docs/slides
+    theme: simple
+    transition: slide
+    background-transition: fade
+    incremental: true
