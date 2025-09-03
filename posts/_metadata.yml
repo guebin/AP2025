@@ -12,16 +12,8 @@ comments:
   utterances: 
     repo: guebin/AP2025
 
-notebook-links: true
-cap-location: margin
-reference-location: margin
-citation-location: margin
 bibliography: ref.bib
 
 format:
   html:
-    toc: true
-    code-fold: false
-    code-line-numbers: false
-    code-copy: true
-  ipynb: default
+    toc: false
