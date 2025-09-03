@@ -8,12 +8,22 @@ execute:
 # Enable banner style title blocks
 title-block-banner: false
 
-comments: 
-  utterances: 
-    repo: guebin/AP2025
+# comments: 
+#   utterances: 
+#     repo: guebin/AP2025
 
 bibliography: ref.bib
 
 format:
   html:
     toc: false
+    format-links: false
+  revealjs:
+    theme: [default, ../styles.scss]
+    incremental: false
+    slide-number: true
+    show-slide-number: all
+    hash-type: number
+    preview-links: auto
+    chalkboard: true
+    multiplex: false

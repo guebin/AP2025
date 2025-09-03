@@ -2,94 +2,122 @@
 
 echo "📚 Building and publishing Quarto project with both HTML and Reveal.js formats..."
 
-# Enable output-dir for publishing
-echo "⚙️ Enabling output-dir for publishing..."
-sed -i.bak 's/# output-dir: docs  # 개발시 주석처리, 배포시 주석해제/output-dir: docs/' _quarto.yml
-
 # Clean previous builds
 echo "🧹 Cleaning previous builds..."
-rm -rf docs/
-mkdir -p docs
+rm -rf docs/ .quarto
 
-# Render HTML format
-echo "🌐 Rendering HTML format..."
-quarto render --to html
+# Use start.sh approach - render individual files
+echo "🌐 Rendering index.qmd..."
+quarto render index.qmd --to html
 
-# Check if HTML build was successful
+# Check if index build was successful
 if [ $? -ne 0 ]; then
-    echo "❌ HTML build failed!"
+    echo "❌ Index build failed!"
     exit 1
 fi
 
-echo "✅ HTML build completed successfully"
+# Render posts
+echo "📊 Rendering posts..."
+cd posts
 
-# Render Reveal.js format to slides subdirectory
-echo "📊 Rendering Reveal.js format..."
-
-# Create slides directory
-mkdir -p docs/slides
-
-# Render each post as Reveal.js slides
-for file in posts/*.ipynb posts/*.qmd; do
+for file in *.ipynb *.qmd; do
     if [ -f "$file" ]; then
         filename=$(basename "$file" | sed 's/\.[^.]*$//')
         echo "   📄 Processing $filename..."
-        quarto render "$file" --to revealjs --output "docs/slides/$filename.html"
+        
+        # Render HTML version first
+        quarto render "$file" --to html
+        
+        # Check if render was successful
+        if [ $? -ne 0 ]; then
+            echo "❌ Failed to render $filename"
+            cd ..
+            exit 1
+        fi
+        
+        # Save the HTML version with a temporary name to protect it
+        if [ -f "../docs/posts/$filename.html" ]; then
+            cp "../docs/posts/$filename.html" "../docs/posts/$filename-temp.html"
+        fi
+        
+        # Also backup the HTML figure files if they exist
+        if [ -d "../docs/posts/${filename}_files/figure-html" ]; then
+            cp -r "../docs/posts/${filename}_files/figure-html" "../docs/posts/${filename}_files/figure-html-backup"
+        fi
+        
+        # Render Reveal.js version  
+        quarto render "$file" --to revealjs
+        
+        # Check if render was successful  
+        if [ $? -ne 0 ]; then
+            echo "❌ Failed to render $filename slides"
+            cd ..
+            exit 1
+        fi
+        
+        # Now we have revealjs in $filename.html, move it to slides version
+        if [ -f "../docs/posts/$filename.html" ]; then
+            mv "../docs/posts/$filename.html" "../docs/posts/$filename-slides.html"
+        fi
+        
+        # Restore the original HTML version
+        if [ -f "../docs/posts/$filename-temp.html" ]; then
+            mv "../docs/posts/$filename-temp.html" "../docs/posts/$filename.html"
+        fi
+        
+        # Restore the HTML figure files if they were backed up
+        if [ -d "../docs/posts/${filename}_files/figure-html-backup" ]; then
+            mv "../docs/posts/${filename}_files/figure-html-backup" "../docs/posts/${filename}_files/figure-html"
+        fi
+        
+        # If no HTML figure directory exists but revealjs figure directory does, copy it
+        if [ ! -d "../docs/posts/${filename}_files/figure-html" ] && [ -d "../docs/posts/${filename}_files/figure-revealjs" ]; then
+            cp -r "../docs/posts/${filename}_files/figure-revealjs" "../docs/posts/${filename}_files/figure-html"
+        fi
     fi
 done
 
-# Also render any standalone qmd files as slides
-for file in *.qmd; do
-    if [ -f "$file" ] && [ "$file" != "index.qmd" ]; then
-        filename=$(basename "$file" .qmd)
-        echo "   📄 Processing $filename..."
-        quarto render "$file" --to revealjs --output "docs/slides/$filename.html"
+cd ..
+
+# Create docs directory and copy files
+echo "📁 Creating docs folder and copying files..."
+mkdir -p docs/posts
+
+# Copy main files
+if [ -f "_site/index.html" ]; then
+    cp _site/index.html docs/
+elif [ -f "index.html" ]; then
+    cp index.html docs/
+fi
+
+# Copy posts
+for file in posts/*.html; do
+    if [ -f "$file" ]; then
+        cp "$file" docs/posts/
     fi
 done
 
-echo "✅ Reveal.js slides build completed successfully"
+# Copy site_libs and assets
+if [ -d "_site/site_libs" ]; then
+    cp -r _site/site_libs docs/
+elif [ -d "site_libs" ]; then
+    cp -r site_libs docs/
+fi
 
-# Create index page for slides
-echo "📋 Creating slides index page..."
-cat > docs/slides/index.html << 'EOF'
-<!DOCTYPE html>
-<html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>고급확률론 (2025) - 슬라이드</title>
-    <style>
-        body { font-family: 'Nanum Myeongjo', serif; margin: 40px; }
-        h1 { color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 10px; }
-        .slide-list { list-style: none; padding: 0; }
-        .slide-item { margin: 15px 0; padding: 15px; border: 1px solid #ddd; border-radius: 5px; }
-        .slide-item a { text-decoration: none; color: #3498db; font-weight: bold; }
-        .slide-item a:hover { color: #2980b9; }
-        .back-link { margin-top: 30px; }
-        .back-link a { background: #3498db; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px; }
-    </style>
-</head>
-<body>
-    <h1>🎯 고급확률론 (2025) - 슬라이드</h1>
-    <ul class="slide-list">
-EOF
+if [ -d "_site" ]; then
+    # Copy everything from _site
+    cp -r _site/* docs/ 2>/dev/null || true
+fi
 
-# Add links to all slide files
-for file in docs/slides/*.html; do
-    if [ -f "$file" ] && [ "$(basename "$file")" != "index.html" ]; then
-        filename=$(basename "$file" .html)
-        echo "        <li class=\"slide-item\"><a href=\"$filename.html\">📊 $filename</a></li>" >> docs/slides/index.html
+# Copy additional assets
+for asset in styles.css profile.jpg fonts; do
+    if [ -e "$asset" ]; then
+        cp -r "$asset" docs/
     fi
 done
 
-cat >> docs/slides/index.html << 'EOF'
-    </ul>
-    <div class="back-link">
-        <a href="../index.html">🏠 메인 페이지로 돌아가기</a>
-    </div>
-</body>
-</html>
-EOF
+
+echo "✅ Project build completed successfully"
 
 # Check if we're in a git repository and commit if requested
 if [ -d ".git" ]; then
@@ -105,22 +133,22 @@ if [ -d ".git" ]; then
         git commit -m "$commit_message"
         echo "✅ Changes committed: $commit_message"
         
-        # Ask if user wants to push (commented out for safety)
-        # echo "🚀 Push to remote? (y/n)"
-        # read -r response
-        # if [[ "$response" =~ ^[Yy]$ ]]; then
-        #     git push
-        #     echo "✅ Pushed to remote repository"
-        # fi
+        # Push to remote repository
+        echo "🚀 Pushing to remote repository..."
+        git push
+        if [ $? -eq 0 ]; then
+            echo "✅ Successfully pushed to remote repository"
+        else
+            echo "❌ Failed to push to remote repository"
+        fi
     else
         echo "ℹ️  No changes to commit"
     fi
 fi
 
-# Restore development mode
-echo "🔄 Restoring development mode..."
-sed -i.bak 's/output-dir: docs/# output-dir: docs  # 개발시 주석처리, 배포시 주석해제/' _quarto.yml
-rm -f _quarto.yml.bak
+# Clean up temporary files
+echo "🧹 Cleaning up..."
+rm -f _quarto.yml.bak _quarto.yml.bak2 index.html
 
 echo ""
 echo "🎉 Build completed successfully!"

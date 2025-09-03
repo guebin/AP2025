@@ -1,6 +1,6 @@
 project:
   type: website
-  # output-dir: docs  # 개발시 주석처리, 배포시 주석해제
+  output-dir: docs
 
 website:
   title: "AP2025"
@@ -13,20 +13,9 @@ website:
 format:
   html:
     theme: cosmo
-    # number-sections: true
     number-sections: false
-    # number-depth: 3  # h4(####)부터는 넘버링 제거
     css: styles.css
     toc: true
     toc-location: right
     highlight-style: github
     toc-depth: 3
-  revealjs:
-    theme: [default, styles.scss]
-    incremental: false
-    slide-number: true
-    show-slide-number: all
-    hash-type: number
-    preview-links: auto
-    chalkboard: true
-    multiplex: false
