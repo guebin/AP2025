@@ -18,7 +18,7 @@
     "href": "posts/02wk.html#수학과의-표현-3-수의-집합",
     "title": "02wk - 수학과의 표현, 귀류법과 일반화",
     "section": "수학과의 표현: (3) 수의 집합",
-    "text": "수학과의 표현: (3) 수의 집합\n- 수학과에서는 수의 집합에 대한 약속된 기호가 있다.\n\n실수전체의 집합을 \\(\\mathbb{R}\\)로 표현한다.\n자연수전체의 집합을 \\(\\mathbb{N}\\)으로 표현한다.\n정수전체의 집합을 \\(\\mathbb{Z}\\)로 표현한다.\n유리서전체의 집합을 \\(\\mathbb{Q}\\)로 표현한다.\n\n\n\n\n\n\n\n\nImportant\n\n\n\n\\(\\infty\\)는 수가 아니다.\n\n\\(\\{-\\infty,\\infty\\} \\not\\subset \\mathbb{R}\\)\n\\(\\infty \\notin \\mathbb{N}\\)\n\n아무리봐도 숫자라고 생각한다면 아래의 예시를 보라.\n# 예시 – 아래 문장의 참 거짓을 판별하라.\n\n\\(\\forall n \\in \\mathbb{N}\\): \\(0 &lt; \\frac{1}{n} \\leq 1\\)\n\n(답변)\n참이다. (하지만 \\(\\infty \\in \\mathbb{N}\\) 을 가정한다면 이것이 참이라고 주장하기 애매하겠지)\n#\n\n\n\n- \\(\\infty\\)는 숫자가 아니지만 편의상 \\(\\infty\\)를 수처럼 생각하여 아래와 같은 집합기호로 표현하기도 한다.\n\\[\\bar{\\mathbb{R}}:=\\mathbb{R} \\cup \\{-\\infty,\\infty\\}\\]\n여기에서 “\\(:=\\)”는 “정의한다” 라는 의미를 가진다."
+    "text": "수학과의 표현: (3) 수의 집합\n- 수학과에서는 수의 집합에 대한 약속된 기호가 있다.\n\n실수전체의 집합을 \\(\\mathbb{R}\\)로 표현한다.\n자연수전체의 집합을 \\(\\mathbb{N}\\)으로 표현한다.\n정수전체의 집합을 \\(\\mathbb{Z}\\)로 표현한다.\n유리수전체의 집합을 \\(\\mathbb{Q}\\)로 표현한다.\n\n\n\n\n\n\n\n\nImportant\n\n\n\n\\(\\infty\\)는 수가 아니다.\n\n\\(\\{-\\infty,\\infty\\} \\not\\subset \\mathbb{R}\\)\n\\(\\infty \\notin \\mathbb{N}\\)\n\n아무리봐도 숫자라고 생각한다면 아래의 예시를 보라.\n# 예시 – 아래 문장의 참 거짓을 판별하라.\n\n\\(\\forall n \\in \\mathbb{N}\\): \\(0 &lt; \\frac{1}{n} \\leq 1\\)\n\n(답변)\n참이다. (하지만 \\(\\infty \\in \\mathbb{N}\\) 을 가정한다면 이것이 참이라고 주장하기 애매하겠지)\n#\n\n\n\n- \\(\\infty\\)는 숫자가 아니지만 편의상 \\(\\infty\\)를 수처럼 생각하여 아래와 같은 집합기호로 표현하기도 한다.\n\\[\\bar{\\mathbb{R}}:=\\mathbb{R} \\cup \\{-\\infty,\\infty\\}\\]\n여기에서 “\\(:=\\)”는 “정의한다” 라는 의미를 가진다."
   },
   {
     "objectID": "posts/02wk.html#귀류법",
