@@ -20,16 +20,6 @@
     --accent-font: 'NanumMyeongjo', 'Nanum Myeongjo', serif;
 }
 
-/* 블록 수식 크게: $$ ... $$ */
-.math.display {
-  font-size: 1.2em !important;
-  margin: 1em 0 !important;
-}
-
-/* 인라인 수식은 약간 크게: $...$ */
-.math.inline {
-  font-size: 1.15em !important;
-}
 
 /* 기본 스타일 */
 body {
@@ -68,4 +58,10 @@ a {
 a:hover {
     text-decoration: underline;
     color: #d64b40;
+}
+
+/* 슬라이드 모드에서 비디오 프레임 크기 조정 */
+.reveal video {
+    width: 95% !important;
+    height: auto !important;
 }
