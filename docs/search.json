@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "고급확률론 (2025)",
     "section": "",
-    "text": "질문하는 방법\n\n카카오톡: 질문하러 가기\n이메일: guebin@jbnu.ac.kr\n직접방문: 자연과학대학 본관 205호\nZoom: 카카오톡이나 이메일로 미리 시간을 정할 것\nLMS쪽지: https://ieilms.jbnu.ac.kr/\n\n강의노트\n\nHTML슬라이드\n\n\n\n\n\n\n\n\nDate\n\n\n\nTitle\n\n\n\nAuthor\n\n\n\n\n\n\n\n\nSep 9, 2025\n\n\n02wk - 수학과의 표현, 귀류법과 일반화\n\n\n최규빈 \n\n\n\n\n\n\nSep 2, 2025\n\n\n01wk - 확률을 정의하는 것은 쉬운 일인가?\n\n\n최규빈 \n\n\n\n\n\n\nNo matching items\n\n\n\n각 강의노트의 슬라이드 버전을 확인할 수 있습니다.\n\n02wk - 수학과의 표현, 귀류법과 일반화\n01wk - 확률을 정의하는 것은 쉬운 일인가?"
+    "text": "질문하는 방법\n\n카카오톡: 질문하러 가기\n이메일: guebin@jbnu.ac.kr\n직접방문: 자연과학대학 본관 205호\nZoom: 카카오톡이나 이메일로 미리 시간을 정할 것\nLMS쪽지: https://ieilms.jbnu.ac.kr/\n\n강의노트\n\nHTML슬라이드\n\n\n\n\n\n\n\n\nDate\n\n\n\nTitle\n\n\n\nAuthor\n\n\n\n\n\n\n\n\nSep 16, 2025\n\n\n03wk - 카디널리티\n\n\n최규빈 \n\n\n\n\n\n\nSep 9, 2025\n\n\n02wk - 수학과의 표현, 귀류법과 일반화\n\n\n최규빈 \n\n\n\n\n\n\nSep 2, 2025\n\n\n01wk - 확률을 정의하는 것은 쉬운 일인가?\n\n\n최규빈 \n\n\n\n\n\n\nNo matching items\n\n\n\n각 강의노트의 슬라이드 버전을 확인할 수 있습니다.\n\n03wk - 카디널리티\n02wk - 수학과의 표현, 귀류법과 일반화\n01wk - 확률을 정의하는 것은 쉬운 일인가?"
   },
   {
     "objectID": "posts/01wk.html#footnotes",
@@ -33,5 +33,12 @@
     "title": "02wk - 수학과의 표현, 귀류법과 일반화",
     "section": "추상화(일반화)",
     "text": "추상화(일반화)\n- 연필이란? 필기도구의 하나. 흑연과 점토의 혼합물을 구워 만든 가느다란 심을 속에 넣고, 겉은 나무로 둘러싸서 만든다. 1565년에 영국에서 처음으로 만들었다. (출처: 네이버국어사전)\n\n질문: 아래는 연필인가?\n\n\n\nFigure: 애플펜슬..\n\n\n\n\n새로운 개념을 적용해야하는 어떠한 일이 있을때, 사람들은 익숙한 정의에서 확장을 하기를 원한다. 확장을 하는 방식은 익숙한 정의에 의해 파생되는 성질을 이용하여 (혹은 성질들을 조합하여), “마치 정의처럼” 쓰는 것이다.\n수학에서는 약속에 의하여 성질이 생기고, 그 성질로부터 확장된 약속이 생기는 것은 매우 흔한일이다."
+  },
+  {
+    "objectID": "posts/03wk.html#footnotes",
+    "href": "posts/03wk.html#footnotes",
+    "title": "03wk - 카디널리티",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\n살짝 어질어질하죠?↩︎\n\\(\\mathbb{R}\\)은 커녕 \\([0,1]\\)도 꽉 채우지 못한다는 의미니까..↩︎"
   }
 ]
