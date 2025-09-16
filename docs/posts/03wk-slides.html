@@ -6,8 +6,8 @@
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="../site_libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-a37c72dd2dbac68997fcdc15a3622e78.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.7.24">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-37eea08aefeeee20ff55810ff984fec1.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.7.32">
 
   <meta name="author" content="최규빈">
   <meta name="dcterms.date" content="2025-09-16">
@@ -145,6 +145,7 @@
 <section class="slide level2">
 
 <h3>강의영상</h3>
+<p>{&lt;&lt; video https://youtu.be/playlist?list=PLQqh36zP38-wQV6AkGrsuHTRs1yFnolPF&amp;si=wV-KVSYTBYze1eCa &gt;}}</p>
 </section>
 <section class="slide level2">
 
@@ -414,45 +415,33 @@
 </section>
 <section class="slide level2">
 
-<div class="callout callout-note callout-titled callout-style-default">
+<p><code>2</code>. 그런데 <span class="math inline">\(\mathbb{N} \to [0,1]\)</span>인 단사가 존재함은 당연하므로 (<span class="math inline">\(f(x)=\frac{1}{x}\)</span>) 이 인물은 사실상 <span class="math inline">\(\mathbb{N} \to [0,1]\)</span> 인 전단사 함수가 존재한다고 주장하는 꼴임. 즉 아래를 주장하는 꼴임.</p>
+<blockquote>
+<p><span class="math inline">\([0,1]=\{a_1,a_2,a_3,\dots\}\)</span> 와 같이 표현할 수 있다.</p>
+</blockquote>
+</section>
+<section class="slide level2">
+
+<p>아래의 원리에 따라서 <span class="math inline">\(y=0.c_1c_2c_3\cdots\)</span>를 뽑는다면?</p>
+<ul>
+<li><span class="math inline">\(y\)</span>의 첫번째 소수점의 값 <span class="math inline">\(c_1\)</span>은 <span class="math inline">\(a(1)=a_1\)</span>의 첫번째 소수점과 다르게 한다. <span class="math inline">\(\Rightarrow\)</span> <span class="math inline">\(y\neq a(1)\)</span> <span class="math inline">\(\Rightarrow\)</span> <span class="math inline">\(y \notin \{a_1\}\)</span></li>
+<li><span class="math inline">\(y\)</span>의 두번째 소수점의 값 <span class="math inline">\(c_2\)</span>은 <span class="math inline">\(a(2)=a_2\)</span>의 두번째 소수점과 다르게 한다. <span class="math inline">\(\Rightarrow\)</span> <span class="math inline">\(y\neq a(1)\)</span> and <span class="math inline">\(y\neq a(2)\)</span> <span class="math inline">\(\Rightarrow\)</span> <span class="math inline">\(y \notin \{a_1, a_2\}\)</span></li>
+<li><span class="math inline">\(\dots\)</span></li>
+</ul>
+<p><span class="math inline">\(y\)</span>는 분명히 <span class="math inline">\([0,1]\)</span> 사이의 실수이지만 <span class="math inline">\(y \notin \{a_1,a_2,a_3,\dots,\}\)</span> 이다. (모순)</p>
+<div class="callout callout-warning callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<p><strong>Note</strong></p>
+<p><strong>Warning</strong></p>
 </div>
 <div class="callout-content">
-<p>함수 <span class="math inline">\(a:\mathbb{N} \to [0,1]\)</span>의 예시 중 하나는 아래와 같은 형태일 것임.</p>
-<ul>
-<li><span class="math inline">\(a(1)=a_1= 0.1\)</span> (유리수)</li>
-<li><span class="math inline">\(a(2)=a_2= 0.3141592\cdots\)</span> (무리수, <span class="math inline">\(\frac{\pi}{10}\)</span>)</li>
-<li><span class="math inline">\(a(3)=a_3=0.14142135\cdots\)</span> (무리수, <span class="math inline">\(\frac{\sqrt{2}}{10}\)</span>)</li>
-<li><span class="math inline">\(\dots\)</span></li>
-</ul>
-<p>그 가상의 인물의 주장이 맞다면 모든 <span class="math inline">\(y \in [0,1]\)</span>에 대하여, <span class="math inline">\(a(x)=y\)</span>를 만족하는 적당한 <span class="math inline">\(x \in \mathbb{N}\)</span>이 존재한다는 의미이므로</p>
-<p><span class="math display">\[[0,1]=\{a_1,a_2,a_3,\dots\}\]</span></p>
-<p>꼴로 표현가능하다는 의미임. 다시 말하면 <span class="math inline">\([0,1]\)</span> 사이의 모든 실수는 “셀 수 있다”는 의미.</p>
+<p>제가 영상에서 설명하다가 보니까.. 다른 방식으로 설명하고 싶어서요.. 강의노트를 좀 더 알기쉽게 바꿨습니다.</p>
 </div>
 </div>
 </div>
-</section>
-<section class="slide level2">
-
-<p><code>2</code>. 전사함수의 정의에 의하여 아래가 성립해야 함</p>
-<blockquote>
-<p><span class="math inline">\(\forall y\in [0,1] ~\exists x \in \mathbb{N}\)</span> such that <span class="math inline">\(a(x)=y\)</span></p>
-</blockquote>
-</section>
-<section class="slide level2">
-
-<p>아래의 원리에 따라서 <span class="math inline">\(y=0.x_1x_2x_3\cdots\)</span>를 뽑는다면?</p>
-<ul>
-<li><span class="math inline">\(y\)</span>의 첫번째 소수점의 값 <span class="math inline">\(x_1\)</span>은 <span class="math inline">\(a(1)=a_1\)</span>의 첫번째 소수점과 다르게 한다. <span class="math inline">\(\Rightarrow\)</span> <span class="math inline">\(y\neq a(1)\)</span> <span class="math inline">\(\Rightarrow\)</span> <span class="math inline">\(y \notin \{a_1\}\)</span></li>
-<li><span class="math inline">\(y\)</span>의 두번째 소수점의 값 <span class="math inline">\(x_2\)</span>은 <span class="math inline">\(a(2)=a_2\)</span>의 두번째 소수점과 다르게 한다. <span class="math inline">\(\Rightarrow\)</span> <span class="math inline">\(y\neq a(1)\)</span> and <span class="math inline">\(y\neq a(2)\)</span> <span class="math inline">\(\Rightarrow\)</span> <span class="math inline">\(y \notin \{a_1, a_2\}\)</span></li>
-<li><span class="math inline">\(\dots\)</span></li>
-</ul>
-<p><span class="math inline">\(y\)</span>는 분명히 실수이지만 <span class="math inline">\(y \notin \{a_1,a_2,a_3,\dots,\}\)</span> 이다. (모순)</p>
 <p><code>#</code></p>
 </section>
 <section class="slide level2">
