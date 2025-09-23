@@ -445,7 +445,20 @@ Note
 <p>예전기억: 왜 <span class="math inline">\(\mathbb{P}(\emptyset)=0\)</span> 인지 이제 알겠죠?</p>
 </blockquote>
 <hr>
-<p><strong><code># 에제4</code></strong> – 동일한 <span class="math inline">\(\Omega\)</span>에 대하여 확률값을 잴 수 있는 집합의 모임 <span class="math inline">\({\cal F}\)</span>는 유니크하지 않음.</p>
+<p><code># 예제4</code> – 원소의 수가 유한한 경우 <span class="math inline">\({\cal F}=2^\Omega\)</span>은 잴 수 있는 집합의 모임이야.</p>
+<p><span class="math inline">\(\Omega=\{1,2,3,4,5,6\}\)</span>이라고 하자. <span class="math inline">\({\cal F}\)</span>을 아래와 같이 정의한다고 하자. 이러한 묶음은 <span class="math inline">\({\cal F}\)</span>은 합리적이다.</p>
+<p><span class="math display">\[{\cal F}=\text{all subset of $\Omega$}= 2^\Omega = \big\{ \emptyset, \{1\}, \{2\}, \dots, \{6\}, \dots, \{1,2,3,4,5\} \dots \Omega\big\}\]</span></p>
+<p>(해설)</p>
+<p><span class="math inline">\(\Omega\)</span>의 모든 부분집합에 대하여 확률을 모순없이 정의할 수 있다. 예를들면</p>
+<ul>
+<li><span class="math inline">\(P(\Omega)=1\)</span>, <span class="math inline">\(P(\emptyset)=0\)</span></li>
+<li><span class="math inline">\(P(\{1\})=\frac{1}{6}\)</span></li>
+<li><span class="math inline">\(P(\{1,2,4\})=\frac{3}{6}\)</span></li>
+<li><span class="math inline">\(P(\{2,3,4,5,6\})=\frac{5}{6}\)</span></li>
+<li><span class="math inline">\(\dots\)</span></li>
+</ul>
+<p>이런식으로 정의할 수 있다.</p>
+<p><strong><code># 에제5</code></strong> – 동일한 <span class="math inline">\(\Omega\)</span>에 대하여 확률값을 잴 수 있는 집합의 모임 <span class="math inline">\({\cal F}\)</span>는 유니크하지 않음.</p>
 <p><span class="math inline">\(\Omega=\{1,2,3,4,5,6\}\)</span>이라고 하자. <span class="math inline">\({\cal F}\)</span>을 아래와 같이 정의한다고 하자. 이러한 묶음 <span class="math inline">\({\cal F}\)</span>는 합리적이다.</p>
 <p><span class="math display">\[{\cal F}=\big\{\emptyset, \{6\}, \{1,2,3,4,5\},\Omega \big\}\]</span></p>
 <hr>
@@ -462,7 +475,7 @@ Note
 <p><span class="math display">\[\emptyset, \{6\}, \{1,2,3,4,5\}, \Omega\]</span></p>
 <p><code>#</code></p>
 <hr>
-<p><strong><code># 예제5</code></strong> – <span class="math inline">\(\Omega\)</span>를 어떠한 사건의 집합으로 보느냐에 따라서 <span class="math inline">\({\cal F}\)</span>를 달리 구성할 수 있다.</p>
+<p><strong><code># 예제6</code></strong></p>
 <p><span class="math inline">\(\Omega=\{1,2,3,4,5,6\}\)</span>이라고 하자. <span class="math inline">\({\cal F}\)</span>을 아래와 같이 정의한다고 하자. 이러한 묶음 <span class="math inline">\({\cal F}\)</span>는 합리적이다.</p>
 <p><span class="math display">\[{\cal F}=\big\{\emptyset, \{1,3,5\}, \{2,4,6\},\Omega \big\}\]</span></p>
 <hr>
@@ -470,7 +483,7 @@ Note
 <p>전체사건을 “주사위를 던져서 짝이 나오는 사건”, “주사위를 던져서 홀이 나오는 사건” 정도만 구분하겠다는 의미</p>
 <p><code>#</code></p>
 <hr>
-<p><strong><code># 예제6</code></strong> – <span class="math inline">\(A\in {\cal F} \Rightarrow A^c \in {\cal F}\)</span></p>
+<p><strong><code># 예제7</code></strong></p>
 <p><span class="math inline">\(\Omega=\{1,2,3,4,5,6\}\)</span>이라고 하자. <span class="math inline">\({\cal F}\)</span>을 아래와 같이 정의한다고 하자. 이러한 묶음 <span class="math inline">\({\cal F}\)</span>는 합리적이지 않다.</p>
 <p><span class="math display">\[{\cal F}=\big\{\emptyset, \{1,3,5\}, \Omega \big\}\]</span></p>
 <hr>
@@ -478,7 +491,7 @@ Note
 <p>“주사위를 던져서 홀수가 나올 사건”에 대한 확률을 정의할 수 있는데, 짝수가 나올 사건에 대한 확률을 정의할 수 없다는건 말이 안되는 소리임.</p>
 <p><code>#</code></p>
 <hr>
-<p><strong><code># 예제7</code></strong> – 서로소인 두 집합의 합</p>
+<p><strong><code># 예제8</code></strong></p>
 <p><span class="math inline">\(\Omega=\{1,2,3,4\}\)</span>이라고 하자. 어떠한 필요에 따라서 1이 나올 확률과 2가 나올 확률에만 관심이 있고 나머지는 별로 관심이 없다고 하자. 그래서 <span class="math inline">\({\cal F}\)</span> 를 아래와 같이 정의했다고 하자. 이러한 묶음 <span class="math inline">\({\cal F}\)</span> 는 합리적이지 않다.</p>
 <p><span class="math display">\[{\cal F}=\{\emptyset, \{1\}, \{2\}, \{2,3,4\}, \{1,3,4\}, \Omega \}\]</span></p>
 <hr>
@@ -547,7 +560,7 @@ Note
 </div>
 </div>
 <hr>
-<p><strong><code># 예제8</code></strong> – <span class="math inline">\({\cal A}=\{\{1\},\{2\}\}\)</span> 일때, <span class="math inline">\(\sigma({\cal A})\)</span> 를 구하는 문제</p>
+<p><strong><code># 예제9</code></strong></p>
 <p><span class="math inline">\(\Omega=\{1,2,3,4\}\)</span>이라고 하자. 내가 관심이 있는 확률은 <span class="math inline">\(\mathbb{P}(\{1\})\)</span>, <span class="math inline">\(\mathbb{P}(\{2\})\)</span> 밖에 없다고 하자. 이러한 확률들이 무모순으로 정의되기 위한 최소한의 <span class="math inline">\({\cal F}\)</span> 를 정의하라.</p>
 <hr>
 <p>(해설) – 좀 귀찮네..?</p>
@@ -573,7 +586,7 @@ Note
 </div>
 </div>
 <hr>
-<p><strong><code># 예제9</code></strong></p>
+<p><strong><code># 예제10</code></strong></p>
 <p><span class="math inline">\(\Omega=[0,1)\)</span> 이라고 하자. 집합 <span class="math inline">\(\mathbb{Q}\)</span> 를 구간 <span class="math inline">\([0,1)\)</span>에 포함된 모든 유리수의 집합이라고 하자. <span class="math inline">\({\cal A} = \{\{x\}: x\in \mathbb{Q}\}\)</span> 이라고 하자. 아래가 성립할까?</p>
 <p><span class="math display">\[\mathbb{Q} \in \sigma({\cal A})\]</span></p>
 <p>즉 구간 <span class="math inline">\([0,1)\)</span>에서의 유리수를 한점씩을 잴 수 있을 때 구간 <span class="math inline">\([0,1)\)</span>의 모든 유리수 집합 역시 잴 수 있어야 할까? 단, 모든 <span class="math inline">\(x \in [0,1)\)</span> 에 대하여 <span class="math inline">\(\mathbb{P}(\{x\})=\lambda(\{x\})\)</span> 라고 하자.</p>
@@ -606,7 +619,7 @@ Note
 </div>
 <p><code>#</code></p>
 <hr>
-<p><strong><code># 예제10</code></strong></p>
+<p><strong><code># 예제11</code></strong></p>
 <p><span class="math inline">\(\Omega=[0,1)\)</span> 이라고 하자. 집합 <span class="math inline">\(\mathbb{Q}\)</span> 를 구간 <span class="math inline">\([0,1)\)</span>에 포함된 모든 유리수의 집합이라고 하자. <span class="math inline">\({\cal A} = \{\{x\}: x\in \mathbb{Q}\}\)</span> 이라고 하자. 아래가 성립할까?</p>
 <p><span class="math display">\[\mathbb{Q}^c \in \sigma({\cal A})\]</span></p>
 <p>단, 여기에서 <span class="math inline">\(\mathbb{Q}^c\)</span> 는 구간 <span class="math inline">\([0,1)\)</span>에 포함된 모든 무리수의 집합이다.</p>
@@ -630,13 +643,13 @@ Caution
 </div>
 </div>
 <hr>
-<p><strong><code># 예제11</code></strong></p>
+<p><strong><code># 예제12</code></strong></p>
 <p><span class="math inline">\(\Omega=\{1,2,3,4,5,6\}\)</span> 이라고 하자. <span class="math inline">\({\cal F}=\emptyset\)</span> 와 같이 정의한다면 합리적인가?</p>
 <p>(해설)</p>
 <p>이건 너무 짜증나는데?.. 그냥 <span class="math inline">\({\cal F}\neq \emptyset\)</span> 이라고 약속하자.</p>
 <p><code>#</code></p>
 <hr>
-<p><strong><code># 예제1~11의 결론</code></strong></p>
+<p><strong><code># 예제1~12의 결론</code></strong></p>
 <p>지금까지의 조건을 종합하면, <span class="math inline">\(\Omega\)</span>의 부분집합 중 잴 수 있는 집합들의 모임 <span class="math inline">\({\cal F}\)</span>은 아래의 조건을 충족해야할 것 같다.</p>
 <ol type="1">
 <li><span class="math inline">\({\cal F}\neq \emptyset\)</span></li>
