@@ -178,6 +178,7 @@ window.Quarto = {
 
 <section id="강의영상" class="level3">
 <h3 class="anchored" data-anchor-id="강의영상">강의영상</h3>
+{{&lt; https://youtube.com/playlist?list=PLQqh36zP38-wv9meH5OK3wrYO0lwE98pT&amp;si=dMKhFHlMQh_b68Fh &gt;}}
 <hr>
 </section>
 <section id="셀-수-있는" class="level3">
@@ -564,123 +565,6 @@ Note
 <p><span class="math display">\[A \in {\cal F}, B \in {\cal F} \text{ and } A \subset B  \quad \Longrightarrow \quad B-A ~ \in~ {\cal F}\]</span></p>
 </div>
 </div>
-<hr>
-<p><strong><code># 예제9</code></strong></p>
-<p><span class="math inline">\(\Omega=\{1,2,3,4\}\)</span>이라고 하자. 내가 관심이 있는 확률은 <span class="math inline">\(\mathbb{P}(\{1\})\)</span>, <span class="math inline">\(\mathbb{P}(\{2\})\)</span> 밖에 없다고 하자. 이러한 확률들이 무모순으로 정의되기 위한 최소한의 <span class="math inline">\({\cal F}\)</span> 를 정의하라.</p>
-<hr>
-<p>(해설) – 좀 귀찮네..?</p>
-<p>0차수정: <span class="math inline">\({\cal A} = \big\{\{1\}, \{2\}\big\}\)</span></p>
-<p>1차수정: <span class="math inline">\(\big\{\emptyset, \{1\}, \{2\}, \Omega \big\}\)</span></p>
-<p>2차수정: <span class="math inline">\(\big\{\emptyset, \{1\}, \{2\}, \{2,3,4\}, \{1,3,4\}, \Omega \big\}\)</span></p>
-<p>3차수정: <span class="math inline">\(\big\{\emptyset, \{1\}, \{2\}, \{2,3,4\}, \{1,3,4\}, \Omega, \{1,2\}, \{3,4\} \big\}\)</span></p>
-<p><code>#</code></p>
-<hr>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Note
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>사실 우리가 관심 있는건 <span class="math inline">\({\cal A} = \{ \{1\}, \{2\} \}\)</span> 뿐 이었음. 그런데 뭔가 <span class="math inline">\(\mathbb{P}(\{1\})\)</span>와 <span class="math inline">\(\mathbb{P}(\{2\})\)</span>를 합리적으로 정의하기 위해서 필연적으로 발생하는 어떠한 집합들을 모두 생각하는건 매우 피곤하고 귀찮은 일임. 그래서</p>
-<p>“아 모르겠고, <span class="math inline">\(\{1\}\)</span> 와 <span class="math inline">\(\{2\}\)</span> 를 포함하고 확률의 뜻에 모순되지 않게 만드는 최소한의 <span class="math inline">\({\cal F}\)</span> 가 있을텐데, 거기서만 확률을 정의할래!”</p>
-<p>라고 쉽게 생각하고 싶은 사람들이 생김. 그러한 공간을 <span class="math inline">\(\sigma({\cal A})\)</span> 라는 기호로 약속하고 smallest <span class="math inline">\(\sigma\)</span>-field containing <span class="math inline">\({\cal A}\)</span> 라는 용어로 부름.</p>
-</div>
-</div>
-<hr>
-<p><strong><code># 예제10</code></strong></p>
-<p><span class="math inline">\(\Omega=[0,1)\)</span> 이라고 하자. 집합 <span class="math inline">\(\mathbb{Q}\)</span> 를 구간 <span class="math inline">\([0,1)\)</span>에 포함된 모든 유리수의 집합이라고 하자. <span class="math inline">\({\cal A} = \{\{x\}: x\in \mathbb{Q}\}\)</span> 이라고 하자. 아래가 성립할까?</p>
-<p><span class="math display">\[\mathbb{Q} \in \sigma({\cal A})\]</span></p>
-<p>즉 구간 <span class="math inline">\([0,1)\)</span>에서의 유리수를 한점씩을 잴 수 있을 때 구간 <span class="math inline">\([0,1)\)</span>의 모든 유리수 집합 역시 잴 수 있어야 할까? 단, 모든 <span class="math inline">\(x \in [0,1)\)</span> 에 대하여 <span class="math inline">\(\mathbb{P}(\{x\})=\lambda(\{x\})\)</span> 라고 하자.</p>
-<hr>
-<p>(해설)</p>
-<p><code>-</code> 집합 <span class="math inline">\(\{\frac{1}{2}\}\)</span> 는 잴 수 있고, 집합 <span class="math inline">\(\{\frac{1}{3}\}\)</span> 역시 잴 수 있다. (왜?)</p>
-<p><code>-</code> 그렇다면 집합 <span class="math inline">\(\{\frac{1}{2},\frac{1}{3}\}=\{\frac{1}{2}\} \uplus \{\frac{1}{3}\}\)</span> 역시 잴 수 있어야 하며, <span class="math inline">\(\mathbb{P}(\{\frac{1}{2}\} \uplus \{\frac{1}{3}\})=0\)</span> 이다. 왜냐하면 확률의 공리에 의하여 아래식이 성립하기 때문이다.</p>
-<p><span class="math display">\[\mathbb{P}(A_1 \uplus A_2)=  \mathbb{P}(A_1) + \mathbb{P}(A_2)\]</span></p>
-<hr>
-<p><code>-</code> 비슷한 논리로 집합 <span class="math inline">\(\{\frac{1}{2},\frac{1}{3},\dots \}\)</span> 역시 잴 수 있어야 한다. 왜냐하면 확률의 공리에 의하여 아래식이 성립하기 때문이다.</p>
-<p><span class="math display">\[\mathbb{P}(\uplus_{n=1}^{\infty} A_n) =  \sum_{n=1}^{\infty}\mathbb{P}(A_n)\]</span></p>
-<hr>
-<p><code>-</code> 집합 <span class="math inline">\(\mathbb{Q}\)</span> 는 잴 수 있을까? <span class="math inline">\(\mathbb{Q}\)</span>의 카니널리티는 자연수의 카디널리티와 같으므로 <span class="math inline">\(\mathbb{N} \to \mathbb{Q}\)</span> 인 전단사함수 <span class="math inline">\(f\)</span>가 존재한다. 따라서 아래와 같이 쓸 수 있다.</p>
-<p><span class="math display">\[\mathbb{Q} = \{f(1),f(2),\dots, \} = \uplus_{n=1}^{\infty}\{ f(n) \}\]</span></p>
-<p>양변에 확률을 취하면 <span class="math inline">\(\mathbb{P}(\mathbb{Q}) = \sum_{n=1}^{\infty} \mathbb{P}(\{f(n)\})\)</span> 이 성립한다. 우변의 값이 무모순으로 정의되므로 <span class="math inline">\(\mathbb{P}(\mathbb{Q})\)</span> 역시 무모순으로 정의되어야 하며 그 값은 0이다.</p>
-<hr>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Note
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p><strong>[<span class="math inline">\(\uplus_{n=1}^{\infty}\)</span>에 닫힘]</strong>: 서로소인 집합들 <span class="math inline">\(A_1,A_2,\dots\)</span> 에서 확률값을 잴 수 있다면, <span class="math inline">\(A=\uplus_{n=1}^{\infty} A_n\)</span> 에서도 확률값을 잴 수 있어야 한다. 즉 아래가 성립해야한다.</p>
-<p><span class="math display">\[\big(A_1 \in {\cal F}, A_2 \in {\cal F} ,\dots\big)  \text{ and } \big( A_1,A_2 \dots \text{are disjoint} \big) \Rightarrow  \bigcup_{n=1}^{\infty} A_n \in~ {\cal F}\]</span></p>
-</div>
-</div>
-<p><code>#</code></p>
-<hr>
-<p><strong><code># 예제11</code></strong></p>
-<p><span class="math inline">\(\Omega=[0,1)\)</span> 이라고 하자. 집합 <span class="math inline">\(\mathbb{Q}\)</span> 를 구간 <span class="math inline">\([0,1)\)</span>에 포함된 모든 유리수의 집합이라고 하자. <span class="math inline">\({\cal A} = \{\{x\}: x\in \mathbb{Q}\}\)</span> 이라고 하자. 아래가 성립할까?</p>
-<p><span class="math display">\[\mathbb{Q}^c \in \sigma({\cal A})\]</span></p>
-<p>단, 여기에서 <span class="math inline">\(\mathbb{Q}^c\)</span> 는 구간 <span class="math inline">\([0,1)\)</span>에 포함된 모든 무리수의 집합이다.</p>
-<hr>
-<p>(해설)</p>
-<p><span class="math inline">\(\mathbb{Q} \in \sigma({\cal A})\)</span> 이므로 <span class="math inline">\(\mathbb{Q}^c\in \sigma({\cal A})\)</span> 이어야 한다. <span class="math inline">\(\mathbb{P}(\mathbb{Q})=0\)</span> 이므로, <span class="math inline">\(\mathbb{P}(\Omega - \mathbb{Q})=1\)</span> 이다.</p>
-<p><code>#</code></p>
-<div class="callout callout-style-default callout-caution callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Caution
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p><span class="math inline">\(\mathbb{Q}^{c}\)</span>는 셀 수 없는 집합이므로</p>
-<p><span class="math display">\[\mathbb{P}(\mathbb{Q}^{c})=\sum_{x \in \mathbb{Q}^c}\mathbb{P}(\{x\})\]</span></p>
-<p>와 같이 쓸 수 없음을 주의하라.</p>
-</div>
-</div>
-<hr>
-<p><strong><code># 예제12</code></strong></p>
-<p><span class="math inline">\(\Omega=\{1,2,3,4,5,6\}\)</span> 이라고 하자. <span class="math inline">\({\cal F}=\emptyset\)</span> 와 같이 정의한다면 합리적인가?</p>
-<p>(해설)</p>
-<p>이건 너무 짜증나는데?.. 그냥 <span class="math inline">\({\cal F}\neq \emptyset\)</span> 이라고 약속하자.</p>
-<p><code>#</code></p>
-<hr>
-<p><strong><code># 예제1~12의 결론</code></strong></p>
-<p>지금까지의 조건을 종합하면, <span class="math inline">\(\Omega\)</span>의 부분집합 중 잴 수 있는 집합들의 모임 <span class="math inline">\({\cal F}\)</span>은 아래의 조건을 충족해야할 것 같다.</p>
-<ol type="1">
-<li><span class="math inline">\({\cal F}\neq \emptyset\)</span></li>
-<li><span class="math inline">\(A \in {\cal F} \Rightarrow A^c \in {\cal F}\)</span></li>
-<li><span class="math inline">\(A \in {\cal F}, B \in {\cal F} \text{ and } A\cap B = \emptyset \Rightarrow A \uplus B~ \in~ {\cal F}\)</span></li>
-<li><span class="math inline">\(A \in {\cal F}, B \in {\cal F} \text{ and } A \subset B  \Rightarrow B-A ~ \in~ {\cal F}\)</span></li>
-<li><span class="math inline">\(\big(A_1 \in {\cal F}, A_2 \in {\cal F} ,\dots\big)  \text{ and }  \big( A_1,A_2 \dots \text{are disjoint} \big)\)</span> <span class="math inline">\(\Rightarrow\)</span> <span class="math inline">\(\uplus_{n=1}^{\infty} A_n \in~ {\cal F}\)</span></li>
-</ol>
-<hr>
-<p><strong><code># 조건의 정리</code></strong></p>
-<p>위의 5개의 조건은 아래의 3가지 조건으로 정리가능하다.</p>
-<ol type="1">
-<li><span class="math inline">\({\cal F}\neq \emptyset\)</span></li>
-<li><span class="math inline">\(A \in {\cal F} \Rightarrow A^c \in {\cal F}\)</span></li>
-<li><span class="math inline">\(\big(A_1 \in {\cal F}, A_2 \in {\cal F} ,\dots\big)  \text{ and }  \big( A_1,A_2 \dots \text{are disjoint} \big)\)</span> <span class="math inline">\(\Rightarrow\)</span> <span class="math inline">\(\uplus_{n=1}^{\infty} A_n \in~ {\cal F}\)</span></li>
-</ol>
-<p><code>#</code></p>
-<hr>
-<p><strong><code># 람다시스템</code></strong> – 이 조건만 되면 확률의 공리가 지켜짐</p>
-<p><span class="math inline">\(\Omega\)</span>의 부분집합중 잴 수 있는 집합의 모임 <span class="math inline">\({\cal F}\)</span> 는 아래의 조건을 만족하는 집합의 집합 (collection) 이라고 정의하면 어떨까??</p>
-<ol type="1">
-<li><span class="math inline">\({\cal F}\neq \emptyset\)</span></li>
-<li><span class="math inline">\(A \in {\cal F} \Rightarrow A^c \in {\cal F}\)</span></li>
-<li><span class="math inline">\(\big(A_1 \in {\cal F}, A_2 \in {\cal F} ,\dots\big)  \text{ and }  \big( A_1,A_2 \dots \text{are disjoint} \big)\)</span> <span class="math inline">\(\Rightarrow\)</span> <span class="math inline">\(\uplus_{n=1}^{\infty} A_n \in~ {\cal F}\)</span></li>
-</ol>
-<p>그럴싸하지만, 하나의 조건이 더 필요하다.</p>
 
 
 </section>

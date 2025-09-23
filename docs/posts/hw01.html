@@ -6,8 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="최규빈">
+<meta name="dcterms.date" content="2025-09-22">
 
-<title>고급확률론 (2025) – AP2025</title>
+<title>HW-1 (2024.09.22) – AP2025</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,25 +25,23 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-b7eda2101a7a109d5067cba531cf9672.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-45a984b55c978f8c4117b5b9aec951d9.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-b7eda2101a7a109d5067cba531cf9672.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-45a984b55c978f8c4117b5b9aec951d9.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -69,35 +69,6 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
-
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing-html .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-date','listing-title','listing-author',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-title-sort'] }],
-      
-      searchColumns: ["listing-date","listing-title","listing-author"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing-html'] = new List('listing-listing-html', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
 
   <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
@@ -129,17 +100,17 @@ window.Quarto = {
 };
 </script>
 
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="../styles.css">
 </head>
 
-<body class="nav-fixed quarto-light">
+<body class="nav-fixed fullcontent quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../index.html">
     <span class="navbar-title">AP2025</span>
     </a>
   </div>
@@ -167,25 +138,35 @@ window.Quarto = {
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
-    </div>
+    
 <!-- main -->
-<main class="content column-page" id="quarto-document-content">
+<main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">고급확률론 (2025)</h1>
+<h1 class="title">HW-1 (2024.09.22)</h1>
 </div>
 
 
 
-<div class="quarto-title-meta column-page">
+<div class="quarto-title-meta">
 
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>최규빈 </p>
+          </div>
+  </div>
     
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">September 22, 2025</p>
+    </div>
+  </div>
   
     
   </div>
@@ -195,124 +176,72 @@ window.Quarto = {
 </header>
 
 
-<p><strong>질문하는 방법</strong></p>
+<blockquote class="blockquote">
+<p>풀이는 <a href="https://guebin.github.io/SS2024/quiz.html" class="uri">https://guebin.github.io/SS2024/quiz.html</a> 의 퀴즈1,2 참고하시면 있을겁니다. (그렇지만 가능하면 혼자 해결하세요)</p>
+</blockquote>
+<section id="바늘이-하나-있는-시계" class="level2">
+<h2 class="anchored" data-anchor-id="바늘이-하나-있는-시계">1. 바늘이 하나 있는 시계</h2>
+<p>우리는 단순한 시계 하나를 생각해볼 수 있다. 이 시계에는 바늘이 하나 있고, 이 바늘을 무작위로 돌렸을 때, 바늘이 시계에서 어떤 위치에 멈추게 될 확률을 계산하는 상황을 상상해보자.</p>
+<p>여기서 시계의 위치를 <strong>각도</strong>로 나타낸다. 시계의 각도는 <span class="math inline">\(0\)</span>에서 <span class="math inline">\(2\pi\)</span> 사이로 표현된다. 즉, 시계바늘이 12시를 가리킬 때는 각도가 <span class="math inline">\(0\)</span>이고, 시계바늘이 시계 방향으로 6시를 가리킬 때는 각도가 <span class="math inline">\(\pi\)</span>이다. 이 문제에서 전체 각도 공간을 <strong>sample space</strong> <span class="math inline">\(\Omega\)</span>로 정의한다. <span class="math inline">\(\Omega = [0, 2\pi)\)</span>는 시계의 모든 각도를 나타내는 구간이다.</p>
+<p>시계바늘이 <span class="math inline">\(0\)</span>부터 <span class="math inline">\(2\pi\)</span> 사이의 각도를 랜덤하게 가리킨다고 가정할 때, 우리는 특정 각도 범위 <span class="math inline">\(\Omega^*\)</span>에 바늘이 있을 확률을 아래와 같이 계산할 수 있다.</p>
+<p><span class="math display">\[
+P(\Omega^*) = \frac{m(\Omega^*)}{2\pi}
+\]</span></p>
+<p>여기에서 <span class="math inline">\(m\)</span>는 길이를 재는 함수이다. 길이를 재는 함수 <span class="math inline">\(m\)</span>에 대하여 아래와 같은 약속을 하자.</p>
 <ul>
-<li>카카오톡: <a href="http://pf.kakao.com/_txeIFG/chat">질문하러 가기</a></li>
-<li>이메일: <a href="mailto:guebin@jbnu.ac.kr" class="email">guebin@jbnu.ac.kr</a></li>
-<li>직접방문: 자연과학대학 본관 205호</li>
-<li>Zoom: <em>카카오톡이나 이메일로 미리 시간을 정할 것</em></li>
-<li>LMS쪽지: <a href="https://ieilms.jbnu.ac.kr/" class="uri">https://ieilms.jbnu.ac.kr/</a></li>
+<li>약속1: 구간 <span class="math inline">\((a,b)\)</span>의 길이는 <span class="math inline">\(b-a\)</span>이다. 즉 <span class="math inline">\(m((a,b))=b-a\)</span> 이다.</li>
+<li>약속2: 한 점의 길이는 0이다.</li>
+<li>약속3: 점을 무한히 합치면 선이 되는것 처럼, 점의 길이를 무한히 합치면 0이 아니라 0보다 큰 어떠한 수가 된다.</li>
+<li>약속4: 구간 <span class="math inline">\((a,b)\)</span>사이의 모든 유리수의 길이는 <span class="math inline">\(\frac{b-a}{2}\)</span> 이다.</li>
 </ul>
-<p><strong>강의노트</strong></p>
-<div class="tabset-margin-container"></div><div class="panel-tabset">
-<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true">HTML</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false">슬라이드</a></li></ul>
-<div class="tab-content">
-<div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
-<div id="listing-listing-html" class="quarto-listing quarto-listing-container-table">
-<table class="quarto-listing-table table">
-<thead>
-<tr>
-
-<th>
-Date
-</th>
-
-<th>
-Title
-</th>
-
-<th>
-Author
-</th>
-
-</tr>
-</thead>
-<tbody class="list">
-
-<tr data-index="0" data-listing-date-sort="1758553200000" data-listing-file-modified-sort="1758645875679" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="8" data-listing-word-count-sort="1409" data-listing-title-sort="04wk - 시그마필드 (1)" data-listing-filename-sort="04wk.ipynb">
-<td>
-<span class="listing-date">Sep 23, 2025</span>
-</td>
-<td>
-<a href="./posts/04wk.html" class="title listing-title">04wk - 시그마필드 (1)</a>
-</td>
-<td>
-<span class="listing-author">최규빈 </span>
-</td>
-
-</tr>
-
-<tr data-index="1" data-listing-date-sort="1758466800000" data-listing-file-modified-sort="1758645982331" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="384" data-listing-title-sort="HW-1 (2024.09.22)" data-listing-filename-sort="hw01.ipynb">
-<td>
-<span class="listing-date">Sep 22, 2025</span>
-</td>
-<td>
-<a href="./posts/hw01.html" class="title listing-title">HW-1 (2024.09.22)</a>
-</td>
-<td>
-<span class="listing-author">최규빈 </span>
-</td>
-
-</tr>
-
-<tr data-index="2" data-listing-date-sort="1757948400000" data-listing-file-modified-sort="1758636614129" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="6" data-listing-word-count-sort="1173" data-listing-title-sort="03wk - 카디널리티" data-listing-filename-sort="03wk.ipynb">
-<td>
-<span class="listing-date">Sep 16, 2025</span>
-</td>
-<td>
-<a href="./posts/03wk.html" class="title listing-title">03wk - 카디널리티</a>
-</td>
-<td>
-<span class="listing-author">최규빈 </span>
-</td>
-
-</tr>
-
-<tr data-index="3" data-listing-date-sort="1757343600000" data-listing-file-modified-sort="1757406599000" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="982" data-listing-title-sort="02wk - 수학과의 표현, 귀류법과 일반화" data-listing-filename-sort="02wk.ipynb">
-<td>
-<span class="listing-date">Sep 9, 2025</span>
-</td>
-<td>
-<a href="./posts/02wk.html" class="title listing-title">02wk - 수학과의 표현, 귀류법과 일반화</a>
-</td>
-<td>
-<span class="listing-author">최규빈 </span>
-</td>
-
-</tr>
-
-<tr data-index="4" data-listing-date-sort="1756738800000" data-listing-file-modified-sort="1756866249000" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="7" data-listing-word-count-sort="1278" data-listing-title-sort="01wk - 확률을 정의하는 것은 쉬운 일인가?" data-listing-filename-sort="01wk.ipynb">
-<td>
-<span class="listing-date">Sep 2, 2025</span>
-</td>
-<td>
-<a href="./posts/01wk.html" class="title listing-title">01wk - 확률을 정의하는 것은 쉬운 일인가?</a>
-</td>
-<td>
-<span class="listing-author">최규빈 </span>
-</td>
-
-</tr>
-
-</tbody>
-</table>
-<div class="listing-no-matching d-none">No matching items</div>
-</div>
-</div>
-<div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
-<p>각 강의노트의 슬라이드 버전을 확인할 수 있습니다.</p>
+<p>이와 같은 방식으로 길이를 잰다면 확률을 정의함에 있어서 모순이 일어나지 않는가? 모순이 일어나지 않으면 모순이 없다고 답을 쓰고 모순이 일어난다면 모순이 일어나는 이유를 설명하라.</p>
+</section>
+<section id="기호의-표현" class="level2">
+<h2 class="anchored" data-anchor-id="기호의-표현">2. 기호의 표현</h2>
+<p><code>(1)</code> 아래의 명제를 읽고 참 거짓을 판단하라.</p>
+<blockquote class="blockquote">
+<p>단, 이 문제에서 <span class="math inline">\(\mathbb{N}\)</span>는 자연수의 집합 <span class="math inline">\(\mathbb{N}_{even}\)</span>은 짝수의 집합을 의미한다.</p>
+</blockquote>
 <ul>
-<li><a href="posts/04wk-slides.html">04wk - 시그마필드(1)</a></li>
-<li><a href="posts/03wk-slides.html">03wk - 카디널리티</a></li>
-<li><a href="posts/02wk-slides.html">02wk - 수학과의 표현, 귀류법과 일반화</a></li>
-<li><a href="posts/01wk-slides.html">01wk - 확률을 정의하는 것은 쉬운 일인가?</a></li>
+<li><span class="math inline">\(a+b \in \mathbb{N}, \forall a,b \in \mathbb{N}\)</span></li>
+<li><span class="math inline">\(a-b \in \mathbb{N}, \forall a,b \in \mathbb{N}\)</span></li>
+<li><span class="math inline">\(k \in \mathbb{N} \Rightarrow 2k \in \mathbb{N}_{even}\)</span></li>
+<li><span class="math inline">\(\forall m \in \mathbb{N}_{even}~ \exists k \in \mathbb{N}\)</span> such that <span class="math inline">\(2k=m\)</span>.</li>
 </ul>
-</div>
-</div>
-</div>
+<p><code>(2)</code> 아래가 의미하는 바를 한국어로 자연스럽게 작성하라.</p>
+<blockquote class="blockquote">
+<p>단, 이 문제에서 <span class="math inline">\(\mathbb{N}\)</span>은 자연수의 집합, <span class="math inline">\(\mathbb{N}_{even}\)</span>은 짝수의 집합, <span class="math inline">\(\mathbb{N}_{odd}\)</span>는 홀수의 집합, 그리고 <span class="math inline">\(\mathbb{Q}^+\)</span>는 양의 유리수 집합을 의미한다.</p>
+</blockquote>
+<ul>
+<li><span class="math inline">\(a \in \mathbb{N}_{even}, b \in \mathbb{N}_{odd} \Rightarrow a \times b \in \mathbb{N}_{even}\)</span></li>
+<li><span class="math inline">\(\forall q \in \mathbb{Q}^+~ \exists m, n \in \mathbb{N}\)</span> such that <span class="math inline">\(q = \frac{n}{m}\)</span>.</li>
+</ul>
+</section>
+<section id="전단사함수" class="level2">
+<h2 class="anchored" data-anchor-id="전단사함수">3. 전단사함수</h2>
+<p><code>(1)</code> 함수 <span class="math inline">\(f\)</span>는 <span class="math inline">\(X = \{1,2,3,4\}\)</span> 에서 <span class="math inline">\(Y = \{1,2,3,4\}\)</span> 로 매핑되며, 매핑은 다음과 같다:</p>
+<ul>
+<li><span class="math inline">\(f(1) = 1\)</span></li>
+<li><span class="math inline">\(f(2) = 1\)</span></li>
+<li><span class="math inline">\(f(3) = 2\)</span></li>
+<li><span class="math inline">\(f(4) = 2\)</span></li>
+</ul>
+<p>이 함수가 전사인지 아닌지, 단사인지 아닌지 판단하고 판단의 근거를 설명하라.</p>
+<p><code>(2)</code> 함수 <span class="math inline">\(f\)</span>는 <span class="math inline">\(X = \{1,2,3,4\}\)</span> 에서 <span class="math inline">\(Y = \{1,2\}\)</span> 로 매핑되며, 매핑은 다음과 같다:</p>
+<ul>
+<li><span class="math inline">\(f(1) = 1\)</span></li>
+<li><span class="math inline">\(f(2) = 1\)</span></li>
+<li><span class="math inline">\(f(3) = 2\)</span></li>
+<li><span class="math inline">\(f(4) = 2\)</span></li>
+</ul>
+<p>이 함수가 전사인지 아닌지, 단사인지 아닌지 판단하고 판단의 근거를 설명하라.</p>
+</section>
+<section id="카디널리티" class="level2">
+<h2 class="anchored" data-anchor-id="카디널리티">4. 카디널리티</h2>
+<p>짝수들의 집합 <span class="math inline">\(\mathbb{N}_{even}\)</span> 와 홀수들의 집합 <span class="math inline">\(\mathbb{N}_{odd}\)</span> 의 카디널리티가 동일함을 보여라.</p>
 
 
-
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
