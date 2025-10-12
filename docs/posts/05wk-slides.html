@@ -175,19 +175,19 @@
 <section class="slide level2">
 
 <p><strong><code># 예제2</code></strong></p>
-<p><span class="math inline">\(\Omega=[0,1)\)</span>이라고 하자. 집합 <span class="math inline">\(\mathbb{Q}\)</span>를 구간 <span class="math inline">\([0,1)\)</span>에 포함된 모든 유리수의 집합이라고 하자. <span class="math inline">\({\cal A} = \{\{x\}: x\in \mathbb{Q}\}\)</span> 이라고 하자. 아래가 성립할까? <span class="math display">\[\mathbb{Q} \in \sigma({\cal A})\]</span> 즉 구간 <span class="math inline">\([0,1)\)</span>에서의 유리수를 한점씩을 잴 수 있을 때 구간 <span class="math inline">\([0,1)\)</span>의 모든 유리수 집합 역시 잴 수 있어야 할까? 단, 모든 <span class="math inline">\(x \in [0,1)\)</span> 에 대하여 <span class="math inline">\(\mathbb{P}(\{x\})=\lambda(\{x\})\)</span> 라고 하자. (여기에서 <span class="math inline">\(\lambda\)</span>는 르벡측도임)</p>
+<p><span class="math inline">\(\Omega=[0,1)\)</span>이라고 하자. 집합 <span class="math inline">\(\mathbb{Q}\)</span>를 구간 <span class="math inline">\([0,1)\)</span>에 포함된 모든 유리수의 집합이라고 하자. <span class="math inline">\({\cal A} = \{\{x\}: x\in \mathbb{Q}\}\)</span> 이라고 하자. 아래가 성립할까? <span class="math display">\[\mathbb{Q} \in \sigma({\cal A})\]</span> 즉 구간 <span class="math inline">\([0,1)\)</span>에서의 유리수를 한점씩을 잴 수 있을 때 구간 <span class="math inline">\([0,1)\)</span>의 모든 유리수 집합 역시 잴 수 있어야 할까?</p>
 </section>
 <section class="slide level2">
 
 <p>(해설)</p>
-<p><code>-</code> 집합 <span class="math inline">\(\{\frac{1}{2}\}\)</span>는 잴 수 있고, 집합 <span class="math inline">\(\{\frac{1}{3}\}\)</span> 역시 잴 수 있다. (왜?? <span class="math inline">\(\frac{1}{2}, \frac{1}{3}\)</span>은 유리수니까) 그렇다면 집합 <span class="math inline">\(\{\frac{1}{2},\frac{1}{3}\}=\{\frac{1}{2}\} \uplus \{\frac{1}{3}\}\)</span> 역시 잴 수 있어야 하며, <span class="math inline">\(\mathbb{P}(\{\frac{1}{2}\} \uplus \{\frac{1}{3}\})=0\)</span> 이다. 왜냐하면 확률의 공리에 의하여 아래식이 성립하기 때문이다.</p>
+<p><code>-</code> 집합 <span class="math inline">\(\{\frac{1}{2}\}\)</span>는 잴 수 있고, 집합 <span class="math inline">\(\{\frac{1}{3}\}\)</span> 역시 잴 수 있다. (즉 <span class="math inline">\(\frac{1}{2} \in \sigma({\cal A})\)</span> 이고 <span class="math inline">\(\frac{1}{3} \in \sigma({\cal A})\)</span>) 그렇다면 집합 <span class="math inline">\(\{\frac{1}{2},\frac{1}{3}\}=\{\frac{1}{2}\} \uplus \{\frac{1}{3}\}\)</span> 역시 잴 수 있어야 한다. (즉 <span class="math inline">\(\{\frac{1}{2},\frac{1}{3}\} \in \sigma({\cal A})\)</span>이어야한다. 왜냐하면 확률의 공리에 의하여 아래식이 성립하기 때문이다.</p>
 <p><span class="math display">\[\mathbb{P}(A_1 \uplus A_2)=  \mathbb{P}(A_1) + \mathbb{P}(A_2)\]</span></p>
 <p>비슷한 논리로 집합 <span class="math inline">\(\{\frac{1}{2},\frac{1}{3},\dots \}\)</span> 역시 잴 수 있어야 한다. 왜냐하면 확률의 공리에 의하여 아래식이 성립하기 때문이다.</p>
 <p><span class="math display">\[\mathbb{P}(\uplus_{n=1}^{\infty} A_n) =  \sum_{n=1}^{\infty}\mathbb{P}(A_n)\]</span></p>
 </section>
 <section class="slide level2">
 
-<p><code>-</code> 집합 <span class="math inline">\(\mathbb{Q}\)</span> 는 잴 수 있을까? <span class="math inline">\(\mathbb{Q}\)</span> 의 카니널리티는 자연수의 카디널리티와 같으므로 <span class="math inline">\(\mathbb{N} \to \mathbb{Q}\)</span> 인 전단사함수 <span class="math inline">\(f\)</span>가 존재하며, 따라서 <span class="math display">\[\mathbb{Q} = \{f(1),f(2),\dots, \} = \uplus_{n=1}^{\infty}\{ f(n) \}\]</span> 와 같이 쓸 수 있다. 확률의 공리에 의하여 아래식이 성립한다. <span class="math display">\[\mathbb{P}(\mathbb{Q}) = \sum_{n=1}^{\infty} \mathbb{P}(\{f(n)\})\]</span> 우변의 값은 (무모순으로) 0으로 정의된다. 따라서 좌변 <span class="math inline">\(\mathbb{P}(\mathbb{Q})\)</span> 역시 무모순으로 정의되어야 하며 그 값은 0이다.</p>
+<p><code>-</code> 집합 <span class="math inline">\(\mathbb{Q}\)</span> 는 잴 수 있을까? <span class="math inline">\(\mathbb{Q}\)</span> 의 카니널리티는 자연수의 카디널리티와 같으므로 <span class="math inline">\(\mathbb{N} \to \mathbb{Q}\)</span> 인 전단사함수 <span class="math inline">\(f\)</span>가 존재하며, 따라서 <span class="math display">\[\mathbb{Q} = \{f(1),f(2),\dots, \} = \uplus_{n=1}^{\infty}\{ f(n) \}\]</span> 와 같이 쓸 수 있다. 확률의 공리에 의하여 아래식이 성립한다. <span class="math display">\[\mathbb{P}(\mathbb{Q}) = \sum_{n=1}^{\infty} \mathbb{P}(\{f(n)\})\]</span> 우변의 값이 무모순으로 정의되므로 좌변의 값 <span class="math inline">\(\mathbb{P}(\mathbb{Q})\)</span> 역시 무모순으로 정의되어야 한다.</p>
 <p><code>-</code> 즉 <span class="math display">\[\mathbb{Q} \in \sigma({\cal A})\]</span> 이어야 한다.</p>
 </section>
 <section class="slide level2">
@@ -201,7 +201,7 @@
 <p><strong>Note</strong></p>
 </div>
 <div class="callout-content">
-<p><strong>[<span class="math inline">\(\uplus_{n=1}^{\infty}\)</span>에 닫힘]</strong>: 서로소인 집합들 <span class="math inline">\(A_1,A_2,\dots\)</span> 에서 확률값을 잴 수 있다면, <span class="math inline">\(A=\uplus_{n=1}^{\infty} A_n\)</span> 에서도 확률값을 잴 수 있어야 한다. 즉 아래가 성리해야한다. <span class="math display">\[\begin{cases} \forall n \in \mathbb{N}: A_n \in {\cal F} \\ \forall {m,k} \in \mathbb{N}, m\neq k:~  A_m \cap A_k = \emptyset\end{cases} \quad \Rightarrow \quad \uplus_{n=1}^{\infty} A_n \in {\cal F}\]</span></p>
+<p><strong>[</strong><span class="math inline">\(\uplus_{n=1}^{\infty}\)</span>에 닫힘]: 서로소인 집합들 <span class="math inline">\(A_1,A_2,\dots\)</span> 에서 확률값을 잴 수 있다면, <span class="math inline">\(A=\uplus_{n=1}^{\infty} A_n\)</span> 에서도 확률값을 잴 수 있어야 한다. 즉 아래가 성리해야한다. <span class="math display">\[\begin{cases} \forall n \in \mathbb{N}: A_n \in {\cal F} \\ \forall {m,k} \in \mathbb{N}, m\neq k:~  A_m \cap A_k = \emptyset\end{cases} \quad \Rightarrow \quad \uplus_{n=1}^{\infty} A_n \in {\cal F}\]</span></p>
 </div>
 </div>
 </div>
@@ -217,7 +217,7 @@
 <section class="slide level2">
 
 <p>(해설)</p>
-<p><span class="math inline">\(\mathbb{Q} \in \sigma({\cal A})\)</span> 이므로 <span class="math inline">\(\mathbb{Q}^c\in \sigma({\cal A})\)</span> 이어야 한다. <span class="math inline">\(\mathbb{P}(\mathbb{Q})=0\)</span> 이므로, <span class="math inline">\(\mathbb{P}(\Omega - \mathbb{Q})=1\)</span> 이다.</p>
+<p><span class="math inline">\(\mathbb{Q} \in \sigma({\cal A})\)</span> 이므로 <span class="math inline">\(\mathbb{Q}^c\in \sigma({\cal A})\)</span> 이어야 한다.</p>
 <blockquote>
 <p><span class="math inline">\(\mathbb{Q}^{c}=\uplus_{x \in \mathbb{Q}^c} \{x\}\)</span> 의 꼴로 표현될 수 있지만, <span class="math inline">\(\mathbb{Q}^{c}=\uplus_{x \in \mathbb{Q}^c} \{x\}=\uplus_{n=1}^{\infty}\{x_n\}\)</span> 와 같이 표현할 수 없으므로 <span class="math inline">\(\mathbb{P}(\mathbb{Q}^{c})=\sum_{x \in \mathbb{Q}^c}\mathbb{P}(\{x\})\)</span> 와 같이 쓸 수 없음을 주의하라. (똑똑한 초등학생 논리의 완벽한 카운터)</p>
 </blockquote>
