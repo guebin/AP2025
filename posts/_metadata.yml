@@ -27,3 +27,6 @@ format:
     preview-links: auto
     chalkboard: true
     multiplex: false
+    html-math-method:
+      method: mathjax
+      url: "https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js"
