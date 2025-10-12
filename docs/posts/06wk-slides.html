@@ -864,7 +864,7 @@
 'autoAnimateUnmatched': true,
 'jumpToSlide': true,
 'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleScrollView(event)\"><kbd>r</kbd> Scroll View Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleChalkboard(event)\"><kbd>b</kbd> Toggle Chalkboard</a></li>\n<li class=\"slide-tool-item\" data-item=\"6\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleNotesCanvas(event)\"><kbd>c</kbd> Toggle Notes Canvas</a></li>\n<li class=\"slide-tool-item\" data-item=\"7\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.downloadDrawings(event)\"><kbd>d</kbd> Download Drawings</a></li>\n<li class=\"slide-tool-item\" data-item=\"8\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
-'chalkboard': {"buttons":true,"boardmarkerWidth":3,"chalkWidth":5,"chalkEffect":0.5,"penOnly":true},
+'chalkboard': {"buttons":true,"boardmarkerWidth":3,"chalkWidth":5,"chalkEffect":0.5},
 'smaller': true,
  
         // Display controls in the bottom right corner
@@ -1211,6 +1211,29 @@
         }
       });
       </script>
+    <style>
+    .reveal .chalkboard-button { pointer-events: none; }
+    canvas.chalkboard, canvas.whiteboard {
+      touch-action: none;
+      -webkit-touch-callout: none;
+    }
+    </style>
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const canvases = document.querySelectorAll('canvas.chalkboard, canvas.whiteboard');
+      canvases.forEach(canvas => {
+        canvas.addEventListener('touchstart', function(e) {
+          // Only allow stylus (pressure > 0) or single precise touch
+          if (e.touches.length === 1 && e.touches[0].touchType === 'stylus') {
+            return; // Allow stylus
+          }
+          // Block all other touch events (fingers, palm)
+          e.preventDefault();
+          e.stopPropagation();
+        }, { passive: false });
+      });
+    });
+    </script>
     <script>videojs(video_shortcode_videojs_video1);</script>
     
 
