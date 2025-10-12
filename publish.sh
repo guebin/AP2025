@@ -135,7 +135,7 @@ if [ -d ".git" ]; then
         
         # Push to remote repository
         echo "🚀 Pushing to remote repository..."
-        git push
+        git push --force origin main
         if [ $? -eq 0 ]; then
             echo "✅ Successfully pushed to remote repository"
         else
