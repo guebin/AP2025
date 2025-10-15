@@ -2,19 +2,11 @@
 title: 06wk - 측도, 확률 / 르벡메저, 보렐시그마필드
 author: 최규빈
 date: 10/10/2025
-format:
-  revealjs:
-    smaller: true
-    chalkboard:
-      boardmarkerWidth: 3
-      chalkWidth: 5
-      chalkEffect: 0.5
-      touch: false
 ---
 
 ### 강의영상
 
-{{<video xxxx >}}
+{{<video https://youtu.be/playlist?list=PLQqh36zP38-z9RolzS-23orzufOCzRwXI&si=ktQKgPRGr9wm_Xi4 >}}
 
 ------------------------------------------------------------------------
 

@@ -20,6 +20,7 @@ format:
     format-links: false
   revealjs:
     theme: [default, ../styles.scss]
+    smaller: true    
     incremental: false
     slide-number: true
     show-slide-number: all

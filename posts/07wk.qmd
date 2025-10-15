@@ -1,0 +1,332 @@
+---
+title: 07wk - 측도론의 중요이론들 (1)
+author: 최규빈
+date: 10/13/2025
+---
+
+
+### 강의영상
+
+{{<video https://youtu.be/playlist?list=PLQqh36zP38-y6Y6YRnbfACyYa247BLvtc&si=nsj2yJTWqgj6mIMB >}}
+
+------------------------------------------------------------------------
+
+### 측도론의 중요이론들
+
+`(1)` **(확장이론1) $\sigma({\cal A})$ 와 같은 표현은 항상 가능하다.** 
+
+`(2)` **파이시스템이고 람다시스템이면 시그마필드이다.**
+
+`(3)` **(딘킨의 $\pi$-$\lambda$ thm) 파이시스템 ${\cal P}$에 대하여 $l({\cal P}) = \sigma({\cal P})$ 이다.** 
+
+`(4)` **(확장이론2) 세미링 ${\cal A}$에서의 set-function $\tilde{m}:{\cal A} \to [0,\infty]$, $\tilde{m}(\emptyset)=0$ 을 고려하자. 함수 $\tilde{m}$이 (1) additive (2) $\sigma$-subadditive (3) $\sigma$-finite 를 만족하면, 이 함수 $\tilde{m}$을 확장하여 $\sigma({\cal A})$에서의 $\sigma$-finite measure $m: \sigma({\cal A}) \to [0,\infty]$ 으로 만들 수 있다. 그리고 이 확장은 유일하다.** 
+
+`(5)` **${\cal A}$가 파이시스템일때, $\sigma({\cal A})$에서의 확률측도 $\mathbb{P}$는 ${\cal A}$에서의 값으로 유일하게 결정된다.** 
+
+---
+
+### 여러가지 collection
+
+`-` 기호와 약속: 앞으로의 강의노트에서는 특별한 언급이 없어도 아래와 같은 기호를 활용한다. 
+
+- 전체집합: $\Omega$
+- 관심있는 집합의 모임: ${\cal A} \subset 2^{\Omega}$
+- ${\cal A}$ 중에서 특별히 시그마필드는 ${\cal F}$, 파이시스템은 ${\cal P}$, 람다시스템은 ${\cal L}$로 표현한다. 
+
+`-` 가정: 앞으로의 강의노트에서는 특별한 언급이 없어도 아래를 가정한다고 생각하자. 
+
+- $\Omega \neq \emptyset$
+- ${\cal A} \neq \emptyset$
+
+`-` 목표: 시그마필드 말고 다른 collection들의 정의를 배워보자. 
+
+- 파이시스템, 세미링, 람다시스템, 시그마필드 
+
+---
+
+`-` 성질에 대한 정리표
+
+| |$A \cap B$|$\emptyset$|$A-B$|$\Omega$|$A^c$|$A\cup B$|$\cup_{i=1}^{\infty}A_i$ |$\uplus_{i=1}^{\infty}B_i$|$\cap_{i=1}^{\infty}A_i$|
+|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
+|**$\pi$-system**|$O$|$X$|$X$|$X$|$X$|$X$|$X$|$X$|$X$|
+|**semi-ring**|$O$|$O$|$\Delta$^[차집합에 반쯤만 닫힘]|$X$|$X$|$X$|$X$|$X$|$X$|
+|**$\lambda$-system**|$X$|$O$|$\Delta'$^[포함관계가 있는 차집합에 닫힘]|$O$|$O$|$X$|$X$|$O$|$X$|
+|**$\sigma$-field**|$O$|$O$|$O$|$O$|$O$|$O$|$O$|$O$|$O$|
+
+---
+
+### 시그마필드
+
+**`# 정의`** -- $\Omega$의 부분집합 중 조건`1`~`3`을 만족하는 집합의 집합 (collection) ${\cal F}$를 "$\Omega$에 대한 시그마필드 ($\sigma$-field)"라고 한다. 
+
+`1`. $\Omega \in {\cal F}$ 
+
+`2`. $A \in {\cal F} \Rightarrow A^c \in {\cal F}$ 
+
+`3`. $\big(\forall n \in \mathbb{N}: A_n \in {\cal F}\big) \Rightarrow \cup_{n=1}^{\infty} A_n \in~ {\cal F}$
+
+> Note: 조건 `2`,`3`이 전제되어있을 경우 조건`1`과 아래는 같은 조건이다. $${\cal F} \neq \emptyset$$ 보통의 교재에서는 ${\cal F}\neq \emptyset$ 임을 이미 선언하고 챕터를 시작하므로, 조건`1`을 생략하기도 한다. 
+
+**`#`**
+
+---
+
+### 파이시스템 
+
+**`# 정의`** -- $\Omega$의 부분집합 중 아래의 조건`1`을 만족하는 집합의 집합 (collection) ${\cal P}$를 "$\Omega$에 대한 파이시스템 ($\pi$-system)"이라고 한다. 
+
+`1`. $A, B \in {\cal P} \Rightarrow A \cap B \in {\cal P}$ 
+
+> Note: 파이시스템이 공집합을 포함할 필요는 없다. 
+
+**`#`**
+
+`-` 파이시스템의 예시: 아래는 모두 $\Omega=\mathbb{R}$ 에 대한 파이시스템이다. 
+
+- 예시1: ${\cal A} = \{(a,b]: -\infty < a < b < \infty \}\cup \{\emptyset\}$
+- 예시2: ${\cal A} = \{[a,b): -\infty < a < b < \infty \}\cup \{\emptyset\}$
+- 예시3: ${\cal A} = \{(a,b): -\infty < a < b < \infty \}\cup \{\emptyset\}$
+- 예시4: ${\cal A} = \{[a,b]: -\infty < a < b < \infty \}\cup \{\emptyset\}$
+
+---
+
+### 람다시스템
+
+**`# 정의`** -- $\Omega$의 부분집합 중 아래의 조건`1`~`3`을 만족하는 집합의 집합 (collection) ${\cal L}$를 "$\Omega$에 대한 람다시스템 ($\lambda$-system)"이라고 한다. 
+
+`1`. $\Omega \in {\cal L}$
+
+`2`. $A \in {\cal L} \Rightarrow A^c \in {\cal L}$ 
+
+`3`. $\begin{cases} \forall n \in \mathbb{N}: B_n \in {\cal L} \\ \forall {m,k} \in \mathbb{N}, m\neq k:~  B_m \cap B_k = \emptyset \end{cases} \quad \Longrightarrow \uplus_{n=1}^{\infty} B_n \in~ {\cal L}$
+
+> Note: 조건`1`,`3`이 전제되었을 경우 조건 `2`는 $$\big(A,B \in {\cal L}\big) \text{ and } \big( A \subset B\big) \Longrightarrow B-A \in {\cal L}$$ 와 같은 조건이다. 
+
+**`#`**
+
+---
+
+**`# 이론`** -- $\Omega$의 부분집합의 모임 ${\cal A}$가 $\Omega$에 대한 파이시스템이면서 동시에 람다시스템이면 ${\cal A}$는 $\Omega$에 대한 시그마필드이다.  
+
+---
+
+### 세미링
+
+**`# 정의`** -- $\Omega$의 부분집합 중 아래의 조건`1`~`3`을 만족하는 집합의 집합 (collection) ${\cal A}$를 "$\Omega$에 대한 세미링 (semiring)"이라고 한다. 
+
+`1`. $\emptyset \in {\cal A}$ 
+
+`2`. For all $A,B \in {\cal A}$ there exists $C_1,C_2,\dots,C_n \in {\cal A}$ such that 
+
+- $C_1,C_2,\dots,C_n \in {\cal A}$ 
+- $C_1,C_2,\dots,C_n$ are disjoint
+- $B-A = \uplus_{n=1}^{N}C_n$
+
+`3`. $A, B \in {\cal A} \Rightarrow A \cap B \in {\cal A}$ 
+
+> Note: 여기에서 `2`를 차집합에 "반쯤" 닫혀있다고 표현한다.
+
+**`#`**
+
+---
+
+`-` 세미링의 예시: 아래의 ${\cal A}$는 모두 $\Omega$에 대한 세미링이다. 
+
+- 예시1: $\Omega=\{a,b,c,d,e,f\}$, ${\cal A} = \{\emptyset, \{a\},\{b\},\{c\},\{a,b,c\}\}$
+- 예시2: $\Omega=\{a,b,c,d,e,f\}$, ${\cal A} = \{\emptyset, \{a\},\{b\},\{c,d\},\{a,b,c,d\}\}$
+- 예시3: $\Omega=\{a,b,c,d,e,f\}$, ${\cal A} = \{\emptyset,\{a\},\{b,c,d\},\{e,f\}, \Omega \}$
+
+---
+
+`-` 세미링의 예시: 아래의 ${\cal A}$는 모두 $\Omega=\mathbb{R}$에 대한 세미링이다. 
+
+- 예시1: ${\cal A} = \{(a,b]: -\infty < a < b < \infty \}\cup \{\emptyset\}$
+- 예시2: ${\cal A} = \{[a,b): -\infty < a < b < \infty \}\cup \{\emptyset\}$
+
+`-` 세미링이 아닌 예시: 아래의 ${\cal A}$는 $\Omega=\mathbb{R}$에 대한 세미링이 아니다. 
+
+- 예시1: ${\cal A} = \{(a,b): -\infty < a < b < \infty \}\cup \{\emptyset\}$
+- 예시2: ${\cal A} = \{[a,b]: -\infty < a < b < \infty \}\cup \{\emptyset\}$
+
+---
+
+## 확장이론1
+
+`-` 목표: $\sigma({\cal A})$의 존재성을 보이자. 
+
+---
+
+`# 예제1` -- ${\cal F}_1$, ${\cal F}_2$ 가 모두 $\Omega$ 에 대한 시그마필드라면, ${\cal F}_1 \cap {\cal F}_2$ 역시 $\Omega$ 에 대한 시그마필드이다. 
+
+(풀이)
+
+${\cal F}_1 \cap {\cal F}_2 = {\cal F}$ 가 시그마필드임을 보이려면 ${\cal F}$가 
+
+1. 전체집합을 포함하고
+2. 여집합에 닫혀있고 
+2. 가산합집합에 닫혀있음을 
+
+보이면 된다. 
+
+---
+
+아래의 식을 관찰하면 1-3 이 성립함을 쉽게 체크할 수 있음. 
+
+- $\Omega \in {\cal F} \Leftrightarrow \big(\Omega \in {\cal F}_1 \text{ and } \Omega \in {\cal F}_2\big)$
+- $A \in {\cal F} \Leftrightarrow \big(A \in {\cal F}_1 \text{ and } A \in {\cal F}_2\big) \Rightarrow \big(A^c \in {\cal F}_1 \text{ and } A^c \in {\cal F}_2\big) \Leftrightarrow A^c \in {\cal F}$
+- $\big(\forall n: A_n \in {\cal F}\big)$ $\Leftrightarrow$ $\big((\forall n: A_n \in {\cal F}_1) \text{ and } (\forall n: A_n \in {\cal F}_2)\big)$ $\Rightarrow$ $\big(\cup_{n=1}^{\infty}A_n \in {\cal F}_1 \text{ and } \cup_{n=1}^{\infty}A_n \in {\cal F}_2\big)$ $\Leftrightarrow$ $\cup_{n=1}^{\infty}A_n \in {\cal F}$
+
+`#`
+
+---
+
+`# 예제2` -- 예제1의 결과는 2개뿐 아니라 모든 자연수 $n$에 대하여 확장가능하고 (유한한 $n$으로 확장가능하고), countable many intersection, uncountable many intersection으로도 확장가능하다. 
+
+`# 결론` -- 시그마필드를 무한번 (uncountable many) 교집합해도 시그마필드이다. 
+
+`# 참고예제` -- 세미링의 교집합: 아래를 고려하자. 
+
+- $\Omega = \{1,2,3,4\}$
+- ${\cal A}_1 = \{\emptyset, \{1\}, \{2,3\}, \{4\}, \{1,2,3,4\} \}$
+- ${\cal A}_2 = \{\emptyset, \{1\}, \{2\}, \{3,4\}, \{1,2,3,4\} \}$
+
+${\cal A}_1, {\cal A}_2$는 모두 세미링이다. 하지만 ${\cal A}_1 \cap {\cal A}_2 = \{\emptyset, \{1\}, \{1,2,3,4\}\}$은 세미링이 아니다. 
+
+`#`
+
+---
+
+`# 생각` -- 교집합은 하면 할수록 작아지는 성질이 있다. 즉 아래가 성립한다. 
+
+$${\cal F}_1 \supset \big({\cal F}_1 \cap {\cal F}_2\big) \supset \big({\cal F}_1 \cap {\cal F}_2 \cap {\cal F}_3\big) \dots$$
+
+---
+
+**`# 이론`** -- ${\cal A} \subset 2^\Omega$ 을 포함하는 가장 작은 시그마필드 $\sigma({\cal A})$ 는 항상 (유일하게) 존재한다. 
+
+(증명) 우선 $2^{\Omega}$가 (1) ${\cal A}$ 를 포함하는 집합이고 (2) 시그마필드임을 고려하면 "${\cal A}$ 를 포함하는 시그마필드가 적어도 하나는 존재함"은 주장할 수 있다. 이제 ${\cal A}$ 를 포함하는 시그마필드를 모두 교집합한 집합 ${\cal F}$ 를 상상하자. 즉 
+
+$${\cal F} = \bigcap_{X \in {\cal X}} X, \quad \text{ where } {\cal X}=\{X: {\cal A} \subset X \text{ and }  X \text{ is $\sigma$-field}  \}$$ 
+
+시그마필드의 교집합은 시그마필드이므로 ${\cal F}$는 시그마필드이다. 또한 ${\cal F}$는 ${\cal A}$ 를 포함하는 시그마필드를 모두 교집합하여 만들었으므로, ${\cal A}$ 를 포함하는 시그마필드중 가장 작은 시그마필드이다. 
+
+`#`
+
+---
+
+`# 참고예제` -- ${\cal A} \subset 2^\Omega$를 포함하는 가장 작은 세미링은 존재하지 않는다. 아래를 고려하자. 
+
+- $\Omega = \{1,2,3,4\}$
+- ${\cal A} = \{\emptyset, \{1\}, \{1,2,3\}\}$
+
+이때 ${\cal A}$를 포함하는 가장 작은 세미링이
+
+$${\cal A}_1 = \{\emptyset, \{1\}, \{1,2,3\}, \{2,3\}\}$$
+
+라고 주장할 수는 없음. 왜냐하면 
+
+$${\cal A}_2 = \{\emptyset, \Omega, \{1\}, \{1,2,3\},\{2\},\{3\}\}$$
+
+역시 ${\cal A}$를 포함하는 세미링이지만 ${\cal A}_1 \not \subset {\cal A}_2$이므로. 
+
+`#`
+
+
+---
+
+
+`# 이론` -- ${\cal A} \subset 2^\Omega$ 을 포함하는 가장 작은 람다시스템 $l({\cal A})$ 는 항상 (유일하게) 존재한다. 
+
+(증명) -- 생략
+
+`#`
+
+---
+
+### 딘킨의 $\pi-\lambda$ theorem
+
+`# 예제1`
+
+$\Omega=\{1,2,3,4\}$ 일때 아래의 집합 ${\cal A}$ 가 교집합에 닫혀있음을 체크하는 방법을 생각해보자. 
+
+$${\cal A} =  \{\emptyset, \{1\}, \{2\}, \{2,3,4\},  \{1,3,4\},  \Omega \}$$
+
+---
+
+(해설) -- 직관적으로 풀기보다 아래와 같이 $\forall A \in {\cal A}: {\cal D}_A = {\cal A}$ 가 성립함을 state
+
+집합 $A$와 교집합하여도 닫힘성을 유지하는 원소들의 모임 ${\cal D}_A$를 고려하자. 
+
+$${\cal D}_A= \{B: A\cap B \in {\cal A},~B \in {\cal A}\}$$
+
+
+- $\emptyset: \big(\emptyset, \emptyset, \emptyset, \emptyset,  \emptyset,  \emptyset\big) \Rightarrow {\cal D}_{\emptyset}={\cal A}$
+- $\{1\}: \big(\emptyset, \{1\}, \emptyset, \emptyset,  \{1\},  \{1\}\big) \Rightarrow {\cal D}_{\{1\}}={\cal A}$
+- $\{2\}: \big(\emptyset, \emptyset, \{2\}, \{2\}, \emptyset,  \{2\}\big) \Rightarrow {\cal D}_{\{2\}}={\cal A}$
+- $\{2,3,4\}: \big(\emptyset, \emptyset, \{2\}, \{2,3,4\}, \textcolor{red}{\{3,4\}},  \{2,3,4\}\big) \Rightarrow {\cal D}_{\{2,3,4\}}={\cal A}-\{1,3,4\}$
+- $\{1,3,4\}: \big(\emptyset, \{1\}, \emptyset, \textcolor{red}{\{3,4\}}, \{1,3,4\},  \{2\}\big) \Rightarrow {\cal D}_{\{1,3,4\}}={\cal A}-\{2,3,4\}$
+- $\{\Omega\}: \big(\emptyset, \{1\}, \{2\}, \{2,3,4\},  \{1,3,4\},  \Omega\big) \Rightarrow {\cal D}_{\Omega}={\cal A}$
+
+만약에 $\forall A \in {\cal A}: {\cal D}_A = {\cal A}$ 가 성립한다면 ${\cal A}$는 교집합에 닫혀있다고 볼 수 있다. 
+
+`#`
+
+---
+
+`# 예제2` 
+
+$\Omega=\{1,2,3\}$ 일때 아래의 집합 ${\cal A}$ 가 교집합에 닫혀있지 않은 이유를 ${\cal D}_A$를 이용하여 설명하라. 
+
+$${\cal A} = \{\emptyset, \{1,2\}, \{2,3\}, \Omega\}$$
+
+(풀이)
+
+${\cal D}_{\{1,2\}} = {\cal A} - \{2,3\}$ 이고 ${\cal D}_{\{2,3\}} = {\cal A} - \{1,2\}$ 이므로 
+
+$$\forall A \in {\cal A}: {\cal D}_A = {\cal A}$$ 
+
+가 성립하지 않음. 
+
+> Note: $A$를 완전히 포함하거나, $A$에 완전히 포함되는 집합들은 ${\cal D}_A$의 원소가 된다.
+
+---
+
+`예제3` 
+
+$\Omega=\{1,2,3,4\}$ 이고 
+
+$${\cal A}=\{\{1\},\{2\},\{3\},\{4\},\{1,2\},\{1,3\},\{1,4\},\{2,3\},\{2,4\},\{3,4\}\}$$
+
+일때 아래를 체크하라. 
+
+- $\{1\} \in {\cal D}_{\{1\}}$ 
+- $\{1,2\} \in {\cal D}_{\{1\}}$ 
+- $\{1,2\} \in {\cal D}_{\{2\}}$ 
+- $\{1\} \in {\cal D}_{\{1,2\}}$ 
+- $\{2\} \in {\cal D}_{\{1,2\}}$ 
+- $\{1,2\} \in {\cal D}_{\{1,2\}}$ 
+
+---
+
+`# 이론` -- Dynkin's $\pi-\lambda$ theorem ($\star$)
+
+${\cal P} \subset 2^{\Omega}$가 파이시스템이면 $l({\cal P})=\sigma({\cal P})$이다. 
+
+> Note: ${\cal P}$를 포함하는 최소한의 시그마필드를 찾기 위해서는 ${\cal P}$를 포함하는 최소한의 람다시스템만 찾아도 충분하다는 의미이다. 
+
+`#`
+
+:::{.callout-note}
+
+감각적으로 이해해보자. $\Omega$의 부분집합들의 모임 ${\cal A}$에서 확장된 $\sigma({\cal A})$를 구하기 위해서는 
+
+- (1차확장) -- $l({\cal A})$ 까지 확장하고
+- (2차확장) -- $l({\cal A})$가 교집합에 닫혀있음을 보이며 추가확장을
+
+해야할  것이다. (2차확장만 하면 $l({\cal A})$가 시그마필드가 되는 이유는 "람다시스템이고 파이시스템이면 시그마필드"라는 이론을 써서 그렇죠) 그런데 애초에 ${\cal A}$를 교집합에 닫혀있는 상태에서 확장을 시작한다면 2차확장을 과정을 생략해도 된다는 것이다. 
+
+:::
+
+---
+
+*강의가 너무 길어져서 증명은 다음시간에 설명하겠습니다*

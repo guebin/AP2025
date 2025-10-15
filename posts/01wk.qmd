@@ -2,9 +2,6 @@
 title: 01wk - 확률을 정의하는 것은 쉬운 일인가?
 author: 최규빈
 date: 09/02/2025
-format:
-  revealjs:
-    smaller: true
 ---
 
 
