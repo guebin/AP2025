@@ -6,8 +6,8 @@
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="../site_libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-37eea08aefeeee20ff55810ff984fec1.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.7.32">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-a37c72dd2dbac68997fcdc15a3622e78.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.7.24">
 
   <meta name="author" content="최규빈">
   <meta name="dcterms.date" content="2025-10-15">
@@ -256,11 +256,128 @@
 <li><span class="math inline">\({\cal A}_1 = \{\emptyset, \{1\}, \{2\}, \Omega, \{2,3,4\},  \{1,3,4\} \}\)</span> // <span class="math inline">\(^c\)</span>-closed</li>
 <li><span class="math inline">\(l({\cal A})={\cal A}_2 = \{\emptyset, \{1\}, \{2\}, \Omega, \{2,3,4\},  \{1,3,4\}, \{1,2\}, \{3,4\} \}\)</span> // <span class="math inline">\(^c\)</span>-closed, <span class="math inline">\(\uplus\)</span>-closed</li>
 </ul>
-<p>파이람다이론에 의하여 <span class="math inline">\(l({\cal A})=\simga({\cal A})\)</span>이다.</p>
+<p>파이람다이론에 의하여 <span class="math inline">\(l({\cal A})=\sigma({\cal A})\)</span>이다.</p>
 <blockquote>
 <p>그렇지만 파이람다이론의 정수는 <span class="math inline">\(\sigma({\cal A})\)</span> 따위를 쉽게 구하는 것에 있지 않음.. 훨씬 대단한걸 할 수 있음</p>
 </blockquote>
 <p><code>#</code></p>
+</section>
+<section class="slide level2">
+
+<h3>집합함수</h3>
+<p><code># 정의</code>: <span class="math inline">\(\Omega\)</span>의 부분집합들의 모임 <span class="math inline">\({\cal A}\)</span> 에서 정의된 집합함수 <span class="math inline">\(\tilde{m}: {\cal A}\to [0,\infty]\)</span>에 대하여, <strong><em>additivity</em></strong>, <strong><em>subadditivity</em></strong>, <strong><em><span class="math inline">\(\sigma\)</span>-additivity</em></strong>, <strong><em><span class="math inline">\(\sigma\)</span>-subadditivity</em></strong> 가 의미하는 바를 살펴보자.</p>
+<p><code>1</code>. <strong><span class="math inline">\(\tilde{m}\)</span> is additive on <span class="math inline">\({\cal A}\)</span></strong></p>
+<p><span class="math inline">\({\cal A}\subset 2^\Omega\)</span> 에서의 집합함수 <span class="math inline">\(\tilde{m}:{\cal A} \to [0,\infty]\)</span>을 고려하자. “집함함수 <span class="math inline">\(\tilde{m}\)</span>이 <span class="math inline">\({\cal A}\)</span> 에서 <strong><em>additive</em></strong> 하다”는 것은 아래가 성립한다는 의미이다.</p>
+<p><span class="math display">\[\text{(1)} B_1,\dots, B_n \in {\cal A} ~~\text{(2)}\biguplus_{i=1}^{n}B_i \in {\cal A}~ \Longrightarrow ~ \tilde{m}\left(\biguplus_{i=1}^{n} B_{i}\right)=\sum_{i=1}^{n}\tilde{m}(B_i)\]</span></p>
+<p>단, <span class="math inline">\(B_1,B_2,\cdots, B_n\)</span>는 서로소인 집합열이다.</p>
+</section>
+<section class="slide level2">
+
+<p><code>2</code>. <strong><span class="math inline">\(\tilde{m}\)</span> is <span class="math inline">\(\sigma\)</span>-additive on <span class="math inline">\({\cal A}\)</span></strong></p>
+<p><span class="math inline">\({\cal A}\subset 2^\Omega\)</span> 에서의 집합함수 <span class="math inline">\(\tilde{m}:{\cal A} \to [0,\infty]\)</span>을 고려하자. “집함함수 <span class="math inline">\(\tilde{m}\)</span>이 <span class="math inline">\({\cal A}\)</span> 에서 <span class="math inline">\(\sigma\)</span>-<strong><em>additive</em></strong> 하다”는 것은 아래가 성립한다는 의미이다.</p>
+<p><span class="math display">\[\text{(1)} B_1,B_2,\cdots \in {\cal A} ~~\text{(2)}\biguplus_{i=1}^{\infty}B_i \in {\cal A}~ \Longrightarrow ~ \tilde{m}\left(\biguplus_{i=1}^{\infty} B_{i}\right)=\sum_{i=1}^{\infty}\tilde{m}(B_i)\]</span></p>
+<p>단, <span class="math inline">\(B_1,B_2,\cdots\)</span> 는 서로소인 집합열이다.</p>
+</section>
+<section class="slide level2">
+
+<p><code>3</code>. <strong><span class="math inline">\(\tilde{m}\)</span> is subadditive on <span class="math inline">\({\cal A}\)</span></strong></p>
+<p><span class="math inline">\({\cal A}\subset 2^\Omega\)</span> 에서의 집합함수 <span class="math inline">\(\tilde{m}:{\cal A} \to [0,\infty]\)</span>을 고려하자. “집함함수 <span class="math inline">\(\tilde{m}\)</span>이 <span class="math inline">\({\cal A}\)</span> 에서 <strong><em>subadditive</em></strong> 하다”는 것은 아래가 성립한다는 의미이다.</p>
+<p><span class="math display">\[\text{(1)} A, A_1,\dots, A_n \in {\cal A} ~~\text{(2)}A \subset \bigcup_{i=1}^{n}A_i ~ \Longrightarrow ~ \tilde{m}\left(A\right)\leq\sum_{i=1}^{n}\tilde{m}(A_i)\]</span></p>
+<blockquote>
+<p>만약에 <span class="math inline">\({\cal A}\subset 2^\Omega\)</span> 가 시그마필드이고 <span class="math inline">\(m:{\cal A} \to [0,\infty]\)</span>이 메저라면, “<span class="math inline">\(m\)</span>이 <span class="math inline">\({\cal A}\)</span> 에서 <strong><em>subadditive</em></strong> 하다”는 것은 아래가 성립한다는 의미이다. <span class="math display">\[A_1,\dots, A_n \in {\cal A}~ \Longrightarrow m\left(\bigcup_{i=1}^{n}A_i\right)\leq\sum_{i=1}^{n}m(A_i)\]</span></p>
+</blockquote>
+</section>
+<section class="slide level2">
+
+<p><code>4</code>. <strong><span class="math inline">\(\tilde{m}\)</span> is <span class="math inline">\(\sigma\)</span>-subadditive on <span class="math inline">\({\cal A}\)</span></strong></p>
+<p><span class="math inline">\({\cal A}\subset 2^\Omega\)</span> 에서의 집합함수 <span class="math inline">\(\tilde{m}:{\cal A} \to [0,\infty]\)</span>을 고려하자. “집함함수 <span class="math inline">\(\tilde{m}\)</span>이 <span class="math inline">\({\cal A}\)</span> 에서 <span class="math inline">\(\sigma\)</span>-<strong><em>subadditive</em></strong> 하다”는 것은 아래가 성립한다는 의미이다.</p>
+<p><span class="math display">\[\text{(1)} A, A_1, A_2 \cdots \in {\cal A} ~~\text{(2)}A \subset \bigcup_{i=1}^{\infty}A_i ~ \Longrightarrow ~ \tilde{m}\left(A\right)\leq\sum_{i=1}^{\infty}\tilde{m}(A_i)\]</span></p>
+<blockquote>
+<p>만약에 <span class="math inline">\({\cal A}\subset 2^\Omega\)</span> 가 시그마필드이고 <span class="math inline">\(m:{\cal A} \to [0,\infty]\)</span>이 메저라면, “<span class="math inline">\(m\)</span>이 <span class="math inline">\({\cal A}\)</span> 에서 <span class="math inline">\(\sigma\)</span>-<strong><em>subadditive</em></strong> 하다”는 것은 아래가 성립한다는 의미이다. <span class="math display">\[A_1,A_2,\cdots \in {\cal A}~ \Longrightarrow m\left(\bigcup_{i=1}^{\infty}A_i\right)\leq\sum_{i=1}^{\infty}m(A_i)\]</span></p>
+</blockquote>
+<p><code>#</code></p>
+</section>
+<section class="slide level2">
+
+<p><code># 성질</code> – <span class="math inline">\({\cal A} \subset 2^\Omega\)</span>, <span class="math inline">\(\tilde{m}: {\cal A} \to [0,\infty]\)</span> 라고 하자. 함수 <span class="math inline">\(\tilde{m}\)</span>에 대하여 체크해볼만한 성질들이 있다.</p>
+<ol type="1">
+<li><span class="math inline">\(\sigma\)</span>-additivity <span class="math inline">\(\Rightarrow\)</span> additivity</li>
+<li><span class="math inline">\(\sigma\)</span>-subadditivity <span class="math inline">\(\Rightarrow\)</span> subadditivity</li>
+<li><span class="math inline">\(\Omega\)</span>가 유한집합일 경우
+<ul>
+<li><span class="math inline">\(\sigma\)</span>-additivity <span class="math inline">\(\Leftrightarrow\)</span> additivity</li>
+<li><span class="math inline">\(\sigma\)</span>-subadditivity <span class="math inline">\(\Leftrightarrow\)</span> subadditivity</li>
+</ul></li>
+<li><span class="math inline">\({\cal A}\)</span>가 세미링일 경우
+<ul>
+<li>additivity <span class="math inline">\(\Rightarrow\)</span> monotonicity (<span class="math inline">\(A \subset B \Rightarrow \tilde{m}(A)\leq \tilde{m}(B)\)</span>)</li>
+<li>additivity <span class="math inline">\(\Rightarrow\)</span> sub-additivity</li>
+<li><span class="math inline">\(\sigma\)</span>-additivity <span class="math inline">\(\Rightarrow\)</span> <span class="math inline">\(\sigma\)</span>-subadditivity</li>
+</ul></li>
+</ol>
+<p><code>#</code></p>
+</section>
+<section class="slide level2">
+
+</section>
+<section class="slide level2">
+
+<h3>측도, 유한측도, 확률</h3>
+<p><code># (간단한) 정의</code> – 측도는 정의역이 시그마필드이고 <span class="math inline">\(\sigma\)</span>-additivity 와 <span class="math inline">\(m(\emptyset)=0\)</span> 를 만족하는 집합함수 <span class="math inline">\(m\)</span> 이다.</p>
+<p><code># (간단한) 정의</code> – <span class="math inline">\(m(\Omega)=1\)</span> 인 측도를 확률측도라고 하고, 간단히 확률이라고 줄여부르기도 한다.</p>
+<p><code># (간단한) 정의</code> – <span class="math inline">\(m(\Omega)&lt;\infty\)</span> 인 측도를 유한측도라고 한다.</p>
+</section>
+<section class="slide level2">
+
+<p><code>-</code> 따라서 확률측도는 유한측도이다. 정리하면</p>
+<p><span class="math display">\[\text{prob-msr $\Rightarrow$ finite-msr $\Rightarrow$ msr}\]</span></p>
+<p>이다.</p>
+<p><code>-</code> 르벡메저는 유한측도가 아니다. ## C. 시그마유한측도 <code># 정의</code> – <span class="math inline">\((\Omega,{\cal F}, m)\)</span> 을 측도공간이라고 하자. 아래가 성립한다면</p>
+<p><span class="math display">\[\text{$\exists~ \Omega_1,\Omega_2, \dots  \in {\cal F}$ such that (1) $\cup_{i=1}^{\infty}\Omega_i=\Omega$ and (2) $\forall n \in \mathbb{N}: m(\Omega_n)&lt; \infty$}\]</span></p>
+<p><span class="math inline">\(m\)</span>을 시그마유한측도라고 한다.</p>
+<p><code>#</code> <code># 정의</code> – 공간 <span class="math inline">\((\Omega,{\cal A})\)</span> 를 상상하자. 여기에서 <span class="math inline">\({\cal A}\)</span>는 <span class="math inline">\(\Omega\)</span>에 대한 세미링이다. 만약에 어떠한 집합함수 <span class="math inline">\(\tilde{m}: {\cal A} \to [0,\infty]\)</span> with <span class="math inline">\(\tilde{m}(\emptyset) =0\)</span> 이 아래를 만족한다면</p>
+<p><span class="math display">\[\text{$\exists~ \Omega_1,\Omega_2, \dots  \in {\cal F}$ such that (1) $\cup_{i=1}^{\infty}\Omega_i=\Omega$ and (2) $\forall n \in \mathbb{N}: \tilde{m}(\Omega_n)&lt; \infty$}\]</span></p>
+<p><span class="math inline">\(\tilde{m}\)</span>을 <span class="math inline">\({\cal A}\)</span> 에서 시그마유한하다고 표현한다.</p>
+<p><code>#</code> <code># 예제1</code> – 측도공간 <span class="math inline">\((\mathbb{R}, {\cal R}, \lambda)\)</span> 를 고려하자. 여기에서 <span class="math inline">\(\lambda\)</span> 는 르벡메저 (즉 길이를 재는 함수), <span class="math inline">\({\cal R}\)</span> 은 보렐시그마필드 (즉 실수의 부분집합중 길이를 무모순으로 잴 수 있는 집합들의 모임) 이다. 아래가 성립하므로</p>
+<p><span class="math display">\[\lambda(\mathbb{R})=\infty\]</span></p>
+<p>르벡메저는 유한측도가 아니다. 그렇지만</p>
+<ul>
+<li><span class="math inline">\(\Omega_1 = [-1,1]\)</span></li>
+<li><span class="math inline">\(\Omega_2 = [-2,2] - \Omega_1\)</span></li>
+<li><span class="math inline">\(\Omega_3 = [-3,3] - \Omega_2 -\Omega_1\)</span></li>
+<li><span class="math inline">\(\dots\)</span></li>
+</ul>
+<p>와 같이 설정한다면,</p>
+<p><span class="math display">\[\forall n \in \mathbb{N}: \lambda(\Omega_n) = 2 &lt;\infty\]</span></p>
+<p>가 성립하고</p>
+<p><span class="math display">\[\cup_{i=1}^{\infty}\Omega_i = \Omega = \mathbb{R}\]</span></p>
+<p>이므로 르벡메저는 시그마유한측도이다.</p>
+<p><code>#</code> :::{.callout-note} 시그마유한측도의 뉘앙스는 “<strong>전체 집합을 유한한 값으로 나타낼 수는 없을지라도, 전체집합을 쪼개서 (비록 무한번 쪼개는 한이 있더라도), 쪼갠것들은 유한한 값으로 나타낼 수 있는 방법이 최소한 하나는 존재한다.</strong>” 의 뉘앙스를 가지고 있다. 따라서 시그마유한측도의 정의에서 집합열 <span class="math inline">\(\Omega_1,\Omega_2,\dots\)</span> 를 무한집합열로 잡을 이유는 굳이 없다. (수 틀리면 무한번 쪼개겠다는 것이지 꼭 무한번 쪼개야 할 이유는 없으니까. 유한번 쪼개서 만들 수 있다면 오히려 좋음!) ::: <code># 예제1의 다른풀이</code> – <code>예제1</code>에서 <span class="math inline">\(\Omega_1,\Omega_2,\dots\)</span>을 아래와 같이 설정해도 된다.</p>
+<ul>
+<li><span class="math inline">\(\Omega_1 = [-1,1]\)</span></li>
+<li><span class="math inline">\(\Omega_2 = [-2,2]\)</span></li>
+<li><span class="math inline">\(\Omega_3 = [-3,3]\)</span></li>
+<li><span class="math inline">\(\dots\)</span></li>
+</ul>
+<p>그래도</p>
+<ul>
+<li><span class="math inline">\(\forall n \in \mathbb{N}: \lambda(\Omega_n) = 2n &lt;\infty\)</span></li>
+<li><span class="math inline">\(\cup_{i=1}^{\infty}\Omega_i = \Omega = \mathbb{R}\)</span></li>
+</ul>
+<p>이 성립하기 때문이다.</p>
+<p><code>#</code> <code># 보충학습</code> – <span class="math inline">\(\forall n \in \mathbb{N}: \lambda(\Omega_n) = 2n &lt;\infty\)</span> 이 이상하다면??</p>
+<p>임의의 자연수 <span class="math inline">\(n\)</span>에 대하여 <span class="math inline">\(\frac{1}{n}\)</span>는 양수이다. 즉</p>
+<p><span class="math display">\[\forall n \in \mathbb{N}: \frac{1}{n} &gt; 0\]</span></p>
+<p>이다. 여기에서 <span class="math inline">\(\mathbb{N}\)</span>은 2주차에서 언급한것처럼 <span class="math inline">\(\{\infty\}\)</span> 를 포함하지 않는다. 한편 <span class="math inline">\(\frac{1}{n}\)</span>은 아래가 성립한다.</p>
+<p><span class="math display">\[\lim_{n\to \infty} \frac{1}{n} = 0\]</span></p>
+<p>정리하면 아래가 성립한다.</p>
+<ol type="1">
+<li><span class="math inline">\(\forall n \in \mathbb{N}: \frac{1}{n} &gt; 0\)</span></li>
+<li><span class="math inline">\(\lim_{n\to \infty} \frac{1}{n} = 0\)</span></li>
+</ol>
+<p>여기에서 1에 대해 이해할때는 <span class="math inline">\(n \neq \infty\)</span> 라고 생각하지만 2는 마치 <span class="math inline">\(n=\infty\)</span> 를 대입한듯한 느낌을 줘서 매우 헷갈릴 수 있다. (그렇지만 우리는 헷갈리면 안되죠? 극한과 함수값은 다른거에요)</p>
+<p><code>#</code></p>
+<p><code>-</code> 유한측도이면 시그마유한측도이다. (<span class="math inline">\(\Omega_1=\Omega\)</span>로 잡으면 된다) 따라서 정리하면 아래와 같다. <span class="math display">\[\text{prob-msr $\Rightarrow$ finite-msr $\Rightarrow$ $\sigma$-finite msr $\Rightarrow$ msr}\]</span></p>
 
 
 </section>
