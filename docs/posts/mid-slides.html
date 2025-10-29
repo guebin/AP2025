@@ -143,6 +143,13 @@
   <p class="date">2025-10-28</p>
 </section>
 <section class="slide level2">
+
+<iframe data-external="1" src="https://www.youtube.com/embed/playlist?list=PLQqh36zP38-wN1RrswIjUc9Igod70Ex1L&amp;si=E7iYShJ-Z-UVc7UV" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+<blockquote>
+<p>8주차강의는 중간고사 해설로 대체하겠습니다</p>
+</blockquote>
+</section>
+<section class="slide level2">
 <h2>1. 바늘이 하나 있는 시계 – 10점</h2>
 <p>우리는 단순한 시계 하나를 생각해볼 수 있다. 이 시계에는 바늘이 하나 있고, 이 바늘을 무작위로 돌렸을 때, 바늘이 시계에서 어떤 위치에 멈추게 될 확률을 계산하는 상황을 상상해보자.</p>
 <p>여기서 시계의 위치를 <strong>각도</strong>로 나타낸다. 시계의 각도는 <span class="math inline">\(0\)</span>에서 <span class="math inline">\(2\pi\)</span> 사이로 표현된다. 즉, 시계바늘이 12시를 가리킬 때는 각도가 <span class="math inline">\(0\)</span>이고, 시계바늘이 시계 방향으로 6시를 가리킬 때는 각도가 <span class="math inline">\(\pi\)</span>이다. 이 문제에서 전체 각도 공간을 <strong>sample space</strong> <span class="math inline">\(\Omega\)</span>로 정의한다. <span class="math inline">\(\Omega = [0, 2\pi)\)</span>는 시계의 모든 각도를 나타내는 구간이다.</p>
@@ -158,13 +165,20 @@ P(\Omega^*) = \frac{m(\Omega^*)}{2\pi}
 <li>약속4: 구간 <span class="math inline">\((a,b)\)</span>사이의 모든 무리수의 길이는 <span class="math inline">\(b-a\)</span>이다.</li>
 </ul>
 <p>이와 같은 방식으로 길이를 잰다면 확률을 정의함에 있어서 모순이 일어나지 않는가? 모순이 일어나지 않으면 모순이 없다고 답을 쓰고 모순이 일어난다면 모순이 일어나는 이유를 설명하라.</p>
-<p><br> <br> <br> <br> <br> <br> <br> <br> <br> <br></p>
+<p><code>(풀이)</code></p>
+<p>구간 <span class="math inline">\((a,b)\)</span>사이의 모든 무리수의 길이가 <span class="math inline">\(b-a\)</span>라는 것은 구간 <span class="math inline">\((a,b)\)</span>사이의 모든 유리수의 길이가 0임을 의미하므로 이는 약속3에 모순이 된다.</p>
 </section>
 <section class="slide level2">
 <h2>2. 수학과의 표현 – 10점</h2>
 <p>아래가 의미하는 바를 한국어로 풀어 작성하라. (의역도 정답으로 인정)</p>
 <p><code>(1)</code> <span class="math inline">\(\forall n,m \in \mathbb{N}: n+m \in \mathbb{N}\)</span>.</p>
+<blockquote>
+<p>답: 두 자연수의 합은 항상 자연수이다.</p>
+</blockquote>
 <p><code>(2)</code> <span class="math inline">\(\forall a \in \mathbb{N}: \exists b \in \mathbb{Z}\)</span> such that <span class="math inline">\(a+b=0\)</span>.</p>
+<blockquote>
+<p>답: 모든 자연수는 정수영역에서 덧섬에 대한 역원을 가진다.</p>
+</blockquote>
 </section>
 <section class="slide level2">
 
@@ -173,29 +187,43 @@ P(\Omega^*) = \frac{m(\Omega^*)}{2\pi}
 <p>전사, 단사, 전단사중 하나를 답으로 쓰면 됩니다. (답만 쓰면 됩니다)</p>
 </blockquote>
 <p><code>(3)</code> <span class="math inline">\(\forall x, x' \in X, f(x)=f(x') \Longrightarrow x=x'\)</span></p>
+<blockquote>
+<p>답: 단사</p>
+</blockquote>
 <p><code>(4)</code> <span class="math inline">\(\forall y \in Y, \exists x \in X\)</span> such that <span class="math inline">\(y=f(x)\)</span></p>
-<p><br> <br> <br> <br> <br> <br> <br> <br> <br> <br></p>
+<blockquote>
+<p>답: 전사</p>
+</blockquote>
 </section>
 <section class="slide level2">
 <h2>3. 유리수의 카디널리티 – 10점</h2>
 <p>자연수와 <span class="math inline">\([0,1]\cap \mathbb{Q}\)</span><sup>1</sup>의 카디널리티가 동일함을 보여라. (단, 이 문제에서 <span class="math inline">\(|\mathbb{Q}|=\aleph_0\)</span> 임은 모른다고 가정)</p>
-<p><br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br></p>
+<p><code>(풀이)</code></p>
+<p>편의상 <span class="math inline">\(Q=[0,1]\cap \mathbb{Q}\)</span>라고 하자.</p>
+<ol type="1">
+<li><span class="math inline">\(f(x)=\frac{1}{x}\)</span>는 <span class="math inline">\(\mathbb{N} \to Q\)</span>인 단사함수이다.</li>
+<li>집합 <span class="math inline">\(\{a(1),a(2),a(3),a(4),a(5)\dots\}=\{\frac{1}{2},\frac{2}{2},\frac{1}{3},\frac{2}{3},\frac{3}{3},\dots\}\)</span>을 고려하자. <span class="math inline">\(a(n)\)</span>은 <span class="math inline">\(\mathbb{N} \to Q\)</span>인 전사함수이다.</li>
+</ol>
+<p>따라서 <span class="math inline">\(Q\)</span>와 <span class="math inline">\(\mathbb{N}\)</span>의 카디널리티는 동일하다.</p>
 <aside><ol class="aside-footnotes"><li id="fn1"><p>구간 <span class="math inline">\([0,1]\)</span>사이의 유리수</p></li></ol></aside></section>
 <section class="slide level2">
 <h2>4. 실수의 카디널리티 – 10점</h2>
 <p>자연수집합 <span class="math inline">\(\mathbb{N}\)</span>에서 <span class="math inline">\([0,1]\)</span>로의 전사함수가 존재하지 않음을 보여라.</p>
-<p><br> <br> <br> <br> <br> <br> <br> <br> <br> <br></p>
+<p><code>(풀이)</code> – 생략. 강의노트 참고</p>
 </section>
 <section class="slide level2">
 <h2>5. 카디널리티와 전단사함수 – 10점</h2>
 <p><code>(1)</code> 구간 <span class="math inline">\([0,1]\)</span>과 <span class="math inline">\([0,2]\)</span>의 카디널리티를 비교하고, 두 집합의 카디널리티가 서로 다른지 또는 같은지를 판단한 뒤, 그 이유를 설명하라.</p>
 <p><code>(2)</code> 함수 <span class="math inline">\(f:\mathbb{R}\to\mathbb{R}\)</span>가 <span class="math inline">\(f(x)=x^2\)</span>로 정의되어 있을 때, 이 함수가 전사함수인지 아닌지 단사함수인지 아닌지 판단하고 그 근거를 설명하라.</p>
-<p><br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br></p>
+<p><code>(풀이)</code></p>
+<p><code>(1)</code> <span class="math inline">\(f(x)=2x\)</span>는 <span class="math inline">\([0,1] \to [0,2]\)</span>에서의 전단사함수이므로 두 구간의 카디널리티는 같다.</p>
+<p><code>(2)</code> <span class="math inline">\(f(-1)=f(1)\)</span>이므로 단사가 아니며, <span class="math inline">\(f(x)=-1\)</span>에 대응하는 <span class="math inline">\(x\)</span>가 존재하지 않으므로 전사가 아니다.</p>
 </section>
 <section class="slide level2">
 <h2>6. 시그마필드 – 10점</h2>
 <p><span class="math inline">\(\Omega=\{1,2,3,4\}\)</span>이라고 하자. 내가 관심이 있는 확률은 <span class="math inline">\(\mathbb{P}(\{1,3\})\)</span>, <span class="math inline">\(\mathbb{P}(\{2,4\})\)</span> 밖에 없다고 하자. 이러한 확률들이 무모순으로 정의되기 위한 최소한의 시그마필드 <span class="math inline">\({\cal F}\)</span>를 정의하라. – 10점</p>
-<p><br> <br> <br> <br> <br> <br> <br> <br> <br> <br></p>
+<p><code>(풀이)</code></p>
+<p><span class="math display">\[\{\emptyset,\{1,3\}, \{2,4\},\Omega\}\]</span></p>
 </section>
 <section class="slide level2">
 <h2>7. 조건의 정리 – 10점</h2>
@@ -208,14 +236,23 @@ P(\Omega^*) = \frac{m(\Omega^*)}{2\pi}
 </ol>
 <p>아래를 보여라. (모두 맞출 경우만 정답으로 인정)</p>
 <p><code>(1)</code> <span class="math inline">\({\cal F}\)</span>가 전체집합을 포함함을 보여라.</p>
+<p><code>(풀이)</code> <span class="math inline">\({\cal F}\neq \emptyset\)</span> 이라고 하였으므로, 적어도 하나의 원소는 <span class="math inline">\({\cal F}\)</span>에 소속된다. 그 원소를 <span class="math inline">\(A\)</span>라고 하자. <span class="math inline">\(A \in {\cal F}\)</span>이라면 <span class="math inline">\(A^c \in {\cal F}\)</span>이고 (조건2), <span class="math inline">\(A\cup A^c =\Omega \in {\cal F}\)</span>이다(조건4).</p>
 <p><code>(2)</code> <span class="math inline">\({\cal F}\)</span>가 차집합에 닫혀있음을 보여라.</p>
+<p><code>(풀이)</code> <span class="math inline">\(A-B = A \cap B^c\)</span>이고 집합 <span class="math inline">\({\cal F}\)</span>는 교집합과 여집합에 닫혀있으므로 (조건2,조건3) 차집합에 닫혀있다.</p>
 <p><code>(3)</code> <span class="math inline">\({\cal F}\)</span>가 합집합에 닫혀있음을 보여라.</p>
-<p><br> <br> <br> <br> <br> <br> <br> <br> <br> <br></p>
+<p><code>(풀이)</code> <span class="math inline">\(A\cup B = (A^c \cap B^c)^c\)</span>이고 집합 <span class="math inline">\({\cal F}\)</span>는 교집합과 여집합에 닫혀있으므로 (조건2,조건3) 합집합에 닫혀있다.</p>
 </section>
 <section class="slide level2">
 <h2>8. 확률측도와 측도 – 10점</h2>
 <p><span class="math inline">\(\Omega = \{H,T\}\)</span>에 대한 시그마필드 <span class="math inline">\({\cal F}=\{\emptyset, \{H\}, \{T\},\Omega\}\)</span>를 고려하자.</p>
 <p><code>(1)</code> 잴 수 있는 공간 <span class="math inline">\((\Omega, {\cal F})\)</span>에서 확률측도의 정의를 만족하는 함수 <span class="math inline">\(f: \Omega \to [0,1]\)</span>를 제시하라.</p>
+<p><code>(풀이)</code></p>
+<ul>
+<li><span class="math inline">\(f(\emptyset) =0\)</span></li>
+<li><span class="math inline">\(f(\Omega) =1\)</span></li>
+<li><span class="math inline">\(f(\{H\}) = \frac{1}{2}\)</span></li>
+<li><span class="math inline">\(f(\{T\}) =\frac{1}{2}\)</span></li>
+</ul>
 <p><code>(2)</code> 잴 수 있는 공간 <span class="math inline">\((\Omega, {\cal F})\)</span>에서 측도의 정의를 만족하지만 확률측도의 정의를 만족하지 않는 함수 <span class="math inline">\(f: \Omega \to [0,\infty]\)</span>를 제시하라. 단 아래의 함수를 제시할 경우 정답으로 인정하지 않음.</p>
 <ul>
 <li><span class="math inline">\(f(\emptyset)=0\)</span></li>
@@ -223,7 +260,13 @@ P(\Omega^*) = \frac{m(\Omega^*)}{2\pi}
 <li><span class="math inline">\(f(\{T\})=0\)</span></li>
 <li><span class="math inline">\(f(\Omega)=0\)</span></li>
 </ul>
-<p><br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br></p>
+<p><code>(풀이)</code></p>
+<ul>
+<li><span class="math inline">\(f(\emptyset)=0\)</span></li>
+<li><span class="math inline">\(f(\{H\})=3\)</span></li>
+<li><span class="math inline">\(f(\{T\})=5\)</span></li>
+<li><span class="math inline">\(f(\Omega)=8\)</span></li>
+</ul>
 </section>
 <section class="slide level2">
 <h2>9. 보렐시그마필드 – 10점</h2>
@@ -233,10 +276,13 @@ P(\Omega^*) = \frac{m(\Omega^*)}{2\pi}
 <p>모두 맞출 경우만 정답으로 인정</p>
 </blockquote>
 <p><code>(1)</code> <span class="math inline">\(\{2\} \in {\cal R}\)</span></p>
+<p><code>(풀이)</code> <span class="math inline">\(\{2\} = \cap_{n=1}^{\infty}(2-\frac{1}{n},2] \in {\cal R}\)</span></p>
 <p><code>(2)</code> <span class="math inline">\([0,2] \in {\cal R}\)</span></p>
+<p><code>(풀이)</code> <span class="math inline">\([0,2]= (0,2]\cup \{0\}\)</span> 이므로 <span class="math inline">\([0,2] \in {\cal R}\)</span>.</p>
 <p><code>(3)</code> <span class="math inline">\([0,\infty) \in {\cal R}\)</span></p>
+<p><code>(풀이)</code> <span class="math inline">\([0,n) = (0,n] -\{n\} \cup \{0\}\)</span> 이므로 <span class="math inline">\([0,n) \in {\cal R}\)</span> 이고 따라서 <span class="math inline">\([0,\infty) = \cup_{n=1}^{\infty}[0,n) \in {\cal R}\)</span> 이다.</p>
 <p><code>(4)</code> <span class="math inline">\(\mathbb{Q} \in \mathbb{R}\)</span></p>
-<p><br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br></p>
+<p><code>(풀이)</code> (1)의 논의를 확장하면 <span class="math inline">\(\forall q \in \mathbb{Q}: \{q\} \in {\cal R}\)</span> 이고 따라서 그것의 countable union역시 <span class="math inline">\({\cal R}\)</span>의 원소이다.</p>
 </section>
 <section class="slide level2">
 <h2>10. 확장이론 – 10점</h2>
@@ -249,6 +295,20 @@ P(\Omega^*) = \frac{m(\Omega^*)}{2\pi}
 <li><span class="math inline">\(\tilde{P}(\Omega) = 1\)</span></li>
 </ul>
 <p><span class="math inline">\(\tilde{P}\)</span>는 <span class="math inline">\(\sigma({\cal A})\)</span>에서의 확률측도로 유일하게 확장가능한가?</p>
+<p><code>(풀이)</code></p>
+<p>결국 <span class="math inline">\(\sigma({\cal A})\)</span>에서의 확률을 무모순으로 정의하기 위해서는</p>
+<ul>
+<li><span class="math inline">\(P(\{2,3\})=a\)</span></li>
+<li><span class="math inline">\(P(\{1\})=b\)</span></li>
+<li><span class="math inline">\(P(\{4\})=c\)</span></li>
+</ul>
+<p>의 값을 무모순으로 정의해야 한다. 이를 위해서는</p>
+<ul>
+<li><span class="math inline">\(a+b+c=1\)</span></li>
+<li><span class="math inline">\(a+b=\frac{1}{2}\)</span></li>
+<li><span class="math inline">\(a+c=\frac{1}{2}\)</span></li>
+</ul>
+<p>를 만족하는 해를 찾아야 하는데 이 해는 <span class="math inline">\(a=0, b=\frac{1}{2}, c=\frac{1}{2}\)</span> 이외에 없다. 따라서 유일하게 확장가능하다.</p>
 
 
 </section>
