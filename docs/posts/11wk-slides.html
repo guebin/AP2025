@@ -11,7 +11,7 @@
 
   <meta name="author" content="최규빈">
   <meta name="dcterms.date" content="2025-11-04">
-  <title>AP2025 – 10wk - 측도론의 중요이론들 (2)</title>
+  <title>AP2025 – 11wk - 측도론의 중요이론들 (3)</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -130,7 +130,7 @@
     <div class="slides">
 
 <section class="quarto-title-block center">
-  <h1 class="title">10wk - 측도론의 중요이론들 (2)</h1>
+  <h1 class="title">11wk - 측도론의 중요이론들 (3)</h1>
 
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
@@ -144,209 +144,61 @@
 </section>
 <section class="slide level2">
 
-<h3>강의영상</h3>
-<!--  -->
+<h3>집합함수</h3>
+<p><code># 정의</code>: <span class="math inline">\(\Omega\)</span>의 부분집합들의 모임 <span class="math inline">\({\cal A}\)</span> 에서 정의된 집합함수 <span class="math inline">\(\tilde{m}: {\cal A}\to [0,\infty]\)</span>에 대하여, <strong><em>additivity</em></strong>, <strong><em>subadditivity</em></strong>, <strong><em><span class="math inline">\(\sigma\)</span>-additivity</em></strong>, <strong><em><span class="math inline">\(\sigma\)</span>-subadditivity</em></strong> 가 의미하는 바를 살펴보자.</p>
+<p><code>1</code>. <strong><span class="math inline">\(\tilde{m}\)</span> is additive on <span class="math inline">\({\cal A}\)</span></strong></p>
+<p><span class="math inline">\({\cal A}\subset 2^\Omega\)</span> 에서의 집합함수 <span class="math inline">\(\tilde{m}:{\cal A} \to [0,\infty]\)</span>을 고려하자. “집함함수 <span class="math inline">\(\tilde{m}\)</span>이 <span class="math inline">\({\cal A}\)</span> 에서 <strong><em>additive</em></strong> 하다”는 것은 아래가 성립한다는 의미이다.</p>
+<p><span class="math display">\[\text{(1)} B_1,\dots, B_n \in {\cal A} ~~\text{(2)}\biguplus_{i=1}^{n}B_i \in {\cal A}~ \Longrightarrow ~ \tilde{m}\left(\biguplus_{i=1}^{n} B_{i}\right)=\sum_{i=1}^{n}\tilde{m}(B_i)\]</span></p>
+<p>단, <span class="math inline">\(B_1,B_2,\cdots, B_n\)</span>는 서로소인 집합열이다.</p>
 </section>
 <section class="slide level2">
 
-<h3>딘킨의 <span class="math inline">\(\pi-\lambda\)</span> theorem</h3>
-<p><code># 이론</code> – Dynkin’s <span class="math inline">\(\pi-\lambda\)</span> theorem (<span class="math inline">\(\star\)</span>)</p>
-<p><span class="math inline">\({\cal P} \subset 2^{\Omega}\)</span>가 파이시스템이면 <span class="math inline">\(l({\cal P})=\sigma({\cal P})\)</span>이다.</p>
+<p><code>2</code>. <strong><span class="math inline">\(\tilde{m}\)</span> is <span class="math inline">\(\sigma\)</span>-additive on <span class="math inline">\({\cal A}\)</span></strong></p>
+<p><span class="math inline">\({\cal A}\subset 2^\Omega\)</span> 에서의 집합함수 <span class="math inline">\(\tilde{m}:{\cal A} \to [0,\infty]\)</span>을 고려하자. “집함함수 <span class="math inline">\(\tilde{m}\)</span>이 <span class="math inline">\({\cal A}\)</span> 에서 <span class="math inline">\(\sigma\)</span>-<strong><em>additive</em></strong> 하다”는 것은 아래가 성립한다는 의미이다.</p>
+<p><span class="math display">\[\text{(1)} B_1,B_2,\cdots \in {\cal A} ~~\text{(2)}\biguplus_{i=1}^{\infty}B_i \in {\cal A}~ \Longrightarrow ~ \tilde{m}\left(\biguplus_{i=1}^{\infty} B_{i}\right)=\sum_{i=1}^{\infty}\tilde{m}(B_i)\]</span></p>
+<p>단, <span class="math inline">\(B_1,B_2,\cdots\)</span> 는 서로소인 집합열이다.</p>
+</section>
+<section class="slide level2">
+
+<p><code>3</code>. <strong><span class="math inline">\(\tilde{m}\)</span> is subadditive on <span class="math inline">\({\cal A}\)</span></strong></p>
+<p><span class="math inline">\({\cal A}\subset 2^\Omega\)</span> 에서의 집합함수 <span class="math inline">\(\tilde{m}:{\cal A} \to [0,\infty]\)</span>을 고려하자. “집함함수 <span class="math inline">\(\tilde{m}\)</span>이 <span class="math inline">\({\cal A}\)</span> 에서 <strong><em>subadditive</em></strong> 하다”는 것은 아래가 성립한다는 의미이다.</p>
+<p><span class="math display">\[\text{(1)} A, A_1,\dots, A_n \in {\cal A} ~~\text{(2)}A \subset \bigcup_{i=1}^{n}A_i ~ \Longrightarrow ~ \tilde{m}\left(A\right)\leq\sum_{i=1}^{n}\tilde{m}(A_i)\]</span></p>
 <blockquote>
-<p>Note: <span class="math inline">\({\cal P}\)</span>를 포함하는 최소한의 시그마필드를 찾기 위해서는 <span class="math inline">\({\cal P}\)</span>를 포함하는 최소한의 람다시스템만 찾아도 충분하다는 의미이다.</p>
+<p>만약에 <span class="math inline">\({\cal A}\subset 2^\Omega\)</span> 가 시그마필드이고 <span class="math inline">\(m:{\cal A} \to [0,\infty]\)</span>이 메저라면, “<span class="math inline">\(m\)</span>이 <span class="math inline">\({\cal A}\)</span> 에서 <strong><em>subadditive</em></strong> 하다”는 것은 아래가 성립한다는 의미이다. <span class="math display">\[A_1,\dots, A_n \in {\cal A}~ \Longrightarrow m\left(\bigcup_{i=1}^{n}A_i\right)\leq\sum_{i=1}^{n}m(A_i)\]</span></p>
+</blockquote>
+</section>
+<section class="slide level2">
+
+<p><code>4</code>. <strong><span class="math inline">\(\tilde{m}\)</span> is <span class="math inline">\(\sigma\)</span>-subadditive on <span class="math inline">\({\cal A}\)</span></strong></p>
+<p><span class="math inline">\({\cal A}\subset 2^\Omega\)</span> 에서의 집합함수 <span class="math inline">\(\tilde{m}:{\cal A} \to [0,\infty]\)</span>을 고려하자. “집함함수 <span class="math inline">\(\tilde{m}\)</span>이 <span class="math inline">\({\cal A}\)</span> 에서 <span class="math inline">\(\sigma\)</span>-<strong><em>subadditive</em></strong> 하다”는 것은 아래가 성립한다는 의미이다.</p>
+<p><span class="math display">\[\text{(1)} A, A_1, A_2 \cdots \in {\cal A} ~~\text{(2)}A \subset \bigcup_{i=1}^{\infty}A_i ~ \Longrightarrow ~ \tilde{m}\left(A\right)\leq\sum_{i=1}^{\infty}\tilde{m}(A_i)\]</span></p>
+<blockquote>
+<p>만약에 <span class="math inline">\({\cal A}\subset 2^\Omega\)</span> 가 시그마필드이고 <span class="math inline">\(m:{\cal A} \to [0,\infty]\)</span>이 메저라면, “<span class="math inline">\(m\)</span>이 <span class="math inline">\({\cal A}\)</span> 에서 <span class="math inline">\(\sigma\)</span>-<strong><em>subadditive</em></strong> 하다”는 것은 아래가 성립한다는 의미이다. <span class="math display">\[A_1,A_2,\cdots \in {\cal A}~ \Longrightarrow m\left(\bigcup_{i=1}^{\infty}A_i\right)\leq\sum_{i=1}^{\infty}m(A_i)\]</span></p>
 </blockquote>
 <p><code>#</code></p>
 </section>
 <section class="slide level2">
 
-<p>(증명)</p>
-<p>아래를 보이는 것이 목표이다.</p>
-<blockquote>
-<p><strong>(a)</strong> <span class="math inline">\(l({\cal P})=\sigma({\cal P})\)</span></p>
-</blockquote>
-<p>이를 위해서는 아래를 보이면 충분하다.</p>
-<blockquote>
-<p><strong>(b)</strong> <span class="math inline">\(l(\cal P) \subset \sigma({\cal P})\)</span> and <span class="math inline">\(l(\cal P) \supset \sigma({\cal P})\)</span>.</p>
-</blockquote>
-<p>그런데 <span class="math inline">\(l(\cal P) \subset \sigma({\cal P})\)</span> 은 당연하므로<sup>1</sup> 우리는 아래를 보이면 충분하다.</p>
-<blockquote>
-<p><strong>(c)</strong> <span class="math inline">\(l({\cal P}) \supset \sigma({\cal P})\)</span></p>
-</blockquote>
-<aside><ol class="aside-footnotes"><li id="fn1"><p><span class="math inline">\(l({\cal P})\)</span>는 1차확장상태이고 <span class="math inline">\(\sigma({\cal P})\)</span>는 2차확장상태잖아요..?</p></li></ol></aside></section>
-<section class="slide level2">
-
-<p>그런데 만약 <span class="math inline">\(l({\cal P})\)</span> 가 시그마필드라면 <span class="math inline">\(\sigma({\cal P})\)</span>의 정의에 의하여 (c)가 성립하므로 우리는 아래를 보이면 충분하다.</p>
-<blockquote>
-<p><strong>(d)</strong> <span class="math inline">\(l({\cal P})\)</span> is <span class="math inline">\(\sigma\)</span>-field</p>
-</blockquote>
-<p>그런데 만약 <span class="math inline">\(l({\cal P})\)</span> 은 이미 람다시스템이므로 <span class="math inline">\(l({\cal P})\)</span>가 추가적으로 파이시스템임을 보인다면 <span class="math inline">\(l({\cal P})\)</span>를 시그마필드라고 주장할 수 있다. 따라서 우리는 아래가 성립함을 보이면 충분하다.</p>
-<blockquote>
-<p><strong>(e)</strong> <span class="math inline">\(l({\cal P})\)</span> is <span class="math inline">\(\pi\)</span>-system</p>
-</blockquote>
-<p><span class="math inline">\({\cal D}_E = \{F: E\cap F \in l({\cal P}), ~F \in l({\cal P})\}\)</span> 라고 정의할 때 <span class="math inline">\(\forall E \in l({\cal P}): ~ {\cal D}_E = l({\cal P})\)</span> 를 보이면, <span class="math inline">\(l({\cal P})\)</span> 이 파이시스템을 보이는 것이 된다. 즉 아래를 보이면 된다.</p>
-<blockquote>
-<p><strong>(f)</strong> <span class="math inline">\(\forall E \in l({\cal P}): ~ {\cal D}_E = l({\cal P})\)</span>.</p>
-</blockquote>
-</section>
-<section class="slide level2">
-
-<p>이를 위해서는 다시 아래를 보이면 충분하다.</p>
-<blockquote>
-<p><strong>(g)</strong> <span class="math inline">\(\forall E \in l({\cal P}): ~ {\cal D}_E \subset l({\cal P})\)</span> and <span class="math inline">\(l({\cal P}) \subset {\cal D}_E\)</span></p>
-</blockquote>
-<p>그런데 <span class="math inline">\({\cal D}_E \subset l({\cal P})\)</span> 는 당연하므로<sup>1</sup> 아래를 보여도 충분하다.</p>
-<blockquote>
-<p><strong>(h)</strong> <span class="math inline">\(\forall E \in l({\cal P}): ~ l({\cal P}) \subset {\cal D}_E\)</span></p>
-</blockquote>
-<p>그런데 임의의 <span class="math inline">\(E \in l({\cal P})\)</span>에 대하여 <span class="math inline">\({\cal D}_E\)</span>가 <span class="math inline">\({\cal P}\)</span>를 포함하는 람다시스템이라면, <span class="math inline">\(l({\cal P})\)</span>의 정의에 의하여 (h)가 성립하므로 아래를 보이면된다.</p>
-<blockquote>
-<p><strong>(i)</strong> <span class="math inline">\(\forall E \in l({\cal P}):\)</span> (1) <span class="math inline">\(\Omega \in {\cal D}_E\)</span> (2) <span class="math inline">\({\cal D}_E\)</span> is <span class="math inline">\(^c\)</span>-closed (3) <span class="math inline">\({\cal D}_E\)</span> is <span class="math inline">\(\uplus\)</span>-closed. <br> <strong>(j)</strong> <span class="math inline">\(\forall E \in l({\cal P}): {\cal P} \subset {\cal D}_E\)</span>.</p>
-</blockquote>
-<aside><ol class="aside-footnotes"><li id="fn2"><p>애초에 <span class="math inline">\({\cal D}_E\)</span> 자체가 <span class="math inline">\(l({\cal P})\)</span> 의 원소들중에서 특정조건을 만족하는애들만 고려하는거잖아요?</p></li></ol></aside></section>
-<section class="slide level2">
-
-<p>“(i) 임의의 <span class="math inline">\(E \in l({\cal P})\)</span>에 대해서 <span class="math inline">\({\cal D}_E\)</span>가 람다시스템”임을 체크해보자.</p>
-<p>(세부증명1)</p>
+<p><code># 성질</code> – <span class="math inline">\({\cal A} \subset 2^\Omega\)</span>, <span class="math inline">\(\tilde{m}: {\cal A} \to [0,\infty]\)</span> 라고 하자. 함수 <span class="math inline">\(\tilde{m}\)</span>에 대하여 체크해볼만한 성질들이 있다.</p>
 <ol type="1">
-<li>생각을 편하게 하기 위해서 <span class="math inline">\(E \in l({\cal P})\)</span>를 고정하자. [<span class="math inline">\(\Omega \in {\cal D}_E\)</span>는 성립한다. 왜냐하면 <span class="math inline">\({\cal D}_E\)</span>에 속하기 위해서는 (a) <span class="math inline">\(l({\cal P})\)</span>의 원소이며 (b) <span class="math inline">\(E\)</span>와 교집합한 결과가 다시 <span class="math inline">\(l({\cal P})\)</span>의 원소이면 되는데 <span class="math inline">\(\Omega\)</span>는 (a),(b)를 모두 만족하므로.] 이때 […]의 논리가 임의의 <span class="math inline">\(E \in l({\cal P})\)</span>에 대해서도 성립하므로 모든 <span class="math inline">\(E\)</span>에 대하여 <span class="math inline">\({\cal D}_E\)</span>는 전체집합을 포함함을 보일 수 있다.</li>
+<li><span class="math inline">\(\sigma\)</span>-additivity <span class="math inline">\(\Rightarrow\)</span> additivity</li>
+<li><span class="math inline">\(\sigma\)</span>-subadditivity <span class="math inline">\(\Rightarrow\)</span> subadditivity</li>
+<li><span class="math inline">\(\Omega\)</span>가 유한집합일 경우
+<ul>
+<li><span class="math inline">\(\sigma\)</span>-additivity <span class="math inline">\(\Leftrightarrow\)</span> additivity</li>
+<li><span class="math inline">\(\sigma\)</span>-subadditivity <span class="math inline">\(\Leftrightarrow\)</span> subadditivity</li>
+</ul></li>
+<li><span class="math inline">\({\cal A}\)</span>가 세미링일 경우
+<ul>
+<li>additivity <span class="math inline">\(\Rightarrow\)</span> monotonicity (<span class="math inline">\(A \subset B \Rightarrow \tilde{m}(A)\leq \tilde{m}(B)\)</span>)</li>
+<li>additivity <span class="math inline">\(\Rightarrow\)</span> sub-additivity</li>
+<li><span class="math inline">\(\sigma\)</span>-additivity <span class="math inline">\(\Rightarrow\)</span> <span class="math inline">\(\sigma\)</span>-subadditivity</li>
+</ul></li>
 </ol>
-</section>
-<section class="slide level2">
-
-<ol start="2" type="1">
-<li>생각을 편하게 하기 위해서 <span class="math inline">\(E \in l({\cal P})\)</span>를 고정하자. [람다시스템의 두번째 조건 “여집합에 닫혀있음”은 “포함관계에 있는 차집합에 닫혀있음”으로 바꿀 수 있으므로 그걸 체크해보자. &lt;<span class="math inline">\(A \subset B\)</span>을 만족하는 <span class="math inline">\({\cal D}_E\)</span>의 두 원소 <span class="math inline">\(A,B\)</span>를 뽑자. 우리는 <span class="math inline">\(B-A\)</span>가 <span class="math inline">\({\cal D}_E\)</span>의 원소임을 보이면된다. 즉 <span class="math inline">\((B-A) \cap E \in l({\cal P})\)</span>임을 보이면된다. 그런데 (벤다이어그램을 그려보면) <span class="math inline">\((B-A)\cap E  = (B\cap E) - (A \cap E)\)</span> 임을 알 수 있다. <span class="math inline">\(B\cap E\)</span>, <span class="math inline">\(A\cap E\)</span>, <span class="math inline">\((B\cap E) - (A\cap E)\)</span>가 각각 <span class="math inline">\(l({\cal P})\)</span>의 원소이므로 <span class="math inline">\(B-A \in {\cal D}_E\)</span> 임을 보일 수 있다.&gt; 이때 &lt;…&gt;의 논리가 <span class="math inline">\(A\subset B\)</span>를 만족하는 <span class="math inline">\({\cal D}_E\)</span>의 임의의 두 원소에 대해서 성립하므로 고정된 <span class="math inline">\(E\)</span>에 대해서 <span class="math inline">\({\cal D}_E\)</span>는 포함관계에 있는 차집합 연산에 닫혀있다고 볼 수 있다.] 이때 […]의 논리가 임의의 <span class="math inline">\(E \in l({\cal P})\)</span>에 대해서도 성립하므로 모든 <span class="math inline">\(E\)</span>에 대하여 <span class="math inline">\({\cal D}_E\)</span>는 포함관계에 있는 차집합연산에 닫혀있음을 보일 수 있다.</li>
-</ol>
-</section>
-<section class="slide level2">
-
-<ol start="3" type="1">
-<li>생각을 편하게 하기 위해서 <span class="math inline">\(E \in l({\cal P})\)</span>를 고정하자. [<span class="math inline">\({\cal D}_E\)</span>가 <span class="math inline">\(\uplus\)</span>-closed임을 보이면 된다. &lt;<span class="math inline">\({\cal D}_E\)</span>에서 서로소인 무한집합열 <span class="math inline">\(B_1,B_2,\dots\)</span>을 선택하여 고정하자. 우리는 <span class="math inline">\((\uplus_{n=1}^{\infty} B_n\big) \cap E \in l({\cal P})\)</span>임을 보이면 된다. 그런데 모든 <span class="math inline">\(n\)</span>에 대하여 <span class="math inline">\(B_n \cap E \in l(P)\)</span>이므로 <span class="math inline">\(\uplus_{n=1}^{\infty} B_n \in {\cal D}_E\)</span>를 보일 수 있다.&gt; 그런데 &lt;…&gt;의 논의는 임의의 <span class="math inline">\(B_1,B_2,\dots\)</span>에 대해서 모두 성립하므로 <span class="math inline">\({\cal D}_E\)</span>는 고정된 <span class="math inline">\(E\)</span>에 대하여 <span class="math inline">\(\uplus\)</span>-closed임을 알 수 있다.] 그런데 […]의 논의는 임의의 <span class="math inline">\(E\)</span>에 대하여 성립하므로 <span class="math inline">\({\cal D}_E\)</span>는 임의의 <span class="math inline">\(E\)</span>에 대하여 <span class="math inline">\(\uplus\)</span>-closed임을 알 수 있다.</li>
-</ol>
-<p>따라서 <span class="math inline">\({\cal D}_E\)</span>는 람다시스템이다</p>
-<p>(세부증명1끝)</p>
-</section>
-<section class="slide level2">
-
-<p>이제 “(j) 임의의 <span class="math inline">\(E \in l({\cal P})\)</span>에 대하여 <span class="math inline">\({\cal P} \subset {\cal D}_E\)</span>”임을 보이자.</p>
-<p>(세부증명2)</p>
-<p>먼저 아래의 사실을 증명하자.</p>
-<p><code># claim</code> – 세부증명2를 위한 우리의 무기 <span class="math display">\[X \in {\cal P} \Rightarrow {\cal P} \subset {\cal D}_X\]</span></p>
-<p>proof. <span class="math inline">\(X \in {\cal P}\)</span> 가 주어진 상황에서 <span class="math inline">\({\cal P}\)</span>의 임의의 원소는 “(1) <span class="math inline">\(l(P)\)</span>의 원소이고 (2) <span class="math inline">\(X\)</span>와 교지합연산한 결과가 <span class="math inline">\(l(P)\)</span>의 원소임”을 만족한다. 조건1-2는 <span class="math inline">\({\cal D}_X\)</span>의 원소일 조건이므로 <span class="math inline">\(X \in {\cal P} \Rightarrow {\cal P} \subset {\cal D}_X\)</span>가 증명되었다.</p>
 <p><code>#</code></p>
-</section>
-<section class="slide level2">
-
-<p>이제 <span class="math inline">\(\forall E \in l({\cal P}): {\cal P} \subset {\cal D}_E\)</span>을 보이자. 편의상 <span class="math inline">\(E \in l({\cal P})\)</span>를 고정하자. [<span class="math inline">\({\cal P} \subset {\cal D}_E\)</span> 임을 보이기 위해서는 <span class="math inline">\(\forall X \in {\cal P}: X \in {\cal D}_E\)</span> 임을 보여야 한다. 우리의 무기에 의하여 <span class="math inline">\(X \in {\cal P} \Rightarrow {\cal P} \subset {\cal D}_X\)</span> 임을 쓸 수 있다. 그런데 <span class="math inline">\({\cal D}_X\)</span>는 (h)에 의하여 람다시스템이되므로 (따라서 <span class="math inline">\({\cal D}_X\)</span>는 졸지에 <span class="math inline">\({\cal P}\)</span>를 포함하는 람다시스템이 되었음) 아래가 성립한다.</p>
-<p><span class="math display">\[X \in {\cal P} \Rightarrow l({\cal P}) \subset {\cal D}_X\]</span></p>
-<p>그런데 “<span class="math inline">\(l({\cal P}) \subset {\cal D}_X\)</span>” 이 의미하는건 <span class="math inline">\(l({\cal P}) = {\cal D}_X\)</span> 라는 의미이므로 <span class="math inline">\(E \in {\cal D}_X\)</span> 가 만족한다. 따라서 <span class="math inline">\(E \cap X \in l({\cal P})\)</span>가 만족한다. 정리하면 아래가 만족한다.</p>
-<p><span class="math display">\[X \in {\cal P} \Rightarrow E \cap X \in l({\cal P})\]</span> 따라서 <span class="math inline">\({\cal P}\)</span>의 모든원소는 <span class="math inline">\(l({\cal P})\)</span>의 원소이고 <span class="math inline">\(E\)</span>와 교집합연산을 하였을때 그 결과가 <span class="math inline">\(l({\cal P})\)</span>에 속한다. 즉 <span class="math inline">\({\cal P}\)</span>의 모든 원소는 <span class="math inline">\({\cal D}_E\)</span>의 정의를 만족한다. 따라서 <span class="math inline">\({\cal P} \subset {\cal D}_E\)</span>.] 이때 […]의 논의가 임의의 <span class="math inline">\(E \in l({\cal P})\)</span>에 대하여 성립하므로 증명끝.</p>
-</section>
-<section class="slide level2">
-
-<p><code># 예제1</code></p>
-<p><span class="math inline">\(\Omega = \{1,2,3,4\}\)</span> 에 대하여 관심있는 집합을 아래와 같이 설정하자.</p>
-<p><span class="math display">\[{\cal A} = \{\emptyset, \{1\}, \{2\} \}\]</span></p>
-<p><span class="math inline">\({\cal A}\)</span>를 포함하는 최소한의 시그마필드 <span class="math inline">\(\sigma({\cal A})\)</span>를 구하라.</p>
-</section>
-<section class="slide level2">
-
-<p>(풀이)</p>
-<p><span class="math inline">\({\cal A}\)</span>은 파이시스템이므로, <span class="math inline">\(\sigma({\cal A})\)</span>를 구하는 대신 <span class="math inline">\(l({\cal A})\)</span>을 구해도 충분하다.</p>
-<ul>
-<li><span class="math inline">\({\cal A}_1 = \{\emptyset, \{1\}, \{2\}, \Omega, \{2,3,4\},  \{1,3,4\} \}\)</span> // <span class="math inline">\(^c\)</span>-closed</li>
-<li><span class="math inline">\(l({\cal A})={\cal A}_2 = \{\emptyset, \{1\}, \{2\}, \Omega, \{2,3,4\},  \{1,3,4\}, \{1,2\}, \{3,4\} \}\)</span> // <span class="math inline">\(^c\)</span>-closed, <span class="math inline">\(\uplus\)</span>-closed</li>
-</ul>
-<p>파이람다이론에 의하여 <span class="math inline">\(l({\cal A})=\sigma({\cal A})\)</span>이다.</p>
-<blockquote>
-<p>그렇지만 파이람다이론의 정수는 <span class="math inline">\(\sigma({\cal A})\)</span> 따위를 쉽게 구하는 것에 있지 않음.. 훨씬 대단한걸 할 수 있음</p>
-</blockquote>
-<p><code>#</code></p>
-</section>
-<section class="slide level2">
-
-<h3>측도, 유한측도, 확률</h3>
-<p><code># (간단한) 정의</code> – 측도는 정의역이 시그마필드이고 <span class="math inline">\(\sigma\)</span>-additivity 와 <span class="math inline">\(m(\emptyset)=0\)</span> 를 만족하는 집합함수 <span class="math inline">\(m\)</span> 이다.</p>
-<p><code># (간단한) 정의</code> – <span class="math inline">\(m(\Omega)=1\)</span> 인 측도를 확률측도라고 하고, 간단히 확률이라고 줄여부르기도 한다.</p>
-<p><code># (간단한) 정의</code> – <span class="math inline">\(m(\Omega)&lt;\infty\)</span> 인 측도를 유한측도라고 한다.</p>
-<p><code>-</code> 따라서 확률측도는 유한측도이다. 정리하면</p>
-<p><span class="math display">\[\text{prob-msr $\Rightarrow$ finite-msr $\Rightarrow$ msr}\]</span></p>
-<p>이다.</p>
-<p><code>-</code> 르벡메저는 유한측도가 아니다. (대신에 <span class="math inline">\(\sigma\)</span>-finite임, 그런데 <span class="math inline">\(\sigma\)</span>-finite이 뭔데??)</p>
-</section>
-<section class="slide level2">
-
-<h3><span class="math inline">\(\sigma\)</span> 유한측도</h3>
-<p><code># 정의</code> – <span class="math inline">\((\Omega,{\cal F}, m)\)</span> 을 측도공간이라고 하자. 아래가 성립한다면</p>
-<p><span class="math inline">\(\exists~ \Omega_1,\Omega_2, \dots  \in {\cal F}\)</span> such that (1) <span class="math inline">\(\cup_{i=1}^{\infty}\Omega_i=\Omega\)</span> and (2) <span class="math inline">\(\forall n \in \mathbb{N}: m(\Omega_n)&lt; \infty\)</span></p>
-<p><span class="math inline">\(m\)</span>을 시그마유한측도라고 한다.</p>
-<p><code>#</code></p>
-<p><code># 정의</code> – 공간 <span class="math inline">\((\Omega,{\cal A})\)</span> 를 상상하자. 여기에서 <span class="math inline">\({\cal A}\)</span>는 <span class="math inline">\(\Omega\)</span>에 대한 세미링이다. 만약에 어떠한 집합함수 <span class="math inline">\(\tilde{m}: {\cal A} \to [0,\infty]\)</span> with <span class="math inline">\(\tilde{m}(\emptyset) =0\)</span> 이 아래를 만족한다면</p>
-<p><span class="math inline">\(\exists~ \Omega_1,\Omega_2, \dots  \in {\cal F}\)</span> such that (1) <span class="math inline">\(\cup_{i=1}^{\infty}\Omega_i=\Omega\)</span> and (2) <span class="math inline">\(\forall n \in \mathbb{N}: \tilde{m}(\Omega_n)&lt; \infty\)</span></p>
-<p><span class="math inline">\(\tilde{m}\)</span>을 <span class="math inline">\({\cal A}\)</span> 에서 시그마유한하다고 표현한다.</p>
-<p><code>#</code></p>
-</section>
-<section class="slide level2">
-
-<p><code># 예제1</code> – 측도공간 <span class="math inline">\((\mathbb{R}, {\cal R}, \lambda)\)</span> 를 고려하자. 여기에서 <span class="math inline">\(\lambda\)</span> 는 르벡메저 (즉 길이를 재는 함수), <span class="math inline">\({\cal R}\)</span> 은 보렐시그마필드 (즉 실수의 부분집합중 길이를 무모순으로 잴 수 있는 집합들의 모임) 이다. 아래가 성립하므로</p>
-<p><span class="math display">\[\lambda(\mathbb{R})=\infty\]</span></p>
-<p>르벡메저는 유한측도가 아니다.</p>
-</section>
-<section class="slide level2">
-
-<p>그렇지만</p>
-<ul>
-<li><span class="math inline">\(\Omega_1 = [-1,1]\)</span></li>
-<li><span class="math inline">\(\Omega_2 = [-2,2] - \Omega_1\)</span></li>
-<li><span class="math inline">\(\Omega_3 = [-3,3] - \Omega_2 -\Omega_1\)</span></li>
-<li><span class="math inline">\(\dots\)</span></li>
-</ul>
-<p>와 같이 설정한다면,</p>
-<p><span class="math display">\[\forall n \in \mathbb{N}: \lambda(\Omega_n) = 2 &lt;\infty\]</span></p>
-<p>가 성립하고</p>
-<p><span class="math display">\[\cup_{i=1}^{\infty}\Omega_i = \Omega = \mathbb{R}\]</span></p>
-<p>이므로 르벡메저는 시그마유한측도이다.</p>
-<p><code>#</code></p>
-</section>
-<section class="slide level2">
-
-<div class="callout callout-note callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<p><strong>Note</strong></p>
-</div>
-<div class="callout-content">
-<p>시그마유한측도의 뉘앙스는 “<strong>전체 집합을 유한한 값으로 나타낼 수는 없을지라도, 전체집합을 쪼개서 (비록 무한번 쪼개는 한이 있더라도), 쪼갠것들은 유한한 값으로 나타낼 수 있는 방법이 최소한 하나는 존재한다.</strong>” 의 뉘앙스를 가지고 있다. 따라서 시그마유한측도의 정의에서 집합열 <span class="math inline">\(\Omega_1,\Omega_2,\dots\)</span> 를 무한집합열로 잡을 이유는 굳이 없다. (수 틀리면 무한번 쪼개겠다는 것이지 꼭 무한번 쪼개야 할 이유는 없으니까. 유한번 쪼개서 만들 수 있다면 오히려 좋음!)</p>
-</div>
-</div>
-</div>
-</section>
-<section class="slide level2">
-
-<p><code># 예제1의 다른풀이</code> – <code>예제1</code>에서 <span class="math inline">\(\Omega_1,\Omega_2,\dots\)</span>을 아래와 같이 설정해도 된다.</p>
-<ul>
-<li><span class="math inline">\(\Omega_1 = [-1,1]\)</span></li>
-<li><span class="math inline">\(\Omega_2 = [-2,2]\)</span></li>
-<li><span class="math inline">\(\Omega_3 = [-3,3]\)</span></li>
-<li><span class="math inline">\(\dots\)</span></li>
-</ul>
-<p>그래도</p>
-<ul>
-<li><span class="math inline">\(\forall n \in \mathbb{N}: \lambda(\Omega_n) = 2n &lt;\infty\)</span></li>
-<li><span class="math inline">\(\cup_{i=1}^{\infty}\Omega_i = \Omega = \mathbb{R}\)</span></li>
-</ul>
-<p>이 성립하기 때문이다.</p>
-<p><code>#</code></p>
-</section>
-<section class="slide level2">
-
-<p><code>-</code> 유한측도이면 시그마유한측도이다. (<span class="math inline">\(\Omega_1=\Omega\)</span>로 잡으면 된다) 따라서 정리하면 아래와 같다. <span class="math display">\[\text{prob-msr $\Rightarrow$ finite-msr $\Rightarrow$ $\sigma$-finite msr $\Rightarrow$ msr}\]</span></p>
 
 
 </section>
-
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
 <div class="footer footer-default">

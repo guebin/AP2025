@@ -6,8 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="최규빈">
+<meta name="dcterms.date" content="2025-11-04">
 
-<title>고급확률론 (2025) – AP2025</title>
+<title>11wk - 측도론의 중요이론들 (3) – AP2025</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,25 +25,23 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-b7eda2101a7a109d5067cba531cf9672.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-45a984b55c978f8c4117b5b9aec951d9.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-b7eda2101a7a109d5067cba531cf9672.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-45a984b55c978f8c4117b5b9aec951d9.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -69,35 +69,6 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
-
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing-html .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-date','listing-title','listing-author',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-title-sort'] }],
-      
-      searchColumns: ["listing-date","listing-title","listing-author"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing-html'] = new List('listing-listing-html', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
 
   <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
@@ -129,17 +100,17 @@ window.Quarto = {
 };
 </script>
 
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="../styles.css">
 </head>
 
-<body class="nav-fixed quarto-light">
+<body class="nav-fixed fullcontent quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../index.html">
     <span class="navbar-title">AP2025</span>
     </a>
   </div>
@@ -167,25 +138,35 @@ window.Quarto = {
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
-    </div>
+    
 <!-- main -->
-<main class="content column-page" id="quarto-document-content">
+<main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">고급확률론 (2025)</h1>
+<h1 class="title">11wk - 측도론의 중요이론들 (3)</h1>
 </div>
 
 
 
-<div class="quarto-title-meta column-page">
+<div class="quarto-title-meta">
 
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>최규빈 </p>
+          </div>
+  </div>
     
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">November 4, 2025</p>
+    </div>
+  </div>
   
     
   </div>
@@ -195,206 +176,54 @@ window.Quarto = {
 </header>
 
 
-<p><strong>질문하는 방법</strong></p>
+<section id="집합함수" class="level3">
+<h3 class="anchored" data-anchor-id="집합함수">집합함수</h3>
+<p><code># 정의</code>: <span class="math inline">\(\Omega\)</span>의 부분집합들의 모임 <span class="math inline">\({\cal A}\)</span> 에서 정의된 집합함수 <span class="math inline">\(\tilde{m}: {\cal A}\to [0,\infty]\)</span>에 대하여, <strong><em>additivity</em></strong>, <strong><em>subadditivity</em></strong>, <strong><em><span class="math inline">\(\sigma\)</span>-additivity</em></strong>, <strong><em><span class="math inline">\(\sigma\)</span>-subadditivity</em></strong> 가 의미하는 바를 살펴보자.</p>
+<p><code>1</code>. <strong><span class="math inline">\(\tilde{m}\)</span> is additive on <span class="math inline">\({\cal A}\)</span></strong></p>
+<p><span class="math inline">\({\cal A}\subset 2^\Omega\)</span> 에서의 집합함수 <span class="math inline">\(\tilde{m}:{\cal A} \to [0,\infty]\)</span>을 고려하자. “집함함수 <span class="math inline">\(\tilde{m}\)</span>이 <span class="math inline">\({\cal A}\)</span> 에서 <strong><em>additive</em></strong> 하다”는 것은 아래가 성립한다는 의미이다.</p>
+<p><span class="math display">\[\text{(1)} B_1,\dots, B_n \in {\cal A} ~~\text{(2)}\biguplus_{i=1}^{n}B_i \in {\cal A}~ \Longrightarrow ~ \tilde{m}\left(\biguplus_{i=1}^{n} B_{i}\right)=\sum_{i=1}^{n}\tilde{m}(B_i)\]</span></p>
+<p>단, <span class="math inline">\(B_1,B_2,\cdots, B_n\)</span>는 서로소인 집합열이다.</p>
+<hr>
+<p><code>2</code>. <strong><span class="math inline">\(\tilde{m}\)</span> is <span class="math inline">\(\sigma\)</span>-additive on <span class="math inline">\({\cal A}\)</span></strong></p>
+<p><span class="math inline">\({\cal A}\subset 2^\Omega\)</span> 에서의 집합함수 <span class="math inline">\(\tilde{m}:{\cal A} \to [0,\infty]\)</span>을 고려하자. “집함함수 <span class="math inline">\(\tilde{m}\)</span>이 <span class="math inline">\({\cal A}\)</span> 에서 <span class="math inline">\(\sigma\)</span>-<strong><em>additive</em></strong> 하다”는 것은 아래가 성립한다는 의미이다.</p>
+<p><span class="math display">\[\text{(1)} B_1,B_2,\cdots \in {\cal A} ~~\text{(2)}\biguplus_{i=1}^{\infty}B_i \in {\cal A}~ \Longrightarrow ~ \tilde{m}\left(\biguplus_{i=1}^{\infty} B_{i}\right)=\sum_{i=1}^{\infty}\tilde{m}(B_i)\]</span></p>
+<p>단, <span class="math inline">\(B_1,B_2,\cdots\)</span> 는 서로소인 집합열이다.</p>
+<hr>
+<p><code>3</code>. <strong><span class="math inline">\(\tilde{m}\)</span> is subadditive on <span class="math inline">\({\cal A}\)</span></strong></p>
+<p><span class="math inline">\({\cal A}\subset 2^\Omega\)</span> 에서의 집합함수 <span class="math inline">\(\tilde{m}:{\cal A} \to [0,\infty]\)</span>을 고려하자. “집함함수 <span class="math inline">\(\tilde{m}\)</span>이 <span class="math inline">\({\cal A}\)</span> 에서 <strong><em>subadditive</em></strong> 하다”는 것은 아래가 성립한다는 의미이다.</p>
+<p><span class="math display">\[\text{(1)} A, A_1,\dots, A_n \in {\cal A} ~~\text{(2)}A \subset \bigcup_{i=1}^{n}A_i ~ \Longrightarrow ~ \tilde{m}\left(A\right)\leq\sum_{i=1}^{n}\tilde{m}(A_i)\]</span></p>
+<blockquote class="blockquote">
+<p>만약에 <span class="math inline">\({\cal A}\subset 2^\Omega\)</span> 가 시그마필드이고 <span class="math inline">\(m:{\cal A} \to [0,\infty]\)</span>이 메저라면, “<span class="math inline">\(m\)</span>이 <span class="math inline">\({\cal A}\)</span> 에서 <strong><em>subadditive</em></strong> 하다”는 것은 아래가 성립한다는 의미이다. <span class="math display">\[A_1,\dots, A_n \in {\cal A}~ \Longrightarrow m\left(\bigcup_{i=1}^{n}A_i\right)\leq\sum_{i=1}^{n}m(A_i)\]</span></p>
+</blockquote>
+<hr>
+<p><code>4</code>. <strong><span class="math inline">\(\tilde{m}\)</span> is <span class="math inline">\(\sigma\)</span>-subadditive on <span class="math inline">\({\cal A}\)</span></strong></p>
+<p><span class="math inline">\({\cal A}\subset 2^\Omega\)</span> 에서의 집합함수 <span class="math inline">\(\tilde{m}:{\cal A} \to [0,\infty]\)</span>을 고려하자. “집함함수 <span class="math inline">\(\tilde{m}\)</span>이 <span class="math inline">\({\cal A}\)</span> 에서 <span class="math inline">\(\sigma\)</span>-<strong><em>subadditive</em></strong> 하다”는 것은 아래가 성립한다는 의미이다.</p>
+<p><span class="math display">\[\text{(1)} A, A_1, A_2 \cdots \in {\cal A} ~~\text{(2)}A \subset \bigcup_{i=1}^{\infty}A_i ~ \Longrightarrow ~ \tilde{m}\left(A\right)\leq\sum_{i=1}^{\infty}\tilde{m}(A_i)\]</span></p>
+<blockquote class="blockquote">
+<p>만약에 <span class="math inline">\({\cal A}\subset 2^\Omega\)</span> 가 시그마필드이고 <span class="math inline">\(m:{\cal A} \to [0,\infty]\)</span>이 메저라면, “<span class="math inline">\(m\)</span>이 <span class="math inline">\({\cal A}\)</span> 에서 <span class="math inline">\(\sigma\)</span>-<strong><em>subadditive</em></strong> 하다”는 것은 아래가 성립한다는 의미이다. <span class="math display">\[A_1,A_2,\cdots \in {\cal A}~ \Longrightarrow m\left(\bigcup_{i=1}^{\infty}A_i\right)\leq\sum_{i=1}^{\infty}m(A_i)\]</span></p>
+</blockquote>
+<p><code>#</code></p>
+<hr>
+<p><code># 성질</code> – <span class="math inline">\({\cal A} \subset 2^\Omega\)</span>, <span class="math inline">\(\tilde{m}: {\cal A} \to [0,\infty]\)</span> 라고 하자. 함수 <span class="math inline">\(\tilde{m}\)</span>에 대하여 체크해볼만한 성질들이 있다.</p>
+<ol type="1">
+<li><span class="math inline">\(\sigma\)</span>-additivity <span class="math inline">\(\Rightarrow\)</span> additivity</li>
+<li><span class="math inline">\(\sigma\)</span>-subadditivity <span class="math inline">\(\Rightarrow\)</span> subadditivity</li>
+<li><span class="math inline">\(\Omega\)</span>가 유한집합일 경우
 <ul>
-<li>카카오톡: <a href="http://pf.kakao.com/_txeIFG/chat">질문하러 가기</a></li>
-<li>이메일: <a href="mailto:guebin@jbnu.ac.kr" class="email">guebin@jbnu.ac.kr</a></li>
-<li>직접방문: 자연과학대학 본관 205호</li>
-<li>Zoom: <em>카카오톡이나 이메일로 미리 시간을 정할 것</em></li>
-<li>LMS쪽지: <a href="https://ieilms.jbnu.ac.kr/" class="uri">https://ieilms.jbnu.ac.kr/</a></li>
-</ul>
-<p><strong>강의노트</strong></p>
-<div class="tabset-margin-container"></div><div class="panel-tabset">
-<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true">HTML</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false">슬라이드</a></li></ul>
-<div class="tab-content">
-<div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
-<div id="listing-listing-html" class="quarto-listing quarto-listing-container-table">
-<table class="quarto-listing-table table">
-<thead>
-<tr>
-
-<th>
-Date
-</th>
-
-<th>
-Title
-</th>
-
-<th>
-Author
-</th>
-
-</tr>
-</thead>
-<tbody class="list">
-
-<tr data-index="0" data-listing-date-sort="1762182000000" data-listing-file-modified-sort="1762259548278" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="326" data-listing-title-sort="11wk - 측도론의 중요이론들 (3)" data-listing-filename-sort="11wk.qmd">
-<td>
-<span class="listing-date">Nov 4, 2025</span>
-</td>
-<td>
-<a href="./posts/11wk.html" class="title listing-title">11wk - 측도론의 중요이론들 (3)</a>
-</td>
-<td>
-<span class="listing-author">최규빈 </span>
-</td>
-
-</tr>
-
-<tr data-index="1" data-listing-date-sort="1762182000000" data-listing-file-modified-sort="1762259544240" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="7" data-listing-word-count-sort="1245" data-listing-title-sort="10wk - 측도론의 중요이론들 (2)" data-listing-filename-sort="10wk.qmd">
-<td>
-<span class="listing-date">Nov 4, 2025</span>
-</td>
-<td>
-<a href="./posts/10wk.html" class="title listing-title">10wk - 측도론의 중요이론들 (2)</a>
-</td>
-<td>
-<span class="listing-author">최규빈 </span>
-</td>
-
-</tr>
-
-<tr data-index="2" data-listing-date-sort="1761577200000" data-listing-file-modified-sort="1761725304871" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="861" data-listing-title-sort="중간고사 (2025.10.28)" data-listing-filename-sort="mid.qmd">
-<td>
-<span class="listing-date">Oct 28, 2025</span>
-</td>
-<td>
-<a href="./posts/mid.html" class="title listing-title">중간고사 (2025.10.28)</a>
-</td>
-<td>
-<span class="listing-author">최규빈 </span>
-</td>
-
-</tr>
-
-<tr data-index="3" data-listing-date-sort="1760281200000" data-listing-file-modified-sort="1762240550441" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="8" data-listing-word-count-sort="1436" data-listing-title-sort="07wk - 측도론의 중요이론들 (1)" data-listing-filename-sort="07wk.qmd">
-<td>
-<span class="listing-date">Oct 13, 2025</span>
-</td>
-<td>
-<a href="./posts/07wk.html" class="title listing-title">07wk - 측도론의 중요이론들 (1)</a>
-</td>
-<td>
-<span class="listing-author">최규빈 </span>
-</td>
-
-</tr>
-
-<tr data-index="4" data-listing-date-sort="1760022000000" data-listing-file-modified-sort="1760260679179" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="16" data-listing-word-count-sort="3182" data-listing-title-sort="06wk - 측도, 확률 / 르벡메저, 보렐시그마필드" data-listing-filename-sort="06wk.qmd">
-<td>
-<span class="listing-date">Oct 10, 2025</span>
-</td>
-<td>
-<a href="./posts/06wk.html" class="title listing-title">06wk - 측도, 확률 / 르벡메저, 보렐시그마필드</a>
-</td>
-<td>
-<span class="listing-author">최규빈 </span>
-</td>
-
-</tr>
-
-<tr data-index="5" data-listing-date-sort="1759935600000" data-listing-file-modified-sort="1761625028835" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="7" data-listing-word-count-sort="1232" data-listing-title-sort="05wk - 시그마필드 (2)" data-listing-filename-sort="05wk.qmd">
-<td>
-<span class="listing-date">Oct 9, 2025</span>
-</td>
-<td>
-<a href="./posts/05wk.html" class="title listing-title">05wk - 시그마필드 (2)</a>
-</td>
-<td>
-<span class="listing-author">최규빈 </span>
-</td>
-
-</tr>
-
-<tr data-index="6" data-listing-date-sort="1758553200000" data-listing-file-modified-sort="1760235593935" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="8" data-listing-word-count-sort="1409" data-listing-title-sort="04wk - 시그마필드 (1)" data-listing-filename-sort="04wk.qmd">
-<td>
-<span class="listing-date">Sep 23, 2025</span>
-</td>
-<td>
-<a href="./posts/04wk.html" class="title listing-title">04wk - 시그마필드 (1)</a>
-</td>
-<td>
-<span class="listing-author">최규빈 </span>
-</td>
-
-</tr>
-
-<tr data-index="7" data-listing-date-sort="1758466800000" data-listing-file-modified-sort="1760078528000" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="384" data-listing-title-sort="HW-1 (2024.09.22)" data-listing-filename-sort="hw01.qmd">
-<td>
-<span class="listing-date">Sep 22, 2025</span>
-</td>
-<td>
-<a href="./posts/hw01.html" class="title listing-title">HW-1 (2024.09.22)</a>
-</td>
-<td>
-<span class="listing-author">최규빈 </span>
-</td>
-
-</tr>
-
-<tr data-index="8" data-listing-date-sort="1757948400000" data-listing-file-modified-sort="1761610403000" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="6" data-listing-word-count-sort="1173" data-listing-title-sort="03wk - 카디널리티" data-listing-filename-sort="03wk.qmd">
-<td>
-<span class="listing-date">Sep 16, 2025</span>
-</td>
-<td>
-<a href="./posts/03wk.html" class="title listing-title">03wk - 카디널리티</a>
-</td>
-<td>
-<span class="listing-author">최규빈 </span>
-</td>
-
-</tr>
-
-<tr data-index="9" data-listing-date-sort="1757343600000" data-listing-file-modified-sort="1760235585148" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="982" data-listing-title-sort="02wk - 수학과의 표현, 귀류법과 일반화" data-listing-filename-sort="02wk.qmd">
-<td>
-<span class="listing-date">Sep 9, 2025</span>
-</td>
-<td>
-<a href="./posts/02wk.html" class="title listing-title">02wk - 수학과의 표현, 귀류법과 일반화</a>
-</td>
-<td>
-<span class="listing-author">최규빈 </span>
-</td>
-
-</tr>
-
-<tr data-index="10" data-listing-date-sort="1756738800000" data-listing-file-modified-sort="1760235580153" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="7" data-listing-word-count-sort="1278" data-listing-title-sort="01wk - 확률을 정의하는 것은 쉬운 일인가?" data-listing-filename-sort="01wk.qmd">
-<td>
-<span class="listing-date">Sep 2, 2025</span>
-</td>
-<td>
-<a href="./posts/01wk.html" class="title listing-title">01wk - 확률을 정의하는 것은 쉬운 일인가?</a>
-</td>
-<td>
-<span class="listing-author">최규빈 </span>
-</td>
-
-</tr>
-
-</tbody>
-</table>
-<div class="listing-no-matching d-none">No matching items</div>
-</div>
-</div>
-<div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
-<p>각 강의노트의 슬라이드 버전을 확인할 수 있습니다.</p>
+<li><span class="math inline">\(\sigma\)</span>-additivity <span class="math inline">\(\Leftrightarrow\)</span> additivity</li>
+<li><span class="math inline">\(\sigma\)</span>-subadditivity <span class="math inline">\(\Leftrightarrow\)</span> subadditivity</li>
+</ul></li>
+<li><span class="math inline">\({\cal A}\)</span>가 세미링일 경우
 <ul>
-<li><a href="posts/09wk-slides.html">09wk - 측도론의 중요이론들 (2)</a></li>
-<li><a href="posts/07wk-slides.html">07wk - 측도론의 중요이론들 (1)</a></li>
-<li><a href="posts/06wk-slides.html">06wk - 측도, 확률 / 르벡메저, 보렐시그마필드</a></li>
-<li><a href="posts/05wk-slides.html">05wk - 시그마필드(2)</a></li>
-<li><a href="posts/04wk-slides.html">04wk - 시그마필드(1)</a></li>
-<li><a href="posts/03wk-slides.html">03wk - 카디널리티</a></li>
-<li><a href="posts/02wk-slides.html">02wk - 수학과의 표현, 귀류법과 일반화</a></li>
-<li><a href="posts/01wk-slides.html">01wk - 확률을 정의하는 것은 쉬운 일인가?</a></li>
-</ul>
-</div>
-</div>
-</div>
+<li>additivity <span class="math inline">\(\Rightarrow\)</span> monotonicity (<span class="math inline">\(A \subset B \Rightarrow \tilde{m}(A)\leq \tilde{m}(B)\)</span>)</li>
+<li>additivity <span class="math inline">\(\Rightarrow\)</span> sub-additivity</li>
+<li><span class="math inline">\(\sigma\)</span>-additivity <span class="math inline">\(\Rightarrow\)</span> <span class="math inline">\(\sigma\)</span>-subadditivity</li>
+</ul></li>
+</ol>
+<p><code>#</code></p>
 
 
-
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

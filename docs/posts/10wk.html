@@ -276,53 +276,6 @@ window.Quarto = {
 <p><code>#</code></p>
 <hr>
 </section>
-<section id="집합함수" class="level3">
-<h3 class="anchored" data-anchor-id="집합함수">집합함수</h3>
-<p><code># 정의</code>: <span class="math inline">\(\Omega\)</span>의 부분집합들의 모임 <span class="math inline">\({\cal A}\)</span> 에서 정의된 집합함수 <span class="math inline">\(\tilde{m}: {\cal A}\to [0,\infty]\)</span>에 대하여, <strong><em>additivity</em></strong>, <strong><em>subadditivity</em></strong>, <strong><em><span class="math inline">\(\sigma\)</span>-additivity</em></strong>, <strong><em><span class="math inline">\(\sigma\)</span>-subadditivity</em></strong> 가 의미하는 바를 살펴보자.</p>
-<p><code>1</code>. <strong><span class="math inline">\(\tilde{m}\)</span> is additive on <span class="math inline">\({\cal A}\)</span></strong></p>
-<p><span class="math inline">\({\cal A}\subset 2^\Omega\)</span> 에서의 집합함수 <span class="math inline">\(\tilde{m}:{\cal A} \to [0,\infty]\)</span>을 고려하자. “집함함수 <span class="math inline">\(\tilde{m}\)</span>이 <span class="math inline">\({\cal A}\)</span> 에서 <strong><em>additive</em></strong> 하다”는 것은 아래가 성립한다는 의미이다.</p>
-<p><span class="math display">\[\text{(1)} B_1,\dots, B_n \in {\cal A} ~~\text{(2)}\biguplus_{i=1}^{n}B_i \in {\cal A}~ \Longrightarrow ~ \tilde{m}\left(\biguplus_{i=1}^{n} B_{i}\right)=\sum_{i=1}^{n}\tilde{m}(B_i)\]</span></p>
-<p>단, <span class="math inline">\(B_1,B_2,\cdots, B_n\)</span>는 서로소인 집합열이다.</p>
-<hr>
-<p><code>2</code>. <strong><span class="math inline">\(\tilde{m}\)</span> is <span class="math inline">\(\sigma\)</span>-additive on <span class="math inline">\({\cal A}\)</span></strong></p>
-<p><span class="math inline">\({\cal A}\subset 2^\Omega\)</span> 에서의 집합함수 <span class="math inline">\(\tilde{m}:{\cal A} \to [0,\infty]\)</span>을 고려하자. “집함함수 <span class="math inline">\(\tilde{m}\)</span>이 <span class="math inline">\({\cal A}\)</span> 에서 <span class="math inline">\(\sigma\)</span>-<strong><em>additive</em></strong> 하다”는 것은 아래가 성립한다는 의미이다.</p>
-<p><span class="math display">\[\text{(1)} B_1,B_2,\cdots \in {\cal A} ~~\text{(2)}\biguplus_{i=1}^{\infty}B_i \in {\cal A}~ \Longrightarrow ~ \tilde{m}\left(\biguplus_{i=1}^{\infty} B_{i}\right)=\sum_{i=1}^{\infty}\tilde{m}(B_i)\]</span></p>
-<p>단, <span class="math inline">\(B_1,B_2,\cdots\)</span> 는 서로소인 집합열이다.</p>
-<hr>
-<p><code>3</code>. <strong><span class="math inline">\(\tilde{m}\)</span> is subadditive on <span class="math inline">\({\cal A}\)</span></strong></p>
-<p><span class="math inline">\({\cal A}\subset 2^\Omega\)</span> 에서의 집합함수 <span class="math inline">\(\tilde{m}:{\cal A} \to [0,\infty]\)</span>을 고려하자. “집함함수 <span class="math inline">\(\tilde{m}\)</span>이 <span class="math inline">\({\cal A}\)</span> 에서 <strong><em>subadditive</em></strong> 하다”는 것은 아래가 성립한다는 의미이다.</p>
-<p><span class="math display">\[\text{(1)} A, A_1,\dots, A_n \in {\cal A} ~~\text{(2)}A \subset \bigcup_{i=1}^{n}A_i ~ \Longrightarrow ~ \tilde{m}\left(A\right)\leq\sum_{i=1}^{n}\tilde{m}(A_i)\]</span></p>
-<blockquote class="blockquote">
-<p>만약에 <span class="math inline">\({\cal A}\subset 2^\Omega\)</span> 가 시그마필드이고 <span class="math inline">\(m:{\cal A} \to [0,\infty]\)</span>이 메저라면, “<span class="math inline">\(m\)</span>이 <span class="math inline">\({\cal A}\)</span> 에서 <strong><em>subadditive</em></strong> 하다”는 것은 아래가 성립한다는 의미이다. <span class="math display">\[A_1,\dots, A_n \in {\cal A}~ \Longrightarrow m\left(\bigcup_{i=1}^{n}A_i\right)\leq\sum_{i=1}^{n}m(A_i)\]</span></p>
-</blockquote>
-<hr>
-<p><code>4</code>. <strong><span class="math inline">\(\tilde{m}\)</span> is <span class="math inline">\(\sigma\)</span>-subadditive on <span class="math inline">\({\cal A}\)</span></strong></p>
-<p><span class="math inline">\({\cal A}\subset 2^\Omega\)</span> 에서의 집합함수 <span class="math inline">\(\tilde{m}:{\cal A} \to [0,\infty]\)</span>을 고려하자. “집함함수 <span class="math inline">\(\tilde{m}\)</span>이 <span class="math inline">\({\cal A}\)</span> 에서 <span class="math inline">\(\sigma\)</span>-<strong><em>subadditive</em></strong> 하다”는 것은 아래가 성립한다는 의미이다.</p>
-<p><span class="math display">\[\text{(1)} A, A_1, A_2 \cdots \in {\cal A} ~~\text{(2)}A \subset \bigcup_{i=1}^{\infty}A_i ~ \Longrightarrow ~ \tilde{m}\left(A\right)\leq\sum_{i=1}^{\infty}\tilde{m}(A_i)\]</span></p>
-<blockquote class="blockquote">
-<p>만약에 <span class="math inline">\({\cal A}\subset 2^\Omega\)</span> 가 시그마필드이고 <span class="math inline">\(m:{\cal A} \to [0,\infty]\)</span>이 메저라면, “<span class="math inline">\(m\)</span>이 <span class="math inline">\({\cal A}\)</span> 에서 <span class="math inline">\(\sigma\)</span>-<strong><em>subadditive</em></strong> 하다”는 것은 아래가 성립한다는 의미이다. <span class="math display">\[A_1,A_2,\cdots \in {\cal A}~ \Longrightarrow m\left(\bigcup_{i=1}^{\infty}A_i\right)\leq\sum_{i=1}^{\infty}m(A_i)\]</span></p>
-</blockquote>
-<p><code>#</code></p>
-<hr>
-<p><code># 성질</code> – <span class="math inline">\({\cal A} \subset 2^\Omega\)</span>, <span class="math inline">\(\tilde{m}: {\cal A} \to [0,\infty]\)</span> 라고 하자. 함수 <span class="math inline">\(\tilde{m}\)</span>에 대하여 체크해볼만한 성질들이 있다.</p>
-<ol type="1">
-<li><span class="math inline">\(\sigma\)</span>-additivity <span class="math inline">\(\Rightarrow\)</span> additivity</li>
-<li><span class="math inline">\(\sigma\)</span>-subadditivity <span class="math inline">\(\Rightarrow\)</span> subadditivity</li>
-<li><span class="math inline">\(\Omega\)</span>가 유한집합일 경우
-<ul>
-<li><span class="math inline">\(\sigma\)</span>-additivity <span class="math inline">\(\Leftrightarrow\)</span> additivity</li>
-<li><span class="math inline">\(\sigma\)</span>-subadditivity <span class="math inline">\(\Leftrightarrow\)</span> subadditivity</li>
-</ul></li>
-<li><span class="math inline">\({\cal A}\)</span>가 세미링일 경우
-<ul>
-<li>additivity <span class="math inline">\(\Rightarrow\)</span> monotonicity (<span class="math inline">\(A \subset B \Rightarrow \tilde{m}(A)\leq \tilde{m}(B)\)</span>)</li>
-<li>additivity <span class="math inline">\(\Rightarrow\)</span> sub-additivity</li>
-<li><span class="math inline">\(\sigma\)</span>-additivity <span class="math inline">\(\Rightarrow\)</span> <span class="math inline">\(\sigma\)</span>-subadditivity</li>
-</ul></li>
-</ol>
-<p><code>#</code></p>
-<hr>
-</section>
 <section id="측도-유한측도-확률" class="level3">
 <h3 class="anchored" data-anchor-id="측도-유한측도-확률">측도, 유한측도, 확률</h3>
 <p><code># (간단한) 정의</code> – 측도는 정의역이 시그마필드이고 <span class="math inline">\(\sigma\)</span>-additivity 와 <span class="math inline">\(m(\emptyset)=0\)</span> 를 만족하는 집합함수 <span class="math inline">\(m\)</span> 이다.</p>
