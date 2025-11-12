@@ -6,8 +6,8 @@
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="../site_libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-37eea08aefeeee20ff55810ff984fec1.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.7.32">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-a37c72dd2dbac68997fcdc15a3622e78.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.7.24">
 
   <meta name="author" content="최규빈">
   <meta name="dcterms.date" content="2025-11-04">
@@ -145,9 +145,419 @@
 <section class="slide level2">
 
 <h3>강의영상</h3>
+<iframe data-external="1" src="https://www.youtube.com/embed/playlist?list=PLQqh36zP38-yCBhvWauZ3B_NWeyUWgjJb&amp;si=d-NPYsQTLTsGwM0u" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+<h3>궁금증</h3>
+<p><code>-</code> 우리가 하고 싶은것은 “<span class="math inline">\({\cal A}\)</span>에서 적당히 확률과 비슷한 집합함수 <span class="math inline">\(\tilde{P}\)</span>를 정의하면, 그 <span class="math inline">\(\tilde{P}\)</span>가 <span class="math inline">\(\sigma({\cal A})\)</span>에서의 유일한 확률측도 <span class="math inline">\(\mathbb{P}\)</span>로 업그레이드된다.” 를 보이는 것이다.</p>
+<p><code>-</code> 확률과 비슷한 집합함수라는 개념은 도데체 뭘까?</p>
+<p><code>-</code> 르벡메져와 비슷한 집합함수라는 개념도 있겠지? 그건 또 뭘까?</p>
 </section>
+<section class="slide level2">
+
+<h3>집합함수의 성질</h3>
+<p><code>-</code> <span class="math inline">\(\Omega\)</span>의 부분집합들의 모임 <span class="math inline">\({\cal A}\)</span>에서 정의된 집합함수 <span class="math inline">\(\tilde{m}: {\cal A}\to [0,\infty]\)</span>, <strong><em>additivity</em></strong>, <strong><em>subadditivity</em></strong>, <strong><em><span class="math inline">\(\sigma\)</span>-additivity</em></strong>, <strong><em><span class="math inline">\(\sigma\)</span>-subadditivity</em></strong> 가 의미하는 바를 살펴보자.</p>
+<div class="callout callout-caution callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Caution</strong></p>
+</div>
+<div class="callout-content">
+<p>교제에 따라서 집합함수 <span class="math inline">\(\tilde{m}: {\cal A}\to [\infty,\infty]\)</span>를 고려하기도 하는데요. 우리는 <span class="math inline">\(\tilde{m}\)</span>의 공역을 <span class="math inline">\([0,\infty]\)</span>로 한정한 정의를 사용합니다. 또한 교재에 따라서 <span class="math inline">\({\cal A}\)</span>가 어떠한 제약을 가져야함을 조건으로 거는 경우도 있는데요 (예를들면 <span class="math inline">\({\cal A}\)</span>가 field 이어야 한다든지), 우리는 이러한 조건도 무시합니다. 즉 <span class="math inline">\({\cal A}\)</span>는 어떠한 제약도 없는 일반적인 집합족이라 상상합니다.</p>
+</div>
+</div>
+</div>
+</section>
+<section class="slide level2">
+
+<p><code># 정의1</code> – <strong><span class="math inline">\(\tilde{m}\)</span> is additive on <span class="math inline">\({\cal A}\)</span></strong></p>
+<p><span class="math inline">\({\cal A}\subset 2^\Omega\)</span> 에서의 집합함수 <span class="math inline">\(\tilde{m}:{\cal A} \to [0,\infty]\)</span>을 고려하자. “집함함수 <span class="math inline">\(\tilde{m}\)</span>이 <span class="math inline">\({\cal A}\)</span> 에서 <strong><em>additive</em></strong> 하다”는 것은 아래가 성립한다는 의미이다.</p>
+<p><span class="math display">\[\text{(1)} B_1,\dots, B_n \in {\cal A} ~~\text{(2)}\biguplus_{i=1}^{n}B_i \in {\cal A}~ \Longrightarrow ~ \tilde{m}\left(\biguplus_{i=1}^{n} B_{i}\right)=\sum_{i=1}^{n}\tilde{m}(B_i)\]</span></p>
+<p>단, <span class="math inline">\(B_1,B_2,\cdots, B_n\)</span>는 서로소인 집합열이다.</p>
+<blockquote>
+<p>여기에서 <span class="math inline">\(\infty + \infty = \infty\)</span>로 정의함.</p>
+</blockquote>
+</section>
+<section class="slide level2">
+
+<p><code># 예제1</code></p>
+<p><span class="math inline">\(\tilde{m}\)</span> is add on <span class="math inline">\({\cal A}\)</span>?</p>
+<ul>
+<li><span class="math inline">\(\Omega = \{1,2\}\)</span></li>
+<li><span class="math inline">\({\cal A}= \{\emptyset, \{1\},\{1,2\}\}\)</span></li>
+<li><span class="math inline">\(\tilde{m}(\emptyset) = 0, \tilde{m}(\{1\}) = 1, \tilde{m}(\{1,2\})=1\)</span></li>
+</ul>
+<p><code>(답)</code> <span class="math inline">\(\tilde{m}\)</span> is add on <span class="math inline">\({\cal A}\)</span>.</p>
+</section>
+<section class="slide level2">
+
+<p><code># 예제2</code></p>
+<p><span class="math inline">\(\tilde{m}\)</span> is add on <span class="math inline">\({\cal A}\)</span>?</p>
+<ul>
+<li><span class="math inline">\(\Omega = \{1,2\}\)</span></li>
+<li><span class="math inline">\({\cal A}= \{\emptyset, \{1\},\{1,2\}\}\)</span></li>
+<li><span class="math inline">\(\tilde{m}(\emptyset) = 0, \tilde{m}(\{1\}) = 1, \tilde{m}(\{1,2\})=0\)</span></li>
+</ul>
+<p><code>(답)</code> <span class="math inline">\(\tilde{m}\)</span> is add on <span class="math inline">\({\cal A}\)</span>.</p>
+</section>
+<section class="slide level2">
+
+<p><code># 예제3</code></p>
+<p><span class="math inline">\(\tilde{m}\)</span> is add on <span class="math inline">\({\cal A}\)</span>?</p>
+<ul>
+<li><span class="math inline">\(\Omega = \{1,2\}\)</span></li>
+<li><span class="math inline">\({\cal A}= \{\emptyset, \{1\}\}\)</span></li>
+<li><span class="math inline">\(\tilde{m}(\emptyset) = 0, \tilde{m}(\{1\}) = 1\)</span></li>
+</ul>
+<p><code>(답)</code> <span class="math inline">\(\tilde{m}\)</span> is add on <span class="math inline">\({\cal A}\)</span>.</p>
+</section>
+<section class="slide level2">
+
+<p><code># 예제4</code></p>
+<p><span class="math inline">\(\tilde{m}\)</span> is add on <span class="math inline">\({\cal A}\)</span>?</p>
+<ul>
+<li><span class="math inline">\(\Omega = \{1,2\}\)</span></li>
+<li><span class="math inline">\({\cal A}= \{\emptyset, \{1\}\}\)</span></li>
+<li><span class="math inline">\(\tilde{m}(\emptyset) = 1, \tilde{m}(\{1\}) = 0\)</span></li>
+</ul>
+<p><code>(답)</code> <span class="math inline">\(\tilde{m}\)</span> is not add on <span class="math inline">\({\cal A}\)</span>.</p>
+</section>
+<section class="slide level2">
+
+<p><code># 예제5</code></p>
+<p><span class="math inline">\(\tilde{m}\)</span> is add on <span class="math inline">\({\cal A}\)</span>?</p>
+<ul>
+<li><span class="math inline">\(\Omega = \{1,2\}\)</span></li>
+<li><span class="math inline">\({\cal A}= \{\emptyset\}\)</span></li>
+<li><span class="math inline">\(\tilde{m}(\emptyset) = 1\)</span></li>
+</ul>
+<p><code>(답)</code> <span class="math inline">\(\tilde{m}\)</span> is not add on <span class="math inline">\({\cal A}\)</span>.</p>
+<blockquote>
+<p>Note: 이 예제를 보고 “아, 여기서 add를 만족하게 하려면 꼭 <span class="math inline">\(\tilde{m}(\emptyset)=0\)</span>이어야 겠구나!” 라고 정리하고 싶지 않나요?</p>
+</blockquote>
+<blockquote>
+<p>Note: 그런데 <span class="math inline">\(\tilde{m}(\emptyset)=\infty\)</span>라면 어떨까요? 우리가 원하는 바는 아니지만 add가 성립해버리죠? 그래서 우리가 상식적인 측도를 생각할때는 <span class="math inline">\(\tilde{m}(\emptyset)=0\)</span>라고 약속하는 것이 중요합니다. 사실은 이러한 약속을 지금 당장 하고 싶은데요, <span class="math inline">\(\emptyset \in {\cal A}\)</span>이라는 보장이 없어서 <span class="math inline">\(\tilde{m}(\emptyset)=0\)</span>을 미리 정의에 넣어놓고 시작할 순 없어요.</p>
+</blockquote>
+</section>
+<section class="slide level2">
+
+<p><code># 예제6</code></p>
+<p><span class="math inline">\(\tilde{m}\)</span> is add on <span class="math inline">\({\cal A}\)</span>?</p>
+<ul>
+<li><span class="math inline">\(\Omega = \{1,2\}\)</span></li>
+<li><span class="math inline">\({\cal A}= \{\emptyset,\{1\},\{2\},\Omega\}\)</span></li>
+<li><span class="math inline">\(\tilde{m}(\emptyset) = 0, \tilde{m}(\{1\}) = 1, \tilde{m}(\{2\})= \infty, \tilde{m}(\Omega)=\infty\)</span></li>
+</ul>
+<p><code>(답)</code> <span class="math inline">\(\tilde{m}\)</span> is add on <span class="math inline">\({\cal A}\)</span>.</p>
+</section>
+<section class="slide level2">
+
+<p><code># 정의2</code> – <strong><span class="math inline">\(\tilde{m}\)</span> is <span class="math inline">\(\sigma\)</span>-additive on <span class="math inline">\({\cal A}\)</span></strong></p>
+<p><span class="math inline">\({\cal A}\subset 2^\Omega\)</span> 에서의 집합함수 <span class="math inline">\(\tilde{m}:{\cal A} \to [0,\infty]\)</span>을 고려하자. “집함함수 <span class="math inline">\(\tilde{m}\)</span>이 <span class="math inline">\({\cal A}\)</span> 에서 <span class="math inline">\(\sigma\)</span>-<strong><em>additive</em></strong> 하다”는 것은 아래가 성립한다는 의미이다.</p>
+<p><span class="math display">\[\text{(1)} B_1,B_2,\cdots \in {\cal A} ~~\text{(2)}\biguplus_{i=1}^{\infty}B_i \in {\cal A}~ \Longrightarrow ~ \tilde{m}\left(\biguplus_{i=1}^{\infty} B_{i}\right)=\sum_{i=1}^{\infty}\tilde{m}(B_i)\]</span></p>
+<p>단, <span class="math inline">\(B_1,B_2,\cdots\)</span> 는 서로소인 집합열이다.</p>
+</section>
+<section class="slide level2">
+
+<p><code># 예제7</code> – counting msr 비슷한것</p>
+<p><span class="math inline">\(\tilde{m}\)</span> is add on <span class="math inline">\({\cal A}\)</span>? <span class="math inline">\(\tilde{m}\)</span> is <span class="math inline">\(\sigma\)</span>-add on <span class="math inline">\({\cal A}\)</span>?</p>
+<ul>
+<li><span class="math inline">\(\Omega = \mathbb{N}\)</span></li>
+<li><span class="math inline">\({\cal A}= 2^\mathbb{N}\)</span></li>
+<li><span class="math inline">\(\tilde{m}(A) = \begin{cases} |A| &amp; \text{if $A$ is finite,} \\ \infty &amp; \text{if $A$ is infinite.} \end{cases}\)</span></li>
+</ul>
+<p><code>(답)</code> <span class="math inline">\(\tilde{m}\)</span> is <span class="math inline">\(\sigma\)</span>-add on <span class="math inline">\({\cal A}\)</span>. <span class="math inline">\(\Rightarrow\)</span> <span class="math inline">\(\tilde{m}\)</span> is add on <span class="math inline">\({\cal A}\)</span>.</p>
+<blockquote>
+<p>Note: <span class="math inline">\(\sigma\)</span>-add imply add.</p>
+</blockquote>
+</section>
+<section class="slide level2">
+
+<p><code># 예제8</code></p>
+<p><span class="math inline">\(\tilde{m}\)</span> is add on <span class="math inline">\({\cal A}\)</span>? <span class="math inline">\(\tilde{m}\)</span> is <span class="math inline">\(\sigma\)</span>-add on <span class="math inline">\({\cal A}\)</span>?</p>
+<ul>
+<li><span class="math inline">\(\Omega = \mathbb{R}\)</span></li>
+<li><span class="math inline">\({\cal A}= \{\{x\}: x \in \mathbb{R}\} \cup \{\emptyset, \mathbb{Q} , \mathbb{Q}^c, \mathbb{R}\}\)</span></li>
+<li><span class="math inline">\(\tilde{m}(A) = \begin{cases} 0 &amp; A = \{x\}, x\in \mathbb{R} \\ 0 &amp; A = \emptyset \\ 1 &amp; A=\mathbb{Q} \\ 2 &amp; A=\mathbb{Q}^c \\ 3 &amp; A=\mathbb{R} \end{cases}\)</span></li>
+</ul>
+<p><code>(답)</code> <span class="math inline">\(\tilde{m}\)</span> is add but not <span class="math inline">\(\sigma\)</span>-add on <span class="math inline">\({\cal A}\)</span>.</p>
+</section>
+<section class="slide level2">
+
+<p><code># 예제9</code></p>
+<p><span class="math inline">\(\tilde{m}\)</span> is add on <span class="math inline">\({\cal A}\)</span>? <span class="math inline">\(\tilde{m}\)</span> is <span class="math inline">\(\sigma\)</span>-add on <span class="math inline">\({\cal A}\)</span>?</p>
+<ul>
+<li><span class="math inline">\(\Omega = \mathbb{R}\)</span></li>
+<li><span class="math inline">\({\cal A}= \{\{x\}: x \in \mathbb{R}\} \cup \{\emptyset, \mathbb{Q} , \mathbb{Q}^c, \mathbb{R}\}\)</span></li>
+<li><span class="math inline">\(\tilde{m}(A) = \begin{cases} 0 &amp; A = \{x\}, x\in \mathbb{R} \\ 0 &amp; A = \emptyset \\ 0 &amp; A=\mathbb{Q} \\ 2 &amp; A=\mathbb{Q}^c \\ 2 &amp; A=\mathbb{R} \end{cases}\)</span></li>
+</ul>
+<p><code>(답)</code> <span class="math inline">\(\tilde{m}\)</span> is add and also <span class="math inline">\(\sigma\)</span>-add on <span class="math inline">\({\cal A}\)</span>.</p>
+</section>
+<section class="slide level2">
+
+<p><code># 예제10</code></p>
+<p><span class="math inline">\(\tilde{m}\)</span> is add on <span class="math inline">\({\cal A}\)</span>? <span class="math inline">\(\tilde{m}\)</span> is <span class="math inline">\(\sigma\)</span>-add on <span class="math inline">\({\cal A}\)</span>?</p>
+<ul>
+<li><span class="math inline">\(\Omega = \mathbb{R}\)</span></li>
+<li><span class="math inline">\({\cal A}= \{\{x\}: x \in \mathbb{R}\} \cup \{\emptyset, \mathbb{Q} , \mathbb{Q}^c, \mathbb{R}\}\)</span></li>
+<li><span class="math inline">\(\tilde{m}(A) = \begin{cases} 1 &amp; A = \{x\}, x\in \mathbb{R} \\ 0 &amp; A = \emptyset \\ \infty &amp; A=\mathbb{Q} \\ 0 &amp; A=\mathbb{Q}^c \\ \infty &amp; A=\mathbb{R} \end{cases}\)</span></li>
+</ul>
+<p><code>(답)</code> <span class="math inline">\(\tilde{m}\)</span> is add and also <span class="math inline">\(\sigma\)</span>-add on <span class="math inline">\({\cal A}\)</span>.</p>
+</section>
+<section class="slide level2">
+
+<p><code># 정의3</code>– <strong><span class="math inline">\(\tilde{m}\)</span> is subadditive on <span class="math inline">\({\cal A}\)</span></strong></p>
+<p><span class="math inline">\({\cal A}\subset 2^\Omega\)</span> 에서의 집합함수 <span class="math inline">\(\tilde{m}:{\cal A} \to [0,\infty]\)</span>을 고려하자. “집함함수 <span class="math inline">\(\tilde{m}\)</span>이 <span class="math inline">\({\cal A}\)</span> 에서 <strong><em>subadditive</em></strong> 하다”는 것은 아래가 성립한다는 의미이다.</p>
+<p><span class="math display">\[\text{(1)} A, A_1,\dots, A_n \in {\cal A} ~~\text{(2)}A \subset \bigcup_{i=1}^{n}A_i ~ \Longrightarrow ~ \tilde{m}\left(A\right)\leq\sum_{i=1}^{n}\tilde{m}(A_i)\]</span></p>
+<blockquote>
+<p>이 정의에서 subadditive는 monotone<sup>1</sup>을 암시한다. (당연히 monotone이 subadd랑 같은건 아님)</p>
+</blockquote>
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Note</strong></p>
+</div>
+<div class="callout-content">
+<p>조건 (2) 대신에 <span class="math inline">\(A= \bigcup_{i=1}^{n}A_i\)</span>인 경우만 subadd 라고 정의하는 교재도 존재한다. 이러한 정의에서는 subadditive가 monotone을 암시하지 않음.</p>
+</div>
+</div>
+</div>
+<aside><ol class="aside-footnotes"><li id="fn1"><p><span class="math inline">\(\tilde{m}(A)\leq \tilde{m}(B), \forall A,B \in {\cal A}\)</span> with <span class="math inline">\(A\subset B\)</span></p></li></ol></aside></section>
+<section class="slide level2">
+
+<p><code># 예제11</code></p>
+<p><span class="math inline">\(\tilde{m}\)</span> is add on <span class="math inline">\({\cal A}\)</span>? <span class="math inline">\(\tilde{m}\)</span> is subadd on <span class="math inline">\({\cal A}\)</span>?</p>
+<ul>
+<li><span class="math inline">\(\Omega = \{1,2,3\}\)</span></li>
+<li><span class="math inline">\({\cal A}= \{\emptyset,\{1,2\},\{2,3\},\{1,2,3\}\}\)</span></li>
+<li><span class="math inline">\(\tilde{m}(\emptyset) =\tilde{m}(\{1,2\}) = \tilde{m}(\{2,3\})=0, \tilde{m}(\{1,2,3\})=1\)</span></li>
+</ul>
+<p><code>(답)</code> <span class="math inline">\(\tilde{m}\)</span> is add but not subadd on <span class="math inline">\({\cal A}\)</span>. Note that <span class="math inline">\(\tilde{m}\)</span> is mono.</p>
+</section>
+<section class="slide level2">
+
+<p><code># 예제12</code></p>
+<p><span class="math inline">\(\tilde{m}\)</span> is add on <span class="math inline">\({\cal A}\)</span>? <span class="math inline">\(\tilde{m}\)</span> is subadd on <span class="math inline">\({\cal A}\)</span>?</p>
+<ul>
+<li><span class="math inline">\(\Omega = \{1,2\}\)</span></li>
+<li><span class="math inline">\({\cal A}= \{\emptyset,\{1\},\{2\},\Omega\}\)</span></li>
+<li><span class="math inline">\(\tilde{m}(\emptyset) =0, \tilde{m}(\{1\})=\tilde{m}(\{2\})=\tilde{m}(\{1,2\})=1\)</span></li>
+</ul>
+<p><code>(답)</code> <span class="math inline">\(\tilde{m}\)</span> is not add but subadd(<span class="math inline">\(\Rightarrow\)</span> mono) on <span class="math inline">\({\cal A}\)</span>.</p>
+</section>
+<section class="slide level2">
+
+<p><code># 예제13</code></p>
+<p><span class="math inline">\(\tilde{m}\)</span> is add on <span class="math inline">\({\cal A}\)</span>? <span class="math inline">\(\tilde{m}\)</span> is subadd on <span class="math inline">\({\cal A}\)</span>?</p>
+<ul>
+<li><span class="math inline">\(\Omega = \mathbb{R}\)</span></li>
+<li><span class="math inline">\({\cal A}= \{\emptyset,\mathbb{Q},\mathbb{Q}^c,\Omega\}\)</span></li>
+<li><span class="math inline">\(\tilde{m}(\emptyset) =0, \tilde{m}(\mathbb{Q})=\tilde{m}(\mathbb{Q}^c)=\tilde{m}(\mathbb{R})=\infty\)</span></li>
+</ul>
+<p><code>(답)</code> <span class="math inline">\(\tilde{m}\)</span> is add and also subadd(<span class="math inline">\(\Rightarrow\)</span> mono) on <span class="math inline">\({\cal A}\)</span>.</p>
+<blockquote>
+<p>Note: 만약에 <span class="math inline">\(\tilde{m}(\emptyset)=0, \tilde{m}(\mathbb{Q})=\tilde{m}(\mathbb{Q}^c)=\tilde{m}(\mathbb{R})=1\)</span> 이었다면 <span class="math inline">\(\tilde{m}\)</span>은 subadd는 만족하지만 add는 만족하지 않음. (앞의 예제와 비슷한상황)</p>
+</blockquote>
+</section>
+<section class="slide level2">
+
+<p><code># 예제14</code></p>
+<p><span class="math inline">\(\tilde{m}\)</span> is add on <span class="math inline">\({\cal A}\)</span>? <span class="math inline">\(\tilde{m}\)</span> is subadd on <span class="math inline">\({\cal A}\)</span>?</p>
+<ul>
+<li><span class="math inline">\(\Omega = \{1,2,3\}\)</span></li>
+<li><span class="math inline">\({\cal A}= \{\emptyset,\{1\},\{1,2\},\{1,3\},\{2,3\},\Omega\}\)</span></li>
+<li><span class="math inline">\(\tilde{m}(A)=\begin{cases}
+0 &amp; A = \emptyset \\
+1 &amp; A = \{1\} \\
+3 &amp; A = \{1,2\} \\
+3 &amp; A = \{1,3\} \\
+8 &amp; A = \{2,3\} \\
+9 &amp; A = \{1,2,3\}
+\end{cases}\)</span></li>
+</ul>
+<p><code>(답)</code> <span class="math inline">\(\tilde{m}\)</span> is add and not subadd on <span class="math inline">\({\cal A}\)</span>. Note that <span class="math inline">\(\tilde{m}\)</span> is (strictly) mono.</p>
+</section>
+<section class="slide level2">
+
+<p><code># 예제10</code> – 다시 풀기</p>
+<p><span class="math inline">\(\tilde{m}\)</span>가 이상하다고 느낀 원인이 무엇이었을까?</p>
+<ul>
+<li><span class="math inline">\(\Omega = \mathbb{R}\)</span></li>
+<li><span class="math inline">\({\cal A}= \{\{x\}: x \in \mathbb{R}\} \cup \{\emptyset, \mathbb{Q} , \mathbb{Q}^c, \mathbb{R}\}\)</span></li>
+<li><span class="math inline">\(\tilde{m}(A) = \begin{cases} 1 &amp; A = \{x\}, x\in \mathbb{R} \\ 0 &amp; A = \emptyset \\ \infty &amp; A=\mathbb{Q} \\ 0 &amp; A=\mathbb{Q}^c \\ \infty &amp; A=\mathbb{R} \end{cases}\)</span></li>
+</ul>
+<p><code>(답)</code> <span class="math inline">\(\tilde{m}\)</span> is add and also <span class="math inline">\(\sigma\)</span>-add on <span class="math inline">\({\cal A}\)</span> but not subadd on <span class="math inline">\({\cal A}\)</span>. Note that <span class="math inline">\(\tilde{m}\)</span> is also not mono.</p>
+</section>
+<section class="slide level2">
+
+<p><code># 정의4</code>. <strong><span class="math inline">\(\tilde{m}\)</span> is <span class="math inline">\(\sigma\)</span>-subadditive on <span class="math inline">\({\cal A}\)</span></strong></p>
+<p><span class="math inline">\({\cal A}\subset 2^\Omega\)</span> 에서의 집합함수 <span class="math inline">\(\tilde{m}:{\cal A} \to [0,\infty]\)</span>을 고려하자. “집함함수 <span class="math inline">\(\tilde{m}\)</span>이 <span class="math inline">\({\cal A}\)</span> 에서 <span class="math inline">\(\sigma\)</span>-<strong><em>subadditive</em></strong> 하다”는 것은 아래가 성립한다는 의미이다.</p>
+<p><span class="math display">\[\text{(1)} A, A_1, A_2 \cdots \in {\cal A} ~~\text{(2)}A \subset \bigcup_{i=1}^{\infty}A_i ~ \Longrightarrow ~ \tilde{m}\left(A\right)\leq\sum_{i=1}^{\infty}\tilde{m}(A_i)\]</span></p>
+<p><code>#</code></p>
+</section>
+<section class="slide level2">
+
+<p><code># 예제15</code></p>
+<p><span class="math inline">\(\tilde{m}\)</span> is subadd on <span class="math inline">\({\cal A}\)</span>? <span class="math inline">\(\tilde{m}\)</span> is <span class="math inline">\(\sigma\)</span>-subadd on <span class="math inline">\({\cal A}\)</span>?</p>
+<ul>
+<li><span class="math inline">\(\Omega = \mathbb{R}\)</span></li>
+<li><span class="math inline">\({\cal A}= \{\emptyset,\mathbb{R}\} \cup \{[-n,n]: n \in \mathbb{N}\}\)</span></li>
+<li><span class="math inline">\(\tilde{m}(A) = \begin{cases} \infty &amp;  A = \mathbb{R} \\ 0 &amp; o.w. \end{cases}\)</span></li>
+</ul>
+<p><code>(답)</code> <span class="math inline">\(\tilde{m}\)</span> is subadd but not <span class="math inline">\(\sigma\)</span>-subadd on <span class="math inline">\({\cal A}\)</span>.</p>
+<blockquote>
+<p>Note: <span class="math inline">\(\tilde{m}\)</span>은 심지어 add, <span class="math inline">\(\sigma\)</span>-add도 성립함.</p>
+</blockquote>
+</section>
+<section class="slide level2">
+
+<p><code># 성질</code> – <span class="math inline">\({\cal A} \subset 2^\Omega\)</span>, <span class="math inline">\(\tilde{m}: {\cal A} \to [0,\infty]\)</span> 라고 하자. 함수 <span class="math inline">\(\tilde{m}\)</span>에 대하여 체크해볼만한 성질들이 있다.</p>
+<ol type="1">
+<li><span class="math inline">\(\sigma\)</span>-additivity <span class="math inline">\(\Rightarrow\)</span> additivity</li>
+<li><span class="math inline">\(\sigma\)</span>-subadditivity <span class="math inline">\(\Rightarrow\)</span> subadditivity</li>
+<li>subadditivity <span class="math inline">\(\Rightarrow\)</span> monotone</li>
+<li><span class="math inline">\(\Omega\)</span>가 유한집합일 경우
+<ul>
+<li><span class="math inline">\(\sigma\)</span>-additivity <span class="math inline">\(\Leftrightarrow\)</span> additivity</li>
+<li><span class="math inline">\(\sigma\)</span>-subadditivity <span class="math inline">\(\Leftrightarrow\)</span> subadditivity</li>
+</ul></li>
+</ol>
+</section>
+<section class="slide level2">
+
+<p><code># 예제16</code></p>
+<p><span class="math inline">\(\tilde{m}\)</span> is add on <span class="math inline">\({\cal A}\)</span>?</p>
+<ul>
+<li><span class="math inline">\(\Omega = \{1,2,3,4\}\)</span></li>
+<li><span class="math inline">\({\cal A}= \{\emptyset, \{1\},\{1,2,3\},\{1,3,4\},\{1,2,4\},\{2,3,4\}\}\)</span></li>
+<li><span class="math inline">\(\tilde{m}(A) =
+\begin{cases}
+0 &amp; A=\emptyset\\
+1 &amp; A=\{1\}\\
+1 &amp; A=\{1,2,3\}\\
+1 &amp; A=\{1,3,4\}\\
+1 &amp; A=\{1,2,4\}\\
+1 &amp; A=\{2,3,4\}
+\end{cases}\)</span></li>
+</ul>
+<p><code>(풀이)</code> <span class="math inline">\(\tilde{m}\)</span>은 <span class="math inline">\({\cal A}\)</span>에서 add, <span class="math inline">\(\sigma\)</span>-add, subadd, <span class="math inline">\(\sigma\)</span>-subadd임. 그런데 뭔가 이상함.</p>
+</section>
+<section class="slide level2">
+
+<p><code>-</code> 결론: <span class="math inline">\({\cal A}\)</span> 자체에서 뭔가 제약이 있어야겠는데?</p>
+<ul>
+<li><span class="math inline">\(\tilde{m}(\{1\})=1\)</span>, <span class="math inline">\(\tilde{m}(\{1,2,3\})=1\)</span>이라고 정의해놓고 <span class="math inline">\(\tilde{m}(\{2,3\})\)</span>의 값을 정의안하는건 매우 치사함.</li>
+<li><span class="math inline">\(\tilde{m}(\{2,3\})=0\)</span>이라고 명확하게 정의하던가, 아니면 <span class="math inline">\(\tilde{m}(\{2,3\})=\tilde{m}(\{2\})=\tilde{m}(\{3\})=0\)</span>이라고 정의해아함.</li>
+</ul>
+<p><code>-</code> 외우세요: 측도 비스무리한 집합함수라도 정의하려면 <span class="math inline">\({\cal A}\)</span>는 “최소” 세미링이어야함.</p>
+</section>
+<section class="slide level2">
+
+<p><code># 예제16</code> – 다시보기</p>
+<p><span class="math inline">\(\tilde{m}\)</span> is add on <span class="math inline">\({\cal A}\)</span>?</p>
+<ul>
+<li><span class="math inline">\(\Omega = \{1,2,3,4\}\)</span></li>
+<li><span class="math inline">\({\cal A}= \{\emptyset, \{1\},\{1,2,3\},\{1,3,4\},\{1,2,4\},\{2,3,4\}\}\)</span></li>
+<li><span class="math inline">\(\tilde{m}(A) =
+\begin{cases}
+0 &amp; A=\emptyset\\
+1 &amp; A=\{1\}\\
+1 &amp; A=\{1,2,3\}\\
+1 &amp; A=\{1,3,4\}\\
+1 &amp; A=\{1,2,4\}\\
+1 &amp; A=\{2,3,4\}
+\end{cases}\)</span></li>
+</ul>
+<p><code>(풀이)</code> <span class="math inline">\(\tilde{m}\)</span>은 <span class="math inline">\({\cal A}\)</span>에서 add, <span class="math inline">\(\sigma\)</span>-add, subadd, <span class="math inline">\(\sigma\)</span>-subadd, monotone임. <strong>그런데 <span class="math inline">\({\cal A}\)</span>가 세미링이 아니네? (=확률 혹은 측도 비슷한걸 정의할 최소한의 준비도 안되어있잖아?)</strong></p>
+</section>
+<section class="slide level2">
+
+<h3><span class="math inline">\({\cal A}\)</span>가 세미링이라고 가정한다면?</h3>
+<p><code>-</code> 이제부터 <span class="math inline">\({\cal A}\)</span>는 세미링이라고 가정하자. 이 추가가정은 많은 변화를 이끌어낸다. 결론을 먼저 말하면, <span class="math inline">\({\cal A}\)</span>이 세미링이라면 addtivity는 monotonicity 와 subaddtivity를 임플라이하고 <span class="math inline">\(\sigma\)</span>-addivity는 <span class="math inline">\(\sigma\)</span>-subadditivity를 임플라이한다. 즉 아래와 같이 된다.</p>
+
+<img data-src="./figs/11wk-fig1.png" class="r-stretch quarto-figure-center"><p class="caption">그림1: 암기를 돕는 다이어그램</p></section>
+<section class="slide level2">
+
+<p><code># 증명예제1</code> – <span class="math inline">\({\cal A}\subset 2^\Omega\)</span> 에서 집합함수 <span class="math inline">\(\tilde{m}:{\cal A} \to [0,\infty]\)</span>를 고려하자. 추가적으로 <span class="math inline">\({\cal A}\)</span>는 세미링이라고 가정하고 <span class="math inline">\(\tilde{m}(\emptyset)=0\)</span>라고 가정하자. 이제 <span class="math inline">\(1 \Rightarrow 2\)</span> 임을 보여라.</p>
+<ol type="1">
+<li><span class="math inline">\(\tilde{m}\)</span> is addtive on <span class="math inline">\({\cal A}\)</span></li>
+<li><span class="math inline">\(\tilde{m}\)</span> is monotone on <span class="math inline">\({\cal A}\)</span></li>
+</ol>
+</section>
+<section class="slide level2">
+
+<p><code>(증명)</code> 함수 <span class="math inline">\(\tilde{m}\)</span>이 <span class="math inline">\({\cal A}\)</span>에서 monotone이라는 의미는 <span class="math inline">\(A\subset B\)</span>를 만족하는 임의의 <span class="math inline">\(A,B \in {\cal A}\)</span> 에 대하여 아래를 만족한다는 의미이다.</p>
+<p><span class="math display">\[\tilde{m}(A) \leq \tilde{m}(B)\]</span></p>
+<p>그런데 아래의 식이 성립하므로</p>
+<p><span class="math display">\[B=A \uplus (B-A)\]</span></p>
+<p>위의 식의 양변에 <span class="math inline">\(\tilde{m}\)</span>을 취하면, <span class="math inline">\(\tilde{m}\)</span>의 add성질 때문에 아래가 성립하여 증명이 완료될 것 같다.</p>
+<p><span class="math display">\[\tilde{m}(B)=\tilde{m}(A) + \tilde{m}(B-A)\]</span></p>
+</section>
+<section class="slide level2">
+
+<p>그렇지만 세미링 <span class="math inline">\({\cal A}\)</span>는 차집합에 닫혀있지 않으므로 <span class="math inline">\(A,B \in {\cal A}\)</span> 라고 해도 <span class="math inline">\(B-A \in {\cal A}\)</span> 라는 보장이 없다. 따라서 <span class="math inline">\(\tilde{m}(B-A)\)</span> 와 같은 표현은 불가능하다. 대신에 <span class="math inline">\({\cal A}\)</span>는 차집합에 반쯤 닫혀 있으므로 아래와 같은 표현은 가능하다.</p>
+<p><span class="math display">\[\tilde{m}(B)=\tilde{m}(A) + \sum_{i=1}^{n}\tilde{m}(C_i)\]</span></p>
+<p>(당연히) 이때 <span class="math inline">\(C_1,\dots,C_n\)</span>은 서로소이고, 모두 <span class="math inline">\({\cal A}\)</span>의 원소이며 <span class="math inline">\(\biguplus_{i=1}^{n}C_i=B-A\)</span>를 만족한다. 따라서 증명이 완료되었다.</p>
+<blockquote>
+<p>사실 <span class="math inline">\(\tilde{m}(\emptyset)=0\)</span>은 꼭 <span class="math inline">\(1 \Rightarrow 2\)</span>임을 보이는데 필요한 조건은 아님. 에를들어 모든 메져값이 <span class="math inline">\(\infty\)</span>이어도 위의 논의가 그대로 성립함. <span class="math inline">\(\tilde{m}(\emptyset)=0\)</span>는 결론을 얻기위한 조건이 아니라, 그냥 <span class="math inline">\(\tilde{m}(\emptyset)=\infty\)</span>를 고려할 필요가 없어서 서술적으로 들어간 조건임. 즉 “<span class="math inline">\(\tilde{m}(\emptyset)=\infty\)</span>인 경우는 (따질수는 있지만) 따지지 않기로 하자” 정도의 뉘앙스.</p>
+</blockquote>
+<p><code>#</code></p>
+</section>
+<section class="slide level2">
+
+<p><code># 증명예제2</code> – <span class="math inline">\({\cal A}\subset 2^\Omega\)</span> 에서의 집합함수 <span class="math inline">\(\tilde{m}:{\cal A} \to [0,\infty]\)</span>을 고려하자. 추가적으로 <span class="math inline">\({\cal A}\)</span>는 세미링이라고 가정하고 <span class="math inline">\(\tilde{m}(\emptyset)=0\)</span>라고 가정하자. 이제 <span class="math inline">\(1 \Rightarrow 2\)</span> 임을 보여라.</p>
+<ol type="1">
+<li><span class="math inline">\(\tilde{m}\)</span> is addtivie on <span class="math inline">\({\cal A}\)</span></li>
+<li><span class="math inline">\(\tilde{m}\)</span> is subaddtive on <span class="math inline">\({\cal A}\)</span></li>
+</ol>
+</section>
+<section class="slide level2">
+
+<p><code>(증명)</code></p>
+<p>일반성을 잃지 않고, 증명하고자 하는 바를 아래로 간략화 할 수 있다.</p>
+<blockquote>
+<p><span class="math inline">\(A, A_1, A_2 \in {\cal A}\)</span> and <span class="math inline">\(A \subset (A_1\cup A_2)\)</span> <span class="math inline">\(\Rightarrow\)</span> <span class="math inline">\(\tilde{m}(A) \leq \tilde{m}(A_1) + \tilde{m}(A_2)\)</span></p>
+</blockquote>
+<p>일단 <span class="math inline">\(B_1=A_1\)</span>, <span class="math inline">\(B_2=A_2-A_1 =\uplus_{i=1}^{n}C_i\)</span> 을 이용하여 아래의 식을 우선 정리하자.</p>
+<p><strong>(a)</strong> <span class="math inline">\(A_1 \cup A_2 = B_1 \uplus B_2 = B_1 \uplus C_1 \uplus \dots \uplus C_n\)</span></p>
+<p><strong>(b)</strong> <span class="math inline">\(A_2 = (A_1 \cap A_2) \uplus C_1 \uplus \dots \uplus C_n\)</span></p>
+<p>이제 <span class="math inline">\(A \subset (A_1 \cup A_2)\)</span> 를 이용하면 <span class="math display">\[A = A \cap (A_1 \cup A_2) = A \cap (B_1\uplus C_1\uplus\dots\uplus C_n)\]</span>를 얻을 수 있고 따라서 <span class="math inline">\(A\)</span>는 아래와 같이 분해할 수 있다.</p>
+<p><span class="math display">\[A = (A\cap B_1)\uplus (A\cap C_1) \uplus \dots \uplus (A\cap C_n)\]</span></p>
+</section>
+<section class="slide level2">
+
+<p><span class="math inline">\(\tilde{m}\)</span>이 add 함을 이용하면 위의 식을 아래와 같이 쓸 수 있다.</p>
+<p><span class="math display">\[\tilde{m}(A) = \tilde{m}(A\cap B_1)+ \tilde{m}(A\cap C_1) + \dots + \tilde{m}(A\cap C_n)\]</span></p>
+<p>여기에서 <span class="math inline">\(A\in {\cal A}\)</span>, <span class="math inline">\(A \cap B_1 \in {\cal A}\)</span>, <span class="math inline">\(A \cap C_i \in {\cal A}\)</span> 이므로, 위의 식에서 <span class="math inline">\(\tilde{m}(\star)\)</span> 와 같은 표현이 모두 가능함을 체크하자. 이제 <span class="math inline">\(\tilde{m}\)</span>이 monotone 임을 이용하면 (monotone은 add에 의하여 imply 되었음)</p>
+<p><span class="math display">\[\tilde{m}(A) \leq \textcolor{red}{\tilde{m}(B_1)}+ \textcolor{blue}{\tilde{m}(C_1)} + \dots + \textcolor{blue}{\tilde{m}(C_n)}\quad \cdots(*)\]</span></p>
+<p>임을 알 수 있다. 이제 (b)의 양변에 함수 <span class="math inline">\(\tilde{m}\)</span>을 취하여 아래를 얻자.</p>
+<p><span class="math display">\[\tilde{m}(A_2) = \tilde{m}(A_1 \cap A_2) +\tilde{m}(C_1)+ \dots \tilde{m}(C_n) \quad\cdots(**)\]</span></p>
+<p>이제 <span class="math inline">\(\tilde{m}(A_1)=\tilde{m}(B_1)\)</span> 임을 이용하여 <span class="math inline">\((*)\)</span>의 <span class="math inline">\(\textcolor{red}{빨간색부분}\)</span>을 정리하고 <span class="math inline">\((**)\)</span>를 이용하여 <span class="math inline">\((*)\)</span>의 <span class="math inline">\(\textcolor{blue}{파란색부분}\)</span>을 정리하면 아래를 얻을 수 있다. 따라서 증명끝.</p>
+<p><span class="math display">\[\tilde{m}(A) \leq \tilde{m}(A_1) + \tilde{m}(A_2)\]</span></p>
+</section>
+<section class="slide level2">
+
+<p><code>-</code> 따라서 <span class="math inline">\({\cal A}\)</span>가 세미링일 경우 (그리고 <span class="math inline">\(\tilde{m}(\emptyset)=0\)</span>일 경우)</p>
+<ul>
+<li>additivity <span class="math inline">\(\Rightarrow\)</span> monotonicity (<span class="math inline">\(A \subset B \Rightarrow \tilde{m}(A)\leq \tilde{m}(B)\)</span>)</li>
+<li>additivity <span class="math inline">\(\Rightarrow\)</span> sub-additivity</li>
+<li><span class="math inline">\(\sigma\)</span>-additivity <span class="math inline">\(\Rightarrow\)</span> <span class="math inline">\(\sigma\)</span>-subadditivity</li>
+</ul>
+<p><code>#</code></p>
+
+
+</section>
+
     </div>
-  </div>
+  <div class="quarto-auto-generated-content" style="display: none;">
+<div class="footer footer-default">
+
+</div>
+</div></div>
 
   <script>window.backupDefine = window.define; window.define = undefined;</script>
   <script src="../site_libs/revealjs/dist/reveal.js"></script>
