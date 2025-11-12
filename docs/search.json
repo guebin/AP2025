@@ -88,14 +88,7 @@
     "href": "posts/11wk.html",
     "title": "11wk - additivity, σ-additivity, subadditivity, σ-subadditivity",
     "section": "",
-    "text": "- 우리가 하고 싶은것은 “\\({\\cal A}\\)에서 적당히 확률과 비슷한 집합함수 \\(\\tilde{P}\\)를 정의하면, 그 \\(\\tilde{P}\\)가 \\(\\sigma({\\cal A})\\)에서의 유일한 확률측도 \\(\\mathbb{P}\\)로 업그레이드된다.” 를 보이는 것이다.\n- 확률과 비슷한 집합함수라는 개념은 도데체 뭘까?\n- 르벡메져와 비슷한 집합함수라는 개념도 있겠지? 그건 또 뭘까?"
-  },
-  {
-    "objectID": "posts/11wk.html#footnotes",
-    "href": "posts/11wk.html#footnotes",
-    "title": "11wk - additivity, σ-additivity, subadditivity, σ-subadditivity",
-    "section": "Footnotes",
-    "text": "Footnotes\n\n\n\\(\\tilde{m}(A)\\leq \\tilde{m}(B), \\forall A,B \\in {\\cal A}\\) with \\(A\\subset B\\)↩︎"
+    "text": "강의영상"
   },
   {
     "objectID": "posts/12wk.html",
