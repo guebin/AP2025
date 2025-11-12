@@ -387,17 +387,6 @@
 </section>
 <section class="slide level2">
 
-<p><code>-</code> add, subadd, <span class="math inline">\(\sigma\)</span>-add, <span class="math inline">\(\sigma\)</span>-subadd면 “측도느낌이 나는 집합함수”라고 하기에 충분할까? 예제 10을 다시 한번 살펴보자.</p>
-<p><code># 예제10</code></p>
-<p>아래의 집합함수 <span class="math inline">\(\tilde{m}\)</span>은 사실 <span class="math inline">\({\cal A}\)</span>에서 add, subadd, <span class="math inline">\(\sigma\)</span>-add, <span class="math inline">\(\sigma\)</span>-subadd 를 만족함.</p>
-<ul>
-<li><span class="math inline">\(\Omega = \mathbb{R}\)</span></li>
-<li><span class="math inline">\({\cal A}= \{\{x\}: x \in \mathbb{R}\} \cup \{\emptyset, \mathbb{Q} , \mathbb{Q}^c, \mathbb{R}\}\)</span></li>
-<li><span class="math inline">\(\tilde{m}(A) = \begin{cases} 1 &amp; A = \{x\}, x\in \mathbb{R} \\ 0 &amp; A = \emptyset \\ \infty &amp; A=\mathbb{Q} \\ 0 &amp; A=\mathbb{Q}^c \\ \infty &amp; A=\mathbb{R} \end{cases}\)</span></li>
-</ul>
-</section>
-<section class="slide level2">
-
 <p><code># 정의5</code>. <strong><span class="math inline">\(\tilde{m}\)</span> is monotone on <span class="math inline">\({\cal A}\)</span></strong></p>
 <p><span class="math inline">\({\cal A}\subset 2^\Omega\)</span> 에서의 집합함수 <span class="math inline">\(\tilde{m}:{\cal A} \to [0,\infty]\)</span>을 고려하자. “집함함수 <span class="math inline">\(\tilde{m}\)</span>이 <span class="math inline">\({\cal A}\)</span> 에서 <strong><em>monotone</em></strong> 하다”는 것은 아래가 성립한다는 의미이다.</p>
 <p><span class="math display">\[\text{(1)} A,B \in {\cal A} ~~\text{(2)}A \subset B ~ \Longrightarrow ~ \tilde{m}(A)\leq \tilde{m}(B)\]</span></p>
@@ -561,6 +550,17 @@
 </ul>
 <p>(풀이)</p>
 <p><span class="math inline">\(\tilde{m}\)</span>은 <span class="math inline">\(\sigma\)</span>-finite하다.</p>
+</section>
+<section class="slide level2">
+
+<h3>숙제</h3>
+<p><code># 예제10</code></p>
+<p>아래의 집합함수 <span class="math inline">\(\tilde{m}\)</span>이 <span class="math inline">\({\cal A}\)</span>에서 additivity, <span class="math inline">\(\sigma\)</span>-additivity, subadditivity, <span class="math inline">\(\sigma\)</span>-subadditivity, monotone을 만족하는지 판단하라.</p>
+<ul>
+<li><span class="math inline">\(\Omega = \mathbb{R}\)</span></li>
+<li><span class="math inline">\({\cal A}= \{\{x\}: x \in \mathbb{R}\} \cup \{\emptyset, \mathbb{Q} , \mathbb{Q}^c, \mathbb{R}\}\)</span></li>
+<li><span class="math inline">\(\tilde{m}(A) = \begin{cases} 1 &amp; A = \{x\}, x\in \mathbb{R} \\ 0 &amp; A = \emptyset \\ \infty &amp; A=\mathbb{Q} \\ 0 &amp; A=\mathbb{Q}^c \\ \infty &amp; A=\mathbb{R} \end{cases}\)</span></li>
+</ul>
 
 
 </section>
