@@ -95,7 +95,7 @@
     "href": "posts/12wk.html",
     "title": "12wk - 확장이론1, 확장이론2, 르벡메저",
     "section": "",
-    "text": "# 정의 – 공간 \\((\\Omega,{\\cal A})\\) 를 상상하자. 여기에서 \\({\\cal A}\\)는 \\(\\Omega\\)에 대한 세미링이다. 만약에 어떠한 집합함수 \\(\\tilde{m}: {\\cal A} \\to [0,\\infty]\\) with \\(\\tilde{m}(\\emptyset) =0\\) 이 아래를 만족한다면\n\n\\(\\exists~ \\Omega_1,\\Omega_2, \\dots  \\in {\\cal F}\\) such that\n\n\\(\\cup_{i=1}^{\\infty}\\Omega_i=\\Omega\\)\n\\(\\forall n \\in \\mathbb{N}: \\tilde{m}(\\Omega_n)&lt; \\infty\\)\n\n\n\\(\\tilde{m}\\)을 \\({\\cal A}\\)에서 시그마유한하다고 표현한다.\n#\n\n# 예제1\n\\(\\tilde{m}\\) is monotone on \\({\\cal A}\\)?\n\n\\(\\Omega = \\mathbb{R}\\)\n\\({\\cal A}= \\{\\emptyset,\\mathbb{R}\\} \\cup \\{[-n,n]: n \\in \\mathbb{N}\\}\\)\n\\(\\tilde{m}(A) = \\begin{cases} \\infty &  A = \\mathbb{R} \\\\ 0 & o.w. \\end{cases}\\)\n\n(풀이)\n\\(\\tilde{m}\\)은 \\(\\sigma\\)-finite하다."
+    "text": "# 정의 – 공간 \\((\\Omega,{\\cal A})\\) 를 상상하자. 여기에서 \\({\\cal A}\\)는 \\(\\Omega\\)에 대한 세미링이다. 만약에 어떠한 집합함수 \\(\\tilde{m}: {\\cal A} \\to [0,\\infty]\\) with \\(\\tilde{m}(\\emptyset) =0\\) 이 아래를 만족한다면\n\n\\(\\exists~ \\Omega_1,\\Omega_2, \\dots  \\in {\\cal A}\\) such that\n\n\\(\\cup_{i=1}^{\\infty}\\Omega_i=\\Omega\\)\n\\(\\forall n \\in \\mathbb{N}: \\tilde{m}(\\Omega_n)&lt; \\infty\\)\n\n\n\\(\\tilde{m}\\)을 \\({\\cal A}\\)에서 시그마유한하다고 표현한다.\n#\n\n# 예제1\nIs \\(\\tilde{m}\\) \\(\\sigma\\)-finite on \\({\\cal A}\\)?\n\n\\(\\Omega = \\mathbb{R}\\)\n\\({\\cal A}= \\{\\emptyset,\\mathbb{R}\\} \\cup \\{[-n,n]: n \\in \\mathbb{N}\\}\\)\n\\(\\tilde{m}(A) = \\begin{cases} \\infty &  A = \\mathbb{R} \\\\ 0 & o.w. \\end{cases}\\)\n\n(풀이)\n\\(\\tilde{m}\\)은 \\(\\sigma\\)-finite하다."
   },
   {
     "objectID": "posts/12wk.html#footnotes",
