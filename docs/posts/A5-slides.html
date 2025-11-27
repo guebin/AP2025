@@ -1,0 +1,1073 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-html/tabby.min.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/light-border.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-a37c72dd2dbac68997fcdc15a3622e78.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/quarto-contrib/videojs/video.min.js"></script>
+<link href="../site_libs/quarto-contrib/videojs/video-js.css" rel="stylesheet"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.7.24">
+
+  <meta name="author" content="최규빈">
+  <meta name="dcterms.date" content="2025-11-27">
+  <title>AP2025 – A5 - 밀도함수</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="../site_libs/revealjs/dist/reset.css">
+  <link rel="stylesheet" href="../site_libs/revealjs/dist/reveal.css">
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+      vertical-align: middle;
+    }
+  </style>
+  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-dd6e336df6bd42e4aed945529e00dfad.css">
+  <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
+  <link href="../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
+  <link href="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="../site_libs/revealjs/plugin/reveal-chalkboard/font-awesome/css/all.css" rel="stylesheet">
+  <link href="../site_libs/revealjs/plugin/reveal-chalkboard/style.css" rel="stylesheet">
+  <link href="../site_libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
+  <style type="text/css">
+    .reveal div.sourceCode {
+      margin: 0;
+      overflow: auto;
+    }
+    .reveal div.hanging-indent {
+      margin-left: 1em;
+      text-indent: -1em;
+    }
+    .reveal .slide:not(.center) {
+      height: 100%;
+    }
+    .reveal .slide.scrollable {
+      overflow-y: auto;
+    }
+    .reveal .footnotes {
+      height: 100%;
+      overflow-y: auto;
+    }
+    .reveal .slide .absolute {
+      position: absolute;
+      display: block;
+    }
+    .reveal .footnotes ol {
+      counter-reset: ol;
+      list-style-type: none; 
+      margin-left: 0;
+    }
+    .reveal .footnotes ol li:before {
+      counter-increment: ol;
+      content: counter(ol) ". "; 
+    }
+    .reveal .footnotes ol li > p:first-child {
+      display: inline-block;
+    }
+    .reveal .slide ul,
+    .reveal .slide ol {
+      margin-bottom: 0.5em;
+    }
+    .reveal .slide ul li,
+    .reveal .slide ol li {
+      margin-top: 0.4em;
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide ul[role="tablist"] li {
+      margin-bottom: 0;
+    }
+    .reveal .slide ul li > *:first-child,
+    .reveal .slide ol li > *:first-child {
+      margin-block-start: 0;
+    }
+    .reveal .slide ul li > *:last-child,
+    .reveal .slide ol li > *:last-child {
+      margin-block-end: 0;
+    }
+    .reveal .slide .columns:nth-child(3) {
+      margin-block-start: 0.8em;
+    }
+    .reveal blockquote {
+      box-shadow: none;
+    }
+    .reveal .tippy-content>* {
+      margin-top: 0.2em;
+      margin-bottom: 0.7em;
+    }
+    .reveal .tippy-content>*:last-child {
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide > img.stretch.quarto-figure-center,
+    .reveal .slide > img.r-stretch.quarto-figure-center {
+      display: block;
+      margin-left: auto;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-left,
+    .reveal .slide > img.r-stretch.quarto-figure-left  {
+      display: block;
+      margin-left: 0;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-right,
+    .reveal .slide > img.r-stretch.quarto-figure-right  {
+      display: block;
+      margin-left: auto;
+      margin-right: 0; 
+    }
+  </style>
+</head>
+<body class="quarto-light">
+  <div class="reveal">
+    <div class="slides">
+
+<section class="quarto-title-block center">
+  <h1 class="title">A5 - 밀도함수</h1>
+
+<div class="quarto-title-authors">
+<div class="quarto-title-author">
+<div class="quarto-title-author-name">
+최규빈 
+</div>
+</div>
+</div>
+
+  <p class="date">2025-11-27</p>
+</section>
+<section class="title-slide slide level1 center">
+<h1>강의영상</h1>
+<video id="video_shortcode_videojs_video1" class="video-js vjs-default-skin vjs-fluid" controls="" preload="auto" data-setup="{}" title=""><source src="https://youtube.com/playlist?list=PLQqh36zP38-xzs1sJhhsXTzssLICsc9t6"></video>
+</section>
+
+<section>
+<section class="title-slide slide level1 center">
+<h1>칸토어집합</h1>
+<p>ref: <a href="https://en.wikipedia.org/wiki/Cantor_set" class="uri">https://en.wikipedia.org/wiki/Cantor_set</a></p>
+</section>
+<section class="slide level2">
+<h2>정의</h2>
+<p><code>-</code> 아래의 집합열 <span class="math inline">\(C_n\)</span>의 극한 <span class="math inline">\({\cal C}=\lim_{n\to\infty} C_n\)</span>를 생각하자.</p>
+<p><strong>실제수열</strong></p>
+<ul>
+<li><span class="math inline">\(C_0=[0,1]\)</span></li>
+<li><span class="math inline">\(C_1=[0,\frac{1}{3}] \cup [\frac{2}{3},1]\)</span></li>
+<li><span class="math inline">\(C_2=\big([0,\frac{1}{9}]\cup[\frac{2}{9},\frac{1}{3}] \big) \cup \big([\frac{2}{3},\frac{7}{9}]\cup [\frac{8}{9},1] \big)\)</span></li>
+<li><span class="math inline">\(\dots\)</span></li>
+</ul>
+<p><strong>언어버전:</strong> created by iteratively deleting the open middle third from a set of line segments.</p>
+<ul>
+<li><span class="math inline">\(C_0\)</span>: <span class="math inline">\([0,1]\)</span></li>
+<li><span class="math inline">\(C_1\)</span>: <span class="math inline">\(C_0\)</span>에서 정의된 line을 3등분한뒤 가운데를 제거</li>
+<li><span class="math inline">\(C_2\)</span>: <span class="math inline">\(C_1\)</span>에서 정의된 line segments를 각각 3등분한뒤 각각 가운데를 제거</li>
+<li><span class="math inline">\(\dots\)</span></li>
+</ul>
+<p><strong>수식버전</strong></p>
+<ul>
+<li><span class="math inline">\(C_0=[0,1]\)</span></li>
+<li><span class="math inline">\(C_1=\frac{C_{0}}{3}\cup(\frac{2}{3}+\frac{C_{0}}{3})\)</span></li>
+<li><span class="math inline">\(C_2=\frac{C_{1}}{3}\cup(\frac{2}{3}+\frac{C_{1}}{3})\)</span></li>
+<li><span class="math inline">\(\dots\)</span></li>
+<li><span class="math inline">\(C_n=\frac{C_{n-1}}{3}\cup(\frac{2}{3}+\frac{C_{n-1}}{3})\)</span></li>
+</ul>
+<p>단, 여기에서</p>
+<ul>
+<li><span class="math inline">\(\frac{1}{3}[a,b]= [\frac{a}{3},\frac{b}{3}]\)</span></li>
+<li><span class="math inline">\(\frac{2}{3}+[a,b]= [\frac{2}{3}+a,\frac{2}{3}+b]\)</span></li>
+</ul>
+<p>와 같이 정의한다.</p>
+<p><strong>그림버전</strong></p>
+
+<img data-src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Cantor_set_in_seven_iterations.svg/2880px-Cantor_set_in_seven_iterations.svg.png" class="r-stretch quarto-figure-center"><p class="caption">그림1: 칸토어 집합</p></section>
+<section class="slide level2">
+<h2>성질</h2>
+<p><code>-</code> 3진법의 표기: 칸토어 집합의 원소는 <span class="math inline">\([0,1]\)</span>사이의 원소를 삼진법으로 표현할때 모든 자리수가 0 또는 2가 되는 수만 모은 집합이다.</p>
+<ol type="1">
+<li><span class="math inline">\([0,1]\)</span> 사이의 모든 실수를 3진법을 표현한다고 생각하자.</li>
+<li><span class="math inline">\(C_1\)</span>은 <span class="math inline">\(0.1xxxx\dots_{3}\)</span>와 같은 숫자가 빠지고, <span class="math inline">\(C_2\)</span>에서는 <span class="math inline">\(0.01xxx\dots_{3}\)</span> 혹은 <span class="math inline">\(0.21xxx\dots_{3}\)</span> 에 대응하는 숫자가 빠지는 과정이 반복적으로 일어난다고 볼 수 있다.</li>
+<li>2의 결과를 잘 생각하면 칸토어 집합에 포함되는 수는 삼전법 소수로 표기했을 때 모든 자리수가 0 또는 2가 된다는 점을 쉽게 눈치챌 수 있다.</li>
+</ol>
+<p><code>-</code> 카디널리티: 칸토어 집합의 카디널리티는 구간 <span class="math inline">\([0,1]\)</span>의 카디널리티와 같다. 즉 <span class="math inline">\(2^{\aleph_0}\)</span> 이다.</p>
+<ol type="1">
+<li><span class="math inline">\(y\in [0,1]\)</span> 사이의 모든 실수는 임의의 2진수로 표현할 수 있다.</li>
+<li>예를들어 <span class="math inline">\(y=\frac{3}{5}=0.100110011001..._{2}\)</span>와 같이 표현할 수 있다.</li>
+<li>만약에 2의 결과에서 <span class="math inline">\(1\)</span>을 모두 <span class="math inline">\(2\)</span>로 바꾸어 3진법수를 만들면 <span class="math inline">\(0.200220022002..._{3}=\frac{7}{10}\)</span>와 같이 쓸 수 있는데, 이는 칸토르 집합의 원소가 된다.</li>
+<li>3을 2의 출력으로 바꾸는 과정을 수행하는 함수 <span class="math inline">\(f\)</span>를 정의하자. 즉 이 예제의 경우 <span class="math inline">\(f(\frac{7}{10})=\frac{3}{5}\)</span>.</li>
+<li><span class="math inline">\(f\)</span>는 전사함수이므로 <span class="math inline">\({\sf card}([0,1]) \leq {\sf card}({\cal C})\)</span>.</li>
+</ol>
+<p><code>-</code> 잴 수 있는 집합: <span class="math inline">\({\cal C} \in {\cal R}\)</span></p>
+<ol type="1">
+<li><span class="math inline">\(C_0,C_1,C_2\dots \in {\cal R}\)</span></li>
+<li><span class="math inline">\({\cal C} = \lim_{n\to \infty} C_n = \cap_{n=0}^{\infty} C_n\)</span> (<span class="math inline">\(C_0,C_1,C_2,\dots\)</span> 이 감소하는 집합열임을 이용)</li>
+<li>시그마필드 <span class="math inline">\({\cal R}\)</span>은 countable intersection에 닫혀있으므로 <span class="math inline">\({\cal C} \in {\cal R}\)</span></li>
+</ol>
+<p><code>-</code> 르벡측도값(길이): <span class="math inline">\(\lambda({\cal C})=0\)</span>이다. 여기에서 <span class="math inline">\(\lambda\)</span>은 르벡측도이다. 즉 칸토어집합의 길이는 0이다.</p>
+<ol type="1">
+<li>칸토어 집합을 만드는 과정에서 제외되는 집합의 길이는 순서대로 <span class="math inline">\(\frac{1}{3}, \frac{2}{9}, \frac{4}{27} \dots\)</span> 이다.</li>
+<li>이것은 첫째항이 <span class="math inline">\(\frac{1}{3}\)</span>이고 공비가 <span class="math inline">\(\frac{2}{3}\)</span>인 등비수열이므로 무한등비급수의 합을 이용하면 제외되는 길이의 합은 <span class="math inline">\(1\)</span>이 됨을 계산할 수 있다.</li>
+</ol>
+<p><code>-</code> 굉장히 오래전에 만들었던 표</p>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th style="text-align: center;">집합</th>
+<th style="text-align: center;">카디널리티</th>
+<th style="text-align: center;">분류</th>
+<th style="text-align: center;">르벡메져</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;"><span class="math inline">\(\{1,2,3\}\)</span></td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">가산집합</td>
+<td style="text-align: center;">0</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><span class="math inline">\(\mathbb{N}\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\aleph_0\)</span></td>
+<td style="text-align: center;">가산집합</td>
+<td style="text-align: center;">0</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><span class="math inline">\(\mathbb{Z}\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\aleph_0\)</span></td>
+<td style="text-align: center;">가산집합</td>
+<td style="text-align: center;">0</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><span class="math inline">\(\mathbb{Q}\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\aleph_0\)</span></td>
+<td style="text-align: center;">가산집합</td>
+<td style="text-align: center;">0</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><span class="math inline">\([0,1]\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(2^{\aleph_0}\)</span></td>
+<td style="text-align: center;">비가산집합</td>
+<td style="text-align: center;">1</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><span class="math inline">\([0,1]\cap \mathbb{Q}\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\aleph_0\)</span></td>
+<td style="text-align: center;">가산집합</td>
+<td style="text-align: center;">0</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><span class="math inline">\([0,1]\cup \mathbb{Q}\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(2^{\aleph_0}\)</span></td>
+<td style="text-align: center;">비가산집합</td>
+<td style="text-align: center;">1</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><span class="math inline">\([0,1]\cap \mathbb{Q}^c\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(2^{\aleph_0}\)</span></td>
+<td style="text-align: center;">비가산집합</td>
+<td style="text-align: center;">1</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><span class="math inline">\([0,\infty)\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(2^{\aleph_0}\)</span></td>
+<td style="text-align: center;">비가산집합</td>
+<td style="text-align: center;"><span class="math inline">\(\infty\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">비탈리집합</td>
+<td style="text-align: center;"><span class="math inline">\(2^{\aleph_0}\)</span></td>
+<td style="text-align: center;">비가산집합</td>
+<td style="text-align: center;">NA</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">칸토어집합</td>
+<td style="text-align: center;"><span class="math inline">\(2^{\aleph_0}\)</span></td>
+<td style="text-align: center;">비가산집합</td>
+<td style="text-align: center;">0</td>
+</tr>
+</tbody>
+</table>
+<div class="callout callout-warning callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>강의설명 오류 정정</strong></p>
+</div>
+<div class="callout-content">
+<p>이부분의 설명에서 제가 “가산집합이면 대부분 르벡메져가 0이다” 라는 식으로 설명했는데요, 이는 잘못된 설명입니다. 대부분의 가산집합이 르벡메져가 0이 아니고 “모든 가산집합은 무조건 르벡메져가 0입니다.” 왜냐하면 임의의 가산집합 <span class="math inline">\(A\)</span>는 아래와 같이 한점의 집합의 countable union으로</p>
+<p><span class="math display">\[A = \cup_{i=1}^{\infty} \{a_i\}\]</span></p>
+<p>으로 표현가능한데요, 여기에 르벡메져를 취하면</p>
+<p><span class="math display">\[\lambda(A) = \lambda\big(\cup_{i=1}^{\infty} \{a_i\}\big)=\sum_{i=1}^{\infty}\lambda( \{a_i\})=0\]</span></p>
+<p>와 같이 됩니다. 두번째 등호는 메져의 정의 (<span class="math inline">\(\sigma\)</span>-additivity) 에 의하여 성립합니다. 강의오류에 발견에 도움을 준 김보람학생 감사합니다.</p>
+</div>
+</div>
+</div>
+</section></section>
+<section>
+<section class="title-slide slide level1 center">
+<h1>밀도함수 (density function)</h1>
+
+</section>
+<section class="slide level2">
+<h2>정의</h2>
+<p><code>-</code> <strong>(정의)</strong> <span class="math inline">\(X\)</span>를 확률공간 <span class="math inline">\((\Omega, {\cal F}, P)\)</span>에서 정의된 확률변수라고 하고 <span class="math inline">\(F_X\)</span>를 <span class="math inline">\(X\)</span>의 분포함수 라고 하자. 만약에 <span class="math inline">\(F_X\)</span>가 아래와 같은 방식으로 표현된다면 <span class="math inline">\(f_X\)</span>를 <span class="math inline">\(X\)</span>를 밀도함수 (density function) 이라고 한다.</p>
+<p><span class="math display">\[F_X(x)=\int_{-\infty}^xf_X(y)dy\]</span></p>
+<p><code>-</code> 저런 표현이 존재하지 않는다면 어쩌지?</p>
+<ul>
+<li><span class="math inline">\(F_X(x)\)</span>가 불연속인 경우: 미분 불가능</li>
+<li><span class="math inline">\(F_X(x)\)</span>가 연속인 경우: 미분가능할 수도 있고, 아닐 수도 있고</li>
+</ul>
+</section>
+<section class="slide level2">
+<h2>다양한 밀도함수 예시</h2>
+<p><code>-</code> 교양: 함수 <span class="math inline">\(F_X(x)\)</span>가 연속인 경우는 연속확률변수 <span class="math inline">\(X\)</span>의 분포함수 (distribution fucntion) 혹은 CDF라고 하고 함수 <span class="math inline">\(F_X(x)\)</span>가 jump만 존재하는 불연속인 경우는 이산확률변수의 분포함수 (distribution function) 혹은 CDF라고 한다.</p>
+<p><strong>(예제1)</strong> – 균등분포</p>
+<p>아래와 같은 distribution function <span class="math inline">\(F_X\)</span>을 가지는 확률변수 <span class="math inline">\(X\)</span>를 고려하자.</p>
+<p><span class="math display">\[F_X(x) = \begin{cases} 0 &amp; x&lt;0\\ x &amp; 0\leq x \leq 1 \\ 1 &amp; 1&lt;x\end{cases}\]</span></p>
+<p>이러한 함수 <span class="math inline">\(F_X\)</span>의 density가 존재하는가?</p>
+<p>체크: 일단 <span class="math inline">\(F_x(x)\)</span>는 (1) 비감소하며 (2) <span class="math inline">\(\lim_{x\to -\infty}F_X(x) = F_X(0) = 0\)</span>, <span class="math inline">\(\lim_{x\to \infty}F_X(x) = F_X(1) = 1\)</span> (3) 오른쪽연속 (그냥 연속임) 이므로 분포함수의 정의를 만족한다. 따라서 <span class="math inline">\(F_X(x)\)</span>에 대응하는 확률변수 <span class="math inline">\(X\)</span>가 있다.</p>
+<p>(해설)</p>
+<ol type="1">
+<li>대충 생각하면 (진짜 말 그대로 대충) 아래와 같이 생각할 수 있다.</li>
+</ol>
+<p><span class="math display">\[f_X(x) = \frac{d}{dx}F_x(x)\]</span></p>
+<ol start="2" type="1">
+<li>즉 <span class="math inline">\(f_X(x)\)</span>는 <span class="math inline">\(F_x(x)\)</span>의 도함수 같은 것으로 생각할 수 있다.</li>
+<li>문제는 <span class="math inline">\(F_X(x)\)</span>는 연속이지만 <span class="math inline">\(x=0\)</span>과 <span class="math inline">\(x=1\)</span>에서 미분가능하지는 않다는 점이다.</li>
+<li>그래서 <span class="math inline">\(F_X(x)\)</span>는 미분가능하지 않다.</li>
+<li>하지만 미분가능의 개념을 “함수”에 적용하는 것이 아니라 “하나의 포인트”에 적용한다면 어떨까?</li>
+<li><span class="math inline">\(F_X(x)\)</span>는 <span class="math inline">\(x=0\)</span>과 <span class="math inline">\(x=1\)</span>을 제외한 모든 점에서 미분가능하며 그 도함수는 대략적으로 아래와 같이 표현할 수 있다.</li>
+</ol>
+<p><span class="math display">\[f_X(x) = \begin{cases} 0 &amp; x&lt;0 \\ ?? &amp; x=0 \\ 1 &amp; 0&lt;x&lt;1 \\ ?? &amp; x=1 \\ 0 &amp; 1&lt;x \end{cases}\]</span></p>
+<ol start="7" type="1">
+<li>어차피 유한개의 점을 제외하여도 적분값에 영향이 없으므로 ??의 값은 아무값이나 넣어도 상관없다. 편의상 아래와 같은 <span class="math inline">\(f_X(x)\)</span>를 고려하자.</li>
+</ol>
+<p><span class="math display">\[f_X(x) = \begin{cases}  1 &amp; 0\leq x \leq 1 \\ 0 &amp; o.w. \end{cases}\]</span></p>
+<ol start="8" type="1">
+<li>위와 같은 <span class="math inline">\(f_X(x)\)</span>에 대하여 아래식이 성립한다고 볼 수 있다. <span class="math display">\[F_X(x) = \int_{-\infty}^x f_X(y)dy\]</span></li>
+</ol>
+<blockquote>
+<p><span class="math inline">\(F_X(x)\)</span>는 미분불가능하지만 또 어떠한 의미에서는 가능하다고 볼 수 도 있다.</p>
+</blockquote>
+<div class="quarto-layout-panel" data-layout="[[1,1],[1]]">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/Uniform_cdf.svg/1920px-Uniform_cdf.svg.png"></p>
+<figcaption>(a) 균등분포의 cdf</figcaption>
+</figure>
+</div>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Uniform_Distribution_PDF_SVG.svg/1920px-Uniform_Distribution_PDF_SVG.svg.png"></p>
+<figcaption>(b) 균등분포의 pdf</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 100.0%;justify-content: flex-start;">
+<p>그림2: 위키에서 긁어온 균등분포의 pdf, cdf 그림. 실제로는 <span class="math inline">\(x=0,1\)</span>에서 <span class="math inline">\(F_X'(x)\)</span>의 값이 존재하지 않으나 편의상 정의함.</p>
+</div>
+</div>
+</div>
+<p><strong>(예제1의 정답에 대한 의문)</strong></p>
+<p>만약에 누군가가 아래와 같은 <span class="math inline">\(f_X(x)\)</span>들이 pdf라고 주장한다면?</p>
+<ol type="1">
+<li><span class="math inline">\(f_X(x) = \begin{cases}  1 &amp; 0&lt; x &lt;1 \\ 0 &amp; o.w. \end{cases}\)</span></li>
+<li><span class="math inline">\(f_X(x) = \begin{cases}  1 &amp; 0\leq x &lt; 1 \\ 0 &amp; o.w. \end{cases}\)</span></li>
+<li><span class="math inline">\(f_X(x) = \begin{cases}  1 &amp; 0&lt; x \leq 1 \\ 0 &amp; o.w. \end{cases}\)</span></li>
+</ol>
+<p>별로 상관없을듯 하다. 어차피 <span class="math inline">\(\lambda(\{0\})=\lambda(\{1\})=0\)</span> 이므로 넓이에 영향이 없다. 위의 함수는 <span class="math inline">\(x=0,1\)</span>을 제외한 모든곳에서는 함수값이 일치하므로 거의 같다고 보아도 무방하다. 즉 아래의 함수들은 <strong><em>거의 모든 곳에서 같다.</em></strong></p>
+<ol type="1">
+<li><span class="math inline">\(f_X(x) = \begin{cases}  1 &amp; 0&lt; x &lt;1 \\ 0 &amp; o.w. \end{cases}\)</span></li>
+<li><span class="math inline">\(f_X(x) = \begin{cases}  1 &amp; 0\leq x &lt; 1 \\ 0 &amp; o.w. \end{cases}\)</span></li>
+<li><span class="math inline">\(f_X(x) = \begin{cases}  1 &amp; 0&lt; x \leq 1 \\ 0 &amp; o.w. \end{cases}\)</span></li>
+<li><span class="math inline">\(f_X(x) = \begin{cases}  1 &amp; 0\leq  x \leq 1 \\ 0 &amp; o.w. \end{cases}\)</span></li>
+</ol>
+<p>여기에서 <strong><em>두 함수 <span class="math inline">\(f\)</span>, <span class="math inline">\(g\)</span>가 거의 모든 곳에서 같다</em></strong>라는 표현은</p>
+<p><span class="math display">\[\lambda\big(\{x: f(x) \neq g(x)\}\big)=0\]</span></p>
+<p>을 의미한다. 즉 함수값이 다른 집합의 르벡측도값이 0이라는 의미이다.</p>
+<p><strong>(예제2)</strong> – 혼합된 균등분포</p>
+<p>아래와 같은 distribution function <span class="math inline">\(F_X\)</span>을 가지는 확률변수 <span class="math inline">\(X\)</span>를 고려하자.</p>
+<p><span class="math display">\[F_X(x) = \begin{cases} 0 &amp; x&lt;0\\ \frac{3}{2}x &amp; 0\leq x &lt; \frac{1}{2} \\ \frac{1}{2}+\frac{1}{2}x &amp; \frac{1}{2}\leq x&lt;1 \\ 1 &amp; 1\leq x\end{cases}\]</span></p>
+<p>이러한 함수 <span class="math inline">\(F_X\)</span>의 density가 존재하는가?</p>
+<p>체크: 일단 <span class="math inline">\(F_x(x)\)</span>는 (1) 비감소하며 (2) <span class="math inline">\(\lim_{x\to -\infty}F_X(x) = F_X(0) = 0\)</span>, <span class="math inline">\(\lim_{x\to \infty}F_X(x) = F_X(1) = 1\)</span> (3) 오른쪽연속 (그냥 연속임) 이므로 분포함수의 정의를 만족한다. 따라서 <span class="math inline">\(F_X(x)\)</span>에 대응하는 확률변수 <span class="math inline">\(X\)</span>가 있다.</p>
+<p>(해설)</p>
+<p>함수 <span class="math inline">\(F_X(x)\)</span>는 <span class="math inline">\(x=0,\frac{1}{2},1\)</span> 에서 미분불가능하지만 어차피 미분불가능한 점이 countable 하므로 여기에서는 무시하고 <span class="math inline">\(f_X(x)\)</span> 값을 편의상 정의하여도 무방하다. 따라서 아래와 같은 함수 <span class="math inline">\(f_X(x)\)</span>가 pdf가 될 수 있다.</p>
+<p><span class="math display">\[f_X(x) = \begin{cases}  \frac{3}{2} &amp; 0 \leq x &lt;\frac{1}{2} \\ \frac{1}{2} &amp; \frac{1}{2}&lt; x &lt; 1 \end{cases}\]</span></p>
+<p>그 외에도 <span class="math inline">\(x=0,\frac{1}{2}, 1\)</span>에서의 함수값을 어떻게 정의하느냐에 따라서 여러개의 정답이 있을 수 있지만, 그러한 함수들은 <span class="math inline">\(f_X(x)\)</span>와 <strong><em>거의 모든 곳에서 같은</em></strong> 함수이다.</p>
+<blockquote>
+<p>여기서도 <span class="math inline">\(F_X(x)\)</span>는 미분불가능하지만 또 어떠한 의미에서는 가능하다고 볼 수 도 있다.</p>
+</blockquote>
+<p><code>-</code> 주장: <span class="math inline">\(F_X(x)\)</span>가 <strong><em>모든 곳에서 연속</em></strong> 이고 <strong><em>거의 모든 곳에서</em></strong> 미분가능하다고 가능하면 아래를 만족하는 (도함수 비스무리한) <span class="math inline">\(f_X(x)\)</span>가 존재한다.</p>
+<p><span class="math display">\[F_X(x) = \int_{-\infty}^{x} f_X(x) dx\]</span></p>
+<p>이때 <span class="math inline">\(F_X(x)\)</span>가 미분가능하지 않은 집합에 대하여서는 적분을 정의함에 있어서 제외하고 정의해도 무방하다.</p>
+<blockquote>
+<p>엄청 그럴듯해보이지만 칸토어함수의 존재로 인하여 이 주장은 틀렸다.</p>
+</blockquote>
+</section>
+<section class="slide level2">
+<h2>칸토어함수, 칸토어분포</h2>
+<p><code>-</code> 아래와 같은 과정으로 얻어지는 함수 <span class="math inline">\(F_0, F_1, F_2, \dots\)</span>를 고려하자.</p>
+
+<img data-src="https://upload.wikimedia.org/wikipedia/commons/e/e1/Cantor_function_sequence.png" class="r-stretch quarto-figure-center"><p class="caption">그림3: 위키에서 긁어온 칸토어함수의 생성예제</p><p>그림에서는 <span class="math inline">\(f_0, f_1, f_2\)</span> 와 같이 표현하였지만 우리는 편의상 <span class="math inline">\(F_0, F_1, F_2\)</span>와 같이 표현하도록 하겠다.</p>
+<p><code>-</code> 이제 이러한 함수의 극한을 <span class="math inline">\(F\)</span>라고 하자. 즉</p>
+<p><span class="math display">\[F(x) = \lim_{n\to \infty} F_n(x)\]</span></p>
+<p>이다. 이것을 기호로 간단하기 <span class="math inline">\(F_n \to F\)</span> 와 같이 표현하기도 한다. 여기에서 <span class="math inline">\(F_n \to F\)</span>의 의미는 <span class="math inline">\(F_n\)</span>의 임의의 고정된 점 <span class="math inline">\(x^\star\)</span>에 대하여 <span class="math inline">\(F_n(x^\star) \to F(x^\star)\)</span>라는 의미이다.</p>
+<p><code>-</code> 함수 <span class="math inline">\(F_n\)</span>의 정의역을 칸토르 집합 <span class="math inline">\({\cal C}\)</span>와 연계하여 이해하면 아래와 같은 사실을 관찰할 수 있다.</p>
+<ol type="1">
+<li><span class="math inline">\(F_0\)</span>은 <span class="math inline">\(C_0\)</span>에서는 양의 기울기를 가지고 <span class="math inline">\([0,1]-C_0\)</span> 에서는 기울기가 0이다.</li>
+<li><span class="math inline">\(F_1\)</span>은 <span class="math inline">\(C_1\)</span>에서는 양의 기울기를 가지고 <span class="math inline">\([0,1]-C_1\)</span> 에서는 기울기가 0이다.</li>
+<li><span class="math inline">\(F_2\)</span>은 <span class="math inline">\(C_2\)</span>에서는 양의 기울기를 가지고 <span class="math inline">\([0,1]-C_2\)</span> 에서는 기울기가 0이다.</li>
+</ol>
+<p>따라서 아래의 사실을 유추할 수 있다.</p>
+<ul>
+<li><span class="math inline">\(F\)</span>는 <span class="math inline">\({\cal C}\)</span>에서는 양의 기울기를 가지고 <span class="math inline">\([0,1]-{\cal C}\)</span> 에서는 기울기가 0이다.</li>
+</ul>
+<p><code>-</code> 함수 <span class="math inline">\(F\)</span>를 칸토어 함수라고 부른다. 칸토어함수는 아래와 같은 특징이 있다.</p>
+<ol type="1">
+<li>칸토어 함수는 <strong><em>모든 곳에서</em></strong> 연속이다.</li>
+<li>칸토어 집합의 외부 <span class="math inline">\([0,1]-{\cal C}\)</span>에서는 상수함수이다. 즉 칸토어집합의 외부에서는 기울기가 0이다. <span class="math inline">\(m({\cal C})=0\)</span> 이므로 이 함수는 <strong><em>거의 모든 곳에서</em></strong> 기울기가 0이다.</li>
+<li><span class="math inline">\(F\)</span>는 비감소함수이다.</li>
+<li><span class="math inline">\(F(0)=0\)</span> 이고 <span class="math inline">\(F(1)=1\)</span>이다.</li>
+</ol>
+<p><code>-</code> 1,3,4에 의하여 <span class="math inline">\(F\)</span>는 분포함수의 정의를 만족한다. 1에 의하여 <span class="math inline">\(F\)</span>는 연속형확률변수의 분포함수가 된다. 칸토어 집합의 외부에서 (그러니까 <strong><em>[0,1]의 거의 모든 점에서</em></strong>) 도함수는 <span class="math inline">\(0\)</span> 이므로</p>
+<p><span class="math display">\[\frac{d}{dx}F(x)=f(x)=0,\quad \sf{a.e.}\]</span></p>
+<p>이다. 하지만 <span class="math inline">\(f(x)\)</span>는 pdf의 정의를 만족하지 않는다.</p>
+<p><code>-</code> 요약</p>
+<ul>
+<li>칸토어함수 <span class="math inline">\(F\)</span>는 분포함수의 정의를 만족한다. 따라서 <span class="math inline">\(F\)</span>에 대응하는 확률변수 <span class="math inline">\(X\)</span>가 반드시 있다.</li>
+<li>심지어 칸토어함수는 연속함수이므로, <span class="math inline">\(F\)</span>에 대응하는 확률변수 <span class="math inline">\(X\)</span>는 연속형 확률변수가 된다.</li>
+<li><span class="math inline">\(F\)</span>는 <strong><em>거의 모든 점에서 도함수가 존재하지만</em></strong> 그 도함수의 적분이 아니다.</li>
+<li>그래서 <span class="math inline">\(X\)</span>의 pdf는 존재하지 않는다.</li>
+</ul>
+<blockquote>
+<p>칸토어함수는 미적분학의 기본정리 성립하지 않는 반례를 찾기 위해 고안되었다. 즉 어떠한 함수 <span class="math inline">\(F\)</span>가 <strong><em>거의 모든 곳에서</em></strong> 미분가능하며, 그 도함수를 <span class="math inline">\(f\)</span>가 <strong><em>르벡적분 가능</em></strong> 할지라도 <span class="math inline">\(\int_{-\infty}^{x} f(y) dy= F(x)\)</span> 가 성립하지 않을 수 있다.</p>
+</blockquote>
+</section>
+<section class="slide level2">
+<h2>절대연속</h2>
+<p><code>-</code> 모티브</p>
+<ol type="1">
+<li><span class="math inline">\(F_X\)</span>의 “도함수 비슷한 함수”를 일반화 할 수 없을까? <span class="math inline">\(\Rightarrow\)</span> 라돈니코딤 도함수</li>
+<li><span class="math inline">\(F_X\)</span>의 1과 같이 도함수 비슷한 함수가 언제 존재하는지 조건을 알 수 있을까? <span class="math inline">\(\Rightarrow\)</span> 절대연속</li>
+</ol>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th style="text-align: center;">함수</th>
+<th style="text-align: center;">도함수</th>
+<th style="text-align: center;">라돈니코딤 도함수</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">연속</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;">X<sup>1</sup></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">절대연속</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;">O</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">미분가능</td>
+<td style="text-align: center;">O</td>
+<td style="text-align: center;">O</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>암기: 절대연속은 연속보다 강하고, 미분가능보다 약한 조건이다.</p>
+</blockquote>
+<p><code>-</code> <strong>정의</strong>: 함수 <span class="math inline">\(F_X(x)\)</span>가 분포함수의 정의를 만족한다고 가정하자.<sup>2</sup> <span class="math inline">\(F_X(x)\)</span>에 대응하는 분포 <span class="math inline">\(\mu_X:{\cal R} \to [0,1]\)</span>를 생각하자. <span class="math inline">\(F_X(x)\)</span>가 절대연속이라는 뜻은 아래가 성립한다는 의미이다.</p>
+<p><span class="math display">\[\forall B \in {\cal R}: \lambda(B) =0 \Rightarrow \mu_X(B)=0\]</span></p>
+<p>이럴 경우 아래와 같이 표현한다.</p>
+<ul>
+<li>A measure <span class="math inline">\(\mu_X\)</span> is abosolutely continous with respect to Lebesgue measure <span class="math inline">\(\lambda\)</span></li>
+<li><span class="math inline">\(\mu_X &lt;&lt; \lambda\)</span></li>
+</ul>
+<p><code>-</code> <strong>정의:</strong> 좀 더 일반적으로는 아래와 같이 정의할 수 있다. <span class="citation" data-cites="durrett2019probability">(<a href="" role="doc-biblioref" onclick="return false;"><strong>durrett2019probability?</strong></a>, p 470)</span></p>
+<p>가측공간 <span class="math inline">\((\mathbb{R},{\cal R})\)</span>를 고려하고 <span class="math inline">\(\mu\)</span>, <span class="math inline">\(\lambda\)</span>를 <span class="math inline">\((\mathbb{R},{\cal R})\)</span>에서의 메져라고 하자. <span class="math inline">\(\mu\)</span>가 <strong><em>absolutely continuous w.r.t. <span class="math inline">\(\lambda\)</span></em></strong> 라는 의미는</p>
+<p><span class="math display">\[\forall B \in {\cal R}:~ \lambda(B) =0 \Rightarrow \mu(B)=0\]</span></p>
+<p>라는 의미이며 기호로는 <span class="math inline">\(\mu &lt;&lt; \lambda\)</span> 와 같이 나타낸다.</p>
+<blockquote>
+<p>여기에서 공간 <span class="math inline">\((\mathbb{R},{\cal R})\)</span> 은 이해를 돕기위해서 제한한 것이며, 대부분 교재에서는 좀 더 일반적인 가측공간에서 절대연속을 정의한다.</p>
+</blockquote>
+<p><code>-</code> 절대연속의 예제를 살펴보기전에 필요한 예비학습</p>
+<p>이런게 있었거든요.. // 7주차 강의노트</p>
+<p>함수 <span class="math inline">\(\mu\)</span>가 잴 수 있는 공간 <span class="math inline">\((\Omega, {\cal F})\)</span>에서 정의된 메져라고 하자.</p>
+<ul>
+<li><span class="math inline">\(A_i \uparrow A\)</span> <span class="math inline">\(\Rightarrow\)</span> <span class="math inline">\(\mu(\lim_{n\to \infty}A_n) = \lim_{n \to \infty}\mu(A_n)\)</span></li>
+<li><span class="math inline">\(A_i \downarrow A\)</span> with <span class="math inline">\(\mu(A_1)&lt;\infty\)</span> <span class="math inline">\(\Rightarrow\)</span> <span class="math inline">\(\mu(\lim_{n\to \infty}A_n) = \lim_{n \to \infty}\mu(A_n)\)</span></li>
+<li>감소하거나 증가하는 집합열에서는 <span class="math inline">\(\lim\)</span>을 넣거나 뺼 수 있다. (정확하지 않은 state, 그냥 기억을 위한 문장)</li>
+</ul>
+<p><code>-</code> 예제1: – 베르누이</p>
+<p>아래와 같은 함수를 고려하자.</p>
+<p><span class="math display">\[F_X(x) = \begin{cases}
+0 &amp; x&lt;0 \\
+\frac{1}{2} &amp; 0\leq x&lt; 1 \\
+1 &amp; x \geq 1 \\
+\end{cases}\]</span></p>
+<p>이 함수는 르벡메져에 대하여 <strong><em>absolutely continuous</em></strong> 하지 않다.</p>
+<p>(해설1)</p>
+<p>연속이 아니므로 절대연속이 아니다.</p>
+<p>(해설2)</p>
+<p>임의의 <span class="math inline">\(\{x\}\)</span>에 대하여 <span class="math inline">\(\mu_X(\{x\})\)</span>를 계산하기 위해서는 아래와 같이 하면 된다.</p>
+<ol type="1">
+<li><span class="math inline">\(\mu_{X}(\{x\})=\mu_{X}\big(\lim_{n\to\infty}(x-\frac{1}{n},x]\big)=\lim_{n\to\infty}\mu_{X}\big((x-\frac{1}{n},x]\big)\)</span></li>
+<li><span class="math inline">\((x-\frac{1}{n}, x]= (-\infty, x] - (-\infty,x-\frac{1}{n}]\)</span></li>
+<li><span class="math inline">\(\mu_{X}\big((x-\frac{1}{n},x]\big)=F_X(x)-F_X(x-\frac{1}{n})\)</span></li>
+<li><span class="math inline">\(\mu_{X}(\{x\})=F_X(x)-\lim_{n\to\infty}F_X(x-\frac{1}{n})\)</span></li>
+</ol>
+<p>이를 이용하면</p>
+<ul>
+<li><span class="math inline">\(\lambda(\{0\})=0 \not \Rightarrow \mu_X(\{0\})=F_X(0)-\lim_{n\to\infty}F_X(-\frac{1}{n})=\frac{1}{2}-0\)</span></li>
+<li><span class="math inline">\(\lambda(\{1\})=0 \not \Rightarrow \mu_X(\{1\})=F_X(1)-\lim_{n\to\infty}F_X(1-\frac{1}{n})=1-\frac{1}{2}\)</span></li>
+<li><span class="math inline">\(\lambda(\{0,1\})=0 \not \Rightarrow \mu_X(\{0,1\}) =\mu_X(\{0\})+\mu_X(\{1\})=1\)</span></li>
+</ul>
+<blockquote>
+<p>위에서 언급한 경우 이외에서는 연속임. <span class="math inline">\(\lambda(\{0.77\})=0 \Rightarrow \mu_X(\{0.77\})=F_X(0.77)-\lim_{n\to\infty}F_X(0.77-\frac{1}{n})=\frac{1}{2}-\frac{1}{2}\)</span></p>
+</blockquote>
+<p><code>-</code> 예제2: – 균등분포</p>
+<p>아래와 같은 함수를 고려하자.</p>
+<p><span class="math display">\[F_X(x) = \begin{cases}
+0 &amp; x&lt;0 \\
+x &amp; 0\leq  x \leq  1 \\
+1 &amp; x&gt; 1 \\
+\end{cases}\]</span></p>
+<p>이 함수는 르벡메져에 대하여 <strong><em>absolutely continuous</em></strong> 하다.</p>
+<p>(해설)</p>
+<p><span class="math inline">\(\forall B\in {\cal R}: \mu_X(B) \leq \lambda(B)\)</span> 이므로 자명함</p>
+<p><code>-</code> 예제3 – 혼합된 균등분포</p>
+<p>아래와 같은 distribution function <span class="math inline">\(F_X\)</span>을 가지는 확률변수 <span class="math inline">\(X\)</span>를 고려하자.</p>
+<p><span class="math display">\[F_X(x) = \begin{cases} 0 &amp; x&lt;0\\ \frac{3}{2}x &amp; 0\leq x &lt; \frac{1}{2} \\ \frac{1}{2}+\frac{1}{2}x &amp; \frac{1}{2}\leq x&lt;1 \\ 1 &amp; 1\leq x\end{cases}\]</span></p>
+<p>이러한 함수 <span class="math inline">\(F_X\)</span>는 르벡메져에 대하여 absolutely continuous 한가?</p>
+<p>(해설)</p>
+<p><span class="math inline">\(\forall B \in {\cal R}: \mu_X(B) \leq \frac{3}{2}\lambda(B)\)</span> 이므로 자명함.</p>
+<blockquote>
+<p>예제2,3으로 관찰하고 착각할 수 있는 것: 그냥 연속이면 다 절대연속 아니야?</p>
+</blockquote>
+<p><code>-</code> 예제3 – 칸토어함수</p>
+<p>칸토어함수 <span class="math inline">\(F_X\)</span>는 르벡메져에 대하여 <strong><em>absolutely continuous</em></strong> 하지 않다.</p>
+<p>(해설)</p>
+<p>칸토어함수 <span class="math inline">\(F_X\)</span>가 <strong><em>absolutely continuous</em></strong> 하다고 하자. 그러면 <span class="math inline">\(\mu_X((a,b]) = \mu_X([a,b])\)</span> 가 성립한다.</p>
+<p><span class="math inline">\(n=0\)</span>:</p>
+<ul>
+<li><span class="math inline">\(C_0=[0,1]\)</span></li>
+<li><span class="math inline">\(\mu_X(C_0)=\mu_X((0,1])=F_X(1)-F_X(0)=1\)</span></li>
+</ul>
+<p><span class="math inline">\(n=1\)</span>:</p>
+<ul>
+<li><span class="math inline">\(C_1=[0,\frac{1}{3}] \cup [\frac{2}{3},1]\)</span></li>
+<li><span class="math inline">\(\mu_X(C_1)=\mu_X((0,\frac{1}{3}])+\mu_X((\frac{2}{3},1])=F_X(\frac{1}{3})-F_X(0)+F_X(1)-F_X(\frac{2}{3})=1\)</span></li>
+</ul>
+<p>정리하면 아래와 같다.</p>
+<table class="caption-top">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: center;"><span class="math inline">\(n\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(C_n\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(\mu_X(C_n)\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;"><span class="math inline">\(0\)</span></td>
+<td style="text-align: center;"><span class="math inline">\([0,1]\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(1\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><span class="math inline">\(1\)</span></td>
+<td style="text-align: center;"><span class="math inline">\([0,\frac{1}{3}] \cup [\frac{2}{3},1]\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(1\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><span class="math inline">\(2\)</span></td>
+<td style="text-align: center;"><span class="math inline">\([0,\frac{1}{9}]\cup[\frac{2}{9},\frac{1}{3}] \cup[\frac{2}{3},\frac{7}{9}]\cup [\frac{8}{9},1]\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(1\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><span class="math inline">\(\dots\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\dots\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(1\)</span></td>
+</tr>
+</tbody>
+</table>
+<p>그런데 <span class="math inline">\(\lambda({\cal C})=0\)</span> 이지만 <span class="math inline">\(\mu_X(\lim_{n\to \infty}C_n)=\mu_X({\cal C})=1\)</span> 이므로 <span class="math inline">\(\mu&lt;&lt;\lambda\)</span>에 모순이다.</p>
+<aside><ol class="aside-footnotes"><li id="fn1"><p>칸토어함수!!!</p></li><li id="fn2"><p>원래는 이러한 가정이 없음</p></li></ol></aside></section>
+<section class="slide level2">
+<h2>라돈니코딤 정리</h2>
+<p><code>-</code> <strong>이론</strong>: 분포함수 <span class="math inline">\(F_X:\mathbb{R} \to [0,1]\)</span>가 (르벡메져에 대하여) 절대연속이라면 아래를 만족하는 함수 <span class="math inline">\(f_X:\mathbb{R} \to \mathbb{R}^+\)</span>가 존재한다.</p>
+<p><span class="math display">\[F_X = \int_{(-\infty,x]}f_Xd\lambda\]</span></p>
+<p>여기에서 함수 <span class="math inline">\(f_X\)</span>를 <span class="math inline">\(F_X\)</span>의 밀도함수 (density function) 이라고 한다. 일반적으로 밀도함수 <span class="math inline">\(f_X\)</span>는 유일하지 않지만, 르벡측도로 재었을때 0인 집합을 제외한 부분에서는 유일하게 결정된다. (요약: 분포함수 <span class="math inline">\(F_X\)</span>가 절대연속이면 밀도함수 <span class="math inline">\(f_X\)</span>가 존재하고, <strong><em>거의</em></strong> 유일함)</p>
+<blockquote>
+<p>위에서 “르벡측도로 재었을때 0인 집합을 제외한 부분에서는 유일하게 결정된다”라는 부분은 “르벡메져 <span class="math inline">\(\lambda\)</span>에 대하여 <strong><em>거의 유일하다</em></strong>” 라고 이해해도 무방. 엄밀하게 쓰면 “분포함수 <span class="math inline">\(F_X\)</span>가 있다면 밀도함수의 정의하는 만족하는 함수가 반드시 하나는 존재한다. 만약에 두 함수 <span class="math inline">\(f\)</span>와 <span class="math inline">\(g\)</span>가 모두 밀도함수의 정의를 만족한다면 ‘<span class="math inline">\(f=g\)</span> <strong><em>a.e. with respect to</em></strong> <span class="math inline">\(\lambda\)</span>’ 가 성립한다.” 와 같은 식으로 쓸 수 있음.</p>
+</blockquote>
+<blockquote>
+<p>위에서 <span class="math inline">\(f\)</span>의 공역이 <span class="math inline">\(\mathbb{R}^+\)</span>인 이유는 <span class="math inline">\(F_X\)</span>가 증가함수라서..</p>
+</blockquote>
+<p><code>-</code> <strong>Thm</strong> (라돈니코딤 정리)<span class="citation" data-cites="durrett2019probability">(<a href="" role="doc-biblioref" onclick="return false;"><strong>durrett2019probability?</strong></a>, Thm A.4.8.)</span>: 가측공간 <span class="math inline">\((S,{\cal S})\)</span>를 고려하자. 그리고 <span class="math inline">\(\mu\)</span>와 <span class="math inline">\(\lambda\)</span>가 <span class="math inline">\((S,{\cal S})\)</span>에서의 <span class="math inline">\(\sigma\)</span>-finite measure 라고 하자. 만약에 <span class="math inline">\(\mu &lt;&lt; \lambda\)</span> 이라면 아래를 만족하는 가측함수 <span class="math inline">\(f:(S,{\cal S}) \to (\mathbb{R}^+,{\cal R}^+)\)</span>가 <strong>거의 유일하게 (w.r.t. <span class="math inline">\(\lambda\)</span>)</strong> 존재한다.</p>
+<p><span class="math display">\[\forall B \in {\cal S}:~ \mu(B) = \int_B f d\lambda.\]</span></p>
+<p>여기에서 <span class="math inline">\(f\)</span>를 <strong><em>Radon-Nikodym derivative of <span class="math inline">\(\mu\)</span> w.r.t. <span class="math inline">\(\lambda\)</span></em></strong> 라고 하며, 이러한 의미에서 <span class="math inline">\(f=\frac{d\mu}{d\lambda}\)</span>와 같이 표현하기도 한다.</p>
+<div class="callout callout-warning callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>강의 오류 정정</strong></p>
+</div>
+<div class="callout-content">
+<p><span class="math inline">\(f: (S,{\cal S}) \to (S, {\cal S})\)</span>를 <span class="math inline">\(f:(S,{\cal S}) \to (\mathbb{R}^+, {\cal R}^+)\)</span>로 정정합니다.</p>
+</div>
+</div>
+</div>
+<p><code>-</code> 예제1 – 균등분포</p>
+<p>아래와 같은 함수를 고려하자.</p>
+<p><span class="math display">\[F_X(x) = \begin{cases}
+0 &amp; x&lt;0 \\
+x &amp; 0\leq  x \leq  1 \\
+1 &amp; x&gt; 1 \\
+\end{cases}\]</span></p>
+<p>또한 아래와 같은 함수 <span class="math inline">\(f_X: \mathbb{R} \to \mathbb{R}\)</span> 를 고려하자.</p>
+<p><span class="math display">\[f_X(x) = \begin{cases} 1 &amp; 0 \leq x \leq 1 \\ 0 &amp; o.w. \end{cases}\]</span></p>
+<p><span class="math inline">\(f_X(x)\)</span>가 <span class="math inline">\(F_X(x)\)</span>의 라돈니코딤 도함수임을 설명하라.</p>
+<p>(해설)</p>
+<ol type="1">
+<li><span class="math inline">\(\mu_X\)</span>와 <span class="math inline">\(\lambda\)</span>는 모두 <span class="math inline">\((\mathbb{R},{\cal R})\)</span>에서 <span class="math inline">\(\sigma\)</span>-finite 하다.</li>
+<li><span class="math inline">\(\mu_X &lt;&lt; \lambda\)</span>이다. 따라서 적당한 <span class="math inline">\({\cal R} \to {\cal R}^+\)</span> measurable function이 존재하여 라돈니코딤 도함수의 조건을 만족함을 알 수 있다.</li>
+<li>우리가 생각하는 후보는 <span class="math inline">\(f_X\)</span>인데 이것이 만약에 (1) <span class="math inline">\({\cal R} \to {\cal R}^+\)</span> 가측함수이고 (2) 라돈니코딤 도함수의 조건을 만족한다면 <span class="math inline">\(f_X\)</span>는 <span class="math inline">\(F_X\)</span>의 거의 유일한 (<strong><em>w.r.t. <span class="math inline">\(\lambda\)</span></em></strong>) 밀도함수라고 주장할 수 있다.</li>
+<li><span class="math inline">\(f_X\)</span>는 simple function이므로 <span class="math inline">\({\cal R} \to {\cal R}^+\)</span> 가측함수이다.</li>
+<li>임의의 <span class="math inline">\(x\)</span>에 대하여 <span class="math inline">\(F_X(x)=\mu_X((-\infty,x])=\int_{(-\infty,x]}f_Xd\lambda\)</span> 이 성립한다.</li>
+<li>5와 <span class="math inline">\(\pi\)</span>-<span class="math inline">\(\lambda\)</span> thm을 이용하면 모든 <span class="math inline">\(B \in {\cal R}\)</span>에 대하여 <span class="math inline">\(\mu_X(B) = \int_B f_X d\lambda\)</span> 가 성립한다. <a href="https://github.com/guebin/AP2023/blob/main/posts/II.%20%ED%99%95%EB%A5%A0%EB%A1%A0%EA%B8%B0%EC%B4%88/supp_13wk_1.pdf">(풀이참고)</a></li>
+<li>따라서 <span class="math inline">\(f_X\)</span>는 <span class="math inline">\(F_X\)</span>의 밀도함수이다.</li>
+</ol>
+<p><code>-</code> 예제2 – 베르누이 분포</p>
+<p>아래와 같은 함수를 고려하자.</p>
+<p><span class="math display">\[F_X(x) = \begin{cases}
+0 &amp; x&lt;0 \\
+\frac{1}{2} &amp; 0 \leq  x &lt;1 \\
+1 &amp; x \geq 1
+\end{cases}\]</span></p>
+<p>이 함수에 대응하는 <span class="math inline">\(\mu_X\)</span>를 아래와 같이 정의하자.</p>
+<ul>
+<li><span class="math inline">\(\mu_X(\emptyset)=0\)</span></li>
+<li><span class="math inline">\(\mu_X(\{0\})=\frac{1}{2}\)</span></li>
+<li><span class="math inline">\(\mu_X(\{1\})=\frac{1}{2}\)</span></li>
+<li><span class="math inline">\(\mu_X(\{0,1\})=1\)</span></li>
+<li><span class="math inline">\(\mu_X(B)=0\)</span> , <span class="math inline">\(B \in {\cal R} - \{0,1\} - \{0\} - \{1\}\)</span></li>
+</ul>
+<p><span class="math inline">\(\mu_X\)</span>는 <span class="math inline">\(\lambda\)</span>에 대한 라돈니코딤 도함수를 가지지 않음을 보여라.</p>
+<p>(해설) – 절대연속이 안되는걸?</p>
+
+
+</section></section>
+
+    </div>
+  <div class="quarto-auto-generated-content" style="display: none;">
+<div class="footer footer-default">
+
+</div>
+</div></div>
+
+  <script>window.backupDefine = window.define; window.define = undefined;</script>
+  <script src="../site_libs/revealjs/dist/reveal.js"></script>
+  <!-- reveal.js plugins -->
+  <script src="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
+  <script src="../site_libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
+  <script src="../site_libs/revealjs/plugin/reveal-menu/menu.js"></script>
+  <script src="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="../site_libs/revealjs/plugin/reveal-chalkboard/plugin.js"></script>
+  <script src="../site_libs/revealjs/plugin/quarto-support/support.js"></script>
+  
+
+  <script src="../site_libs/revealjs/plugin/notes/notes.js"></script>
+  <script src="../site_libs/revealjs/plugin/search/search.js"></script>
+  <script src="../site_libs/revealjs/plugin/zoom/zoom.js"></script>
+  <script src="../site_libs/revealjs/plugin/math/math.js"></script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://revealjs.com/config/
+      Reveal.initialize({
+'controlsAuto': true,
+'previewLinksAuto': true,
+'pdfSeparateFragments': false,
+'autoAnimateEasing': "ease",
+'autoAnimateDuration': 1,
+'autoAnimateUnmatched': true,
+'jumpToSlide': true,
+'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleScrollView(event)\"><kbd>r</kbd> Scroll View Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleChalkboard(event)\"><kbd>b</kbd> Toggle Chalkboard</a></li>\n<li class=\"slide-tool-item\" data-item=\"6\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleNotesCanvas(event)\"><kbd>c</kbd> Toggle Notes Canvas</a></li>\n<li class=\"slide-tool-item\" data-item=\"7\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.downloadDrawings(event)\"><kbd>d</kbd> Download Drawings</a></li>\n<li class=\"slide-tool-item\" data-item=\"8\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
+'chalkboard': {"buttons":true},
+'smaller': true,
+ 
+        // Display controls in the bottom right corner
+        controls: false,
+
+        // Help the user learn the controls by providing hints, for example by
+        // bouncing the down arrow when they first encounter a vertical slide
+        controlsTutorial: false,
+
+        // Determines where controls appear, "edges" or "bottom-right"
+        controlsLayout: 'edges',
+
+        // Visibility rule for backwards navigation arrows; "faded", "hidden"
+        // or "visible"
+        controlsBackArrows: 'faded',
+
+        // Display a presentation progress bar
+        progress: true,
+
+        // Display the page number of the current slide
+        slideNumber: 'c/t',
+
+        // 'all', 'print', or 'speaker'
+        showSlideNumber: 'all',
+
+        // Add the current slide number to the URL hash so that reloading the
+        // page/copying the URL will return you to the same slide
+        hash: true,
+
+        // Start with 1 for the hash rather than 0
+        hashOneBasedIndex: false,
+
+        // Flags if we should monitor the hash and change slides accordingly
+        respondToHashChanges: true,
+
+        // Push each slide change to the browser history
+        history: true,
+
+        // Enable keyboard shortcuts for navigation
+        keyboard: true,
+
+        // Enable the slide overview mode
+        overview: true,
+
+        // Disables the default reveal.js slide layout (scaling and centering)
+        // so that you can use custom CSS layout
+        disableLayout: false,
+
+        // Vertical centering of slides
+        center: false,
+
+        // Enables touch navigation on devices with touch input
+        touch: true,
+
+        // Loop the presentation
+        loop: false,
+
+        // Change the presentation direction to be RTL
+        rtl: false,
+
+        // see https://revealjs.com/vertical-slides/#navigation-mode
+        navigationMode: 'linear',
+
+        // Randomizes the order of slides each time the presentation loads
+        shuffle: false,
+
+        // Turns fragments on and off globally
+        fragments: true,
+
+        // Flags whether to include the current fragment in the URL,
+        // so that reloading brings you to the same fragment position
+        fragmentInURL: false,
+
+        // Flags if the presentation is running in an embedded mode,
+        // i.e. contained within a limited portion of the screen
+        embedded: false,
+
+        // Flags if we should show a help overlay when the questionmark
+        // key is pressed
+        help: true,
+
+        // Flags if it should be possible to pause the presentation (blackout)
+        pause: true,
+
+        // Flags if speaker notes should be visible to all viewers
+        showNotes: false,
+
+        // Global override for autoplaying embedded media (null/true/false)
+        autoPlayMedia: null,
+
+        // Global override for preloading lazy-loaded iframes (null/true/false)
+        preloadIframes: null,
+
+        // Number of milliseconds between automatically proceeding to the
+        // next slide, disabled when set to 0, this value can be overwritten
+        // by using a data-autoslide attribute on your slides
+        autoSlide: 0,
+
+        // Stop auto-sliding after user input
+        autoSlideStoppable: true,
+
+        // Use this method for navigation when auto-sliding
+        autoSlideMethod: null,
+
+        // Specify the average time in seconds that you think you will spend
+        // presenting each slide. This is used to show a pacing timer in the
+        // speaker view
+        defaultTiming: null,
+
+        // Enable slide navigation via mouse wheel
+        mouseWheel: false,
+
+        // The display mode that will be used to show slides
+        display: 'block',
+
+        // Hide cursor if inactive
+        hideInactiveCursor: true,
+
+        // Time before the cursor is hidden (in ms)
+        hideCursorTime: 5000,
+
+        // Opens links in an iframe preview overlay
+        previewLinks: false,
+
+        // Transition style (none/fade/slide/convex/concave/zoom)
+        transition: 'none',
+
+        // Transition speed (default/fast/slow)
+        transitionSpeed: 'default',
+
+        // Transition style for full page slide backgrounds
+        // (none/fade/slide/convex/concave/zoom)
+        backgroundTransition: 'none',
+
+        // Number of slides away from the current that are visible
+        viewDistance: 3,
+
+        // Number of slides away from the current that are visible on mobile
+        // devices. It is advisable to set this to a lower number than
+        // viewDistance in order to save resources.
+        mobileViewDistance: 2,
+
+        // The "normal" size of the presentation, aspect ratio will be preserved
+        // when the presentation is scaled to fit different resolutions. Can be
+        // specified using percentage units.
+        width: 1050,
+
+        height: 700,
+
+        // Factor of the display size that should remain empty around the content
+        margin: 0.1,
+
+        math: {
+          mathjax: 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js',
+          config: 'TeX-AMS_HTML-full',
+          tex2jax: {
+            inlineMath: [['\\(','\\)']],
+            displayMath: [['\\[','\\]']],
+            balanceBraces: true,
+            processEscapes: false,
+            processRefs: true,
+            processEnvironments: true,
+            preview: 'TeX',
+            skipTags: ['script','noscript','style','textarea','pre','code'],
+            ignoreClass: 'tex2jax_ignore',
+            processClass: 'tex2jax_process'
+          },
+        },
+
+        // reveal.js plugins
+        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, RevealChalkboard, QuartoSupport,
+
+          RevealMath,
+          RevealNotes,
+          RevealSearch,
+          RevealZoom
+        ]
+      });
+    </script>
+    <script id="quarto-html-after-body" type="application/javascript">
+      window.document.addEventListener("DOMContentLoaded", function (event) {
+        const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")
+        tabsets.forEach(function(tabset) {
+          const tabby = new Tabby('#' + tabset.id);
+        });
+        const isCodeAnnotation = (el) => {
+          for (const clz of el.classList) {
+            if (clz.startsWith('code-annotation-')) {                     
+              return true;
+            }
+          }
+          return false;
+        }
+        const onCopySuccess = function(e) {
+          // button target
+          const button = e.trigger;
+          // don't keep focus
+          button.blur();
+          // flash "checked"
+          button.classList.add('code-copy-button-checked');
+          var currentTitle = button.getAttribute("title");
+          button.setAttribute("title", "Copied!");
+          let tooltip;
+          if (window.bootstrap) {
+            button.setAttribute("data-bs-toggle", "tooltip");
+            button.setAttribute("data-bs-placement", "left");
+            button.setAttribute("data-bs-title", "Copied!");
+            tooltip = new bootstrap.Tooltip(button, 
+              { trigger: "manual", 
+                customClass: "code-copy-button-tooltip",
+                offset: [0, -8]});
+            tooltip.show();    
+          }
+          setTimeout(function() {
+            if (tooltip) {
+              tooltip.hide();
+              button.removeAttribute("data-bs-title");
+              button.removeAttribute("data-bs-toggle");
+              button.removeAttribute("data-bs-placement");
+            }
+            button.setAttribute("title", currentTitle);
+            button.classList.remove('code-copy-button-checked');
+          }, 1000);
+          // clear code selection
+          e.clearSelection();
+        }
+        const getTextToCopy = function(trigger) {
+            const codeEl = trigger.previousElementSibling.cloneNode(true);
+            for (const childEl of codeEl.children) {
+              if (isCodeAnnotation(childEl)) {
+                childEl.remove();
+              }
+            }
+            return codeEl.innerText;
+        }
+        const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+          text: getTextToCopy
+        });
+        clipboard.on('success', onCopySuccess);
+        if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+          const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+            text: getTextToCopy,
+            container: window.document.getElementById('quarto-embedded-source-code-modal')
+          });
+          clipboardModal.on('success', onCopySuccess);
+        }
+          var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+          var mailtoRegex = new RegExp(/^mailto:/);
+            var filterRegex = new RegExp('/' + window.location.host + '/');
+          var isInternal = (href) => {
+              return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+          }
+          // Inspect non-navigation links and adorn them if external
+         var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+          for (var i=0; i<links.length; i++) {
+            const link = links[i];
+            if (!isInternal(link.href)) {
+              // undo the damage that might have been done by quarto-nav.js in the case of
+              // links that we want to consider external
+              if (link.dataset.originalHref !== undefined) {
+                link.href = link.dataset.originalHref;
+              }
+            }
+          }
+        function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+          const config = {
+            allowHTML: true,
+            maxWidth: 500,
+            delay: 100,
+            arrow: false,
+            appendTo: function(el) {
+                return el.closest('section.slide') || el.parentElement;
+            },
+            interactive: true,
+            interactiveBorder: 10,
+            theme: 'light-border',
+            placement: 'bottom-start',
+          };
+          if (contentFn) {
+            config.content = contentFn;
+          }
+          if (onTriggerFn) {
+            config.onTrigger = onTriggerFn;
+          }
+          if (onUntriggerFn) {
+            config.onUntrigger = onUntriggerFn;
+          }
+            config['offset'] = [0,0];
+            config['maxWidth'] = 700;
+          window.tippy(el, config); 
+        }
+        const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+        for (var i=0; i<noterefs.length; i++) {
+          const ref = noterefs[i];
+          tippyHover(ref, function() {
+            // use id or data attribute instead here
+            let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+            try { href = new URL(href).hash; } catch {}
+            const id = href.replace(/^#\/?/, "");
+            const note = window.document.getElementById(id);
+            if (note) {
+              return note.innerHTML;
+            } else {
+              return "";
+            }
+          });
+        }
+        const findCites = (el) => {
+          const parentEl = el.parentElement;
+          if (parentEl) {
+            const cites = parentEl.dataset.cites;
+            if (cites) {
+              return {
+                el,
+                cites: cites.split(' ')
+              };
+            } else {
+              return findCites(el.parentElement)
+            }
+          } else {
+            return undefined;
+          }
+        };
+        var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+        for (var i=0; i<bibliorefs.length; i++) {
+          const ref = bibliorefs[i];
+          const citeInfo = findCites(ref);
+          if (citeInfo) {
+            tippyHover(citeInfo.el, function() {
+              var popup = window.document.createElement('div');
+              citeInfo.cites.forEach(function(cite) {
+                var citeDiv = window.document.createElement('div');
+                citeDiv.classList.add('hanging-indent');
+                citeDiv.classList.add('csl-entry');
+                var biblioDiv = window.document.getElementById('ref-' + cite);
+                if (biblioDiv) {
+                  citeDiv.innerHTML = biblioDiv.innerHTML;
+                }
+                popup.appendChild(citeDiv);
+              });
+              return popup.innerHTML;
+            });
+          }
+        }
+      });
+      </script>
+    <script>videojs(video_shortcode_videojs_video1);</script>
+    
+
+</body></html>
