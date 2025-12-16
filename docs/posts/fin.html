@@ -7,9 +7,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="최규빈">
-<meta name="dcterms.date" content="2025-09-22">
+<meta name="dcterms.date" content="2025-12-16">
 
-<title>HW-1 (2024.09.22) – AP2025</title>
+<title>기말고사 (2025.12.16) – AP2025</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -146,7 +146,7 @@ window.Quarto = {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">HW-1 (2024.09.22)</h1>
+<h1 class="title">기말고사 (2025.12.16)</h1>
 </div>
 
 
@@ -163,7 +163,7 @@ window.Quarto = {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">September 22, 2025</p>
+      <p class="date">December 16, 2025</p>
     </div>
   </div>
   
@@ -175,69 +175,63 @@ window.Quarto = {
 </header>
 
 
-<blockquote class="blockquote">
-<p>풀이는 <a href="https://guebin.github.io/SS2024/quiz.html" class="uri">https://guebin.github.io/SS2024/quiz.html</a> 의 퀴즈1,2 참고하시면 있을겁니다. (그렇지만 가능하면 혼자 해결하세요)</p>
-</blockquote>
-<section id="바늘이-하나-있는-시계" class="level2">
-<h2 class="anchored" data-anchor-id="바늘이-하나-있는-시계">1. 바늘이 하나 있는 시계</h2>
-<p>우리는 단순한 시계 하나를 생각해볼 수 있다. 이 시계에는 바늘이 하나 있고, 이 바늘을 무작위로 돌렸을 때, 바늘이 시계에서 어떤 위치에 멈추게 될 확률을 계산하는 상황을 상상해보자.</p>
-<p>여기서 시계의 위치를 <strong>각도</strong>로 나타낸다. 시계의 각도는 <span class="math inline">\(0\)</span>에서 <span class="math inline">\(2\pi\)</span> 사이로 표현된다. 즉, 시계바늘이 12시를 가리킬 때는 각도가 <span class="math inline">\(0\)</span>이고, 시계바늘이 시계 방향으로 6시를 가리킬 때는 각도가 <span class="math inline">\(\pi\)</span>이다. 이 문제에서 전체 각도 공간을 <strong>sample space</strong> <span class="math inline">\(\Omega\)</span>로 정의한다. <span class="math inline">\(\Omega = [0, 2\pi)\)</span>는 시계의 모든 각도를 나타내는 구간이다.</p>
-<p>시계바늘이 <span class="math inline">\(0\)</span>부터 <span class="math inline">\(2\pi\)</span> 사이의 각도를 랜덤하게 가리킨다고 가정할 때, 우리는 특정 각도 범위 <span class="math inline">\(\Omega^*\)</span>에 바늘이 있을 확률을 아래와 같이 계산할 수 있다.</p>
-<p><span class="math display">\[
-P(\Omega^*) = \frac{m(\Omega^*)}{2\pi}
-\]</span></p>
-<p>여기에서 <span class="math inline">\(m\)</span>는 길이를 재는 함수이다. 길이를 재는 함수 <span class="math inline">\(m\)</span>에 대하여 아래와 같은 약속을 하자.</p>
-<ul>
-<li>약속1: 구간 <span class="math inline">\((a,b)\)</span>의 길이는 <span class="math inline">\(b-a\)</span>이다. 즉 <span class="math inline">\(m((a,b))=b-a\)</span> 이다.</li>
-<li>약속2: 한 점의 길이는 0이다.</li>
-<li>약속3: 점을 무한히 합치면 선이 되는것 처럼, 점의 길이를 무한히 합치면 0이 아니라 0보다 큰 어떠한 수가 된다.</li>
-<li>약속4: 구간 <span class="math inline">\((a,b)\)</span>사이의 모든 유리수의 길이는 <span class="math inline">\(\frac{b-a}{2}\)</span> 이다.</li>
-</ul>
-<p>이와 같은 방식으로 길이를 잰다면 확률을 정의함에 있어서 모순이 일어나지 않는가? 모순이 일어나지 않으면 모순이 없다고 답을 쓰고 모순이 일어난다면 모순이 일어나는 이유를 설명하라.</p>
+<section id="truefalse-20점" class="level2">
+<h2 class="anchored" data-anchor-id="truefalse-20점">1. True/False (20점)</h2>
+<p><span class="math inline">\(\Omega\)</span>의 부분집합들의 모임 <span class="math inline">\({\cal A}\)</span>에 대하여 다음을 읽고 참 거짓을 판단하라.</p>
+<ol type="1">
+<li><span class="math inline">\({\cal A}\)</span>가 세미링이면 <span class="math inline">\({\cal A}\)</span>는 파이시스템이다.</li>
+<li><span class="math inline">\({\cal A}\)</span>가 파이시스템이면 <span class="math inline">\({\cal A}\)</span>는 시그마필드이다.</li>
+<li><span class="math inline">\({\cal A}\)</span>가 시그마필드이면 <span class="math inline">\({\cal A}\)</span>는 파이시스템이다.</li>
+<li><span class="math inline">\({\cal A}\)</span>가 시그마필드이면 <span class="math inline">\({\cal A}\)</span>는 람다시스템이고 파이시스템이다.</li>
+<li><span class="math inline">\({\cal A}\)</span>가 람다시스템이고 파이시스템이면 <span class="math inline">\({\cal A}\)</span>는 시그마필드이다.</li>
+</ol>
 </section>
-<section id="기호의-표현" class="level2">
-<h2 class="anchored" data-anchor-id="기호의-표현">2. 기호의 표현</h2>
-<p><code>(1)</code> 아래의 명제를 읽고 참 거짓을 판단하라.</p>
-<blockquote class="blockquote">
-<p>단, 이 문제에서 <span class="math inline">\(\mathbb{N}\)</span>는 자연수의 집합 <span class="math inline">\(\mathbb{N}_{even}\)</span>은 짝수의 집합을 의미한다.</p>
-</blockquote>
-<ul>
-<li><span class="math inline">\(a+b \in \mathbb{N}, \forall a,b \in \mathbb{N}\)</span></li>
-<li><span class="math inline">\(a-b \in \mathbb{N}, \forall a,b \in \mathbb{N}\)</span></li>
-<li><span class="math inline">\(k \in \mathbb{N} \Rightarrow 2k \in \mathbb{N}_{even}\)</span></li>
-<li><span class="math inline">\(\forall m \in \mathbb{N}_{even}~ \exists k \in \mathbb{N}\)</span> such that <span class="math inline">\(2k=m\)</span>.</li>
-</ul>
-<p><code>(2)</code> 아래가 의미하는 바를 한국어로 자연스럽게 작성하라.</p>
-<blockquote class="blockquote">
-<p>단, 이 문제에서 <span class="math inline">\(\mathbb{N}\)</span>은 자연수의 집합, <span class="math inline">\(\mathbb{N}_{even}\)</span>은 짝수의 집합, <span class="math inline">\(\mathbb{N}_{odd}\)</span>는 홀수의 집합, 그리고 <span class="math inline">\(\mathbb{Q}^+\)</span>는 양의 유리수 집합을 의미한다.</p>
-</blockquote>
-<ul>
-<li><span class="math inline">\(a \in \mathbb{N}_{even}, b \in \mathbb{N}_{odd} \Rightarrow a \times b \in \mathbb{N}_{even}\)</span></li>
-<li><span class="math inline">\(\forall q \in \mathbb{Q}^+~ \exists m, n \in \mathbb{N}\)</span> such that <span class="math inline">\(q = \frac{n}{m}\)</span>.</li>
-</ul>
+<section id="딘킨의-pi-lambda-theorem-50점" class="level2">
+<h2 class="anchored" data-anchor-id="딘킨의-pi-lambda-theorem-50점">2. 딘킨의 <span class="math inline">\(\pi\)</span>-<span class="math inline">\(\lambda\)</span> theorem (50점)</h2>
+<p><span class="math inline">\({\cal P} \subset 2^\Omega\)</span>가 파이시스템이라고 하자.</p>
+<p><code>(1)</code> <span class="math inline">\(l({\cal P}) = \sigma({\cal P})\)</span> 임을 보이기 위해서는 <span class="math inline">\(l({\cal P})\)</span>가 파이시스템임을 보이면 충분하다. 왜그런지 설명하라.</p>
+<p><code>(2)</code> <span class="math inline">\(\Omega = \{1,2,3,4\}\)</span> 일때 아래의 집합 <span class="math inline">\({\cal A}\)</span> 가 교집합에 닫혀있지 않은 이유를 <span class="math inline">\({\cal D}_A\)</span>를 이용하여 설명하라.</p>
+<p><span class="math display">\[{\cal A} = \{\emptyset, \{1,2\}, \{3,4\}, \{1,3\}, \{2,4\}, \Omega\}\]</span></p>
+<p><code>(3)</code> <span class="math inline">\({\cal D}_E = \{F: E \cap F \in l({\cal P}), F \in l({\cal P})\}\)</span> 라고 하자. <span class="math inline">\(l({\cal P})\)</span> 이 파이시스템이 되는 조건을 <span class="math inline">\({\cal D}_E\)</span>를 이용하여 서술하라.</p>
+<p><code>(4)</code> <span class="math inline">\({\cal D}_E\)</span>가 포함관계에 있는 차집합에 닫혀있음을 보여라.</p>
+<p><code>(5)</code> <span class="math inline">\(X \in {\cal P}\)</span> 이면 <span class="math inline">\({\cal P} \subset {\cal D}_X\)</span>임을 설명하라.</p>
 </section>
-<section id="전단사함수" class="level2">
-<h2 class="anchored" data-anchor-id="전단사함수">3. 전단사함수</h2>
-<p><code>(1)</code> 함수 <span class="math inline">\(f\)</span>는 <span class="math inline">\(X = \{1,2,3,4\}\)</span> 에서 <span class="math inline">\(Y = \{1,2,3,4\}\)</span> 로 매핑되며, 매핑은 다음과 같다:</p>
+<section id="확장이론-30점" class="level2">
+<h2 class="anchored" data-anchor-id="확장이론-30점">3. 확장이론 (30점)</h2>
+<p><code>(1)</code> <span class="math inline">\(\Omega = \{1,2,3,4,5,6\}\)</span>이라고 하자. 내가 관심있는 집합의 모임은 아래와 같다.</p>
+<p><span class="math display">\[{\cal A} = \{\emptyset, \{1,2\}, \{3,4\}, \{5,6\}, \Omega\}\]</span></p>
+<p>이러한 집합에서 아래와 같은 함수를 정의하자.</p>
 <ul>
-<li><span class="math inline">\(f(1) = 1\)</span></li>
-<li><span class="math inline">\(f(2) = 1\)</span></li>
-<li><span class="math inline">\(f(3) = 2\)</span></li>
-<li><span class="math inline">\(f(4) = 2\)</span></li>
+<li><span class="math inline">\(\tilde{P}(\emptyset) = 0\)</span></li>
+<li><span class="math inline">\(\tilde{P}(\{1,2\}) = 1/4\)</span></li>
+<li><span class="math inline">\(\tilde{P}(\{3,4\}) = 1/4\)</span></li>
+<li><span class="math inline">\(\tilde{P}(\{5,6\}) = 2/4\)</span></li>
+<li><span class="math inline">\(\tilde{P}(\Omega) = 1\)</span></li>
 </ul>
-<p>이 함수가 전사인지 아닌지, 단사인지 아닌지 판단하고 판단의 근거를 설명하라.</p>
-<p><code>(2)</code> 함수 <span class="math inline">\(f\)</span>는 <span class="math inline">\(X = \{1,2,3,4\}\)</span> 에서 <span class="math inline">\(Y = \{1,2\}\)</span> 로 매핑되며, 매핑은 다음과 같다:</p>
+<p><span class="math inline">\(\tilde{P}\)</span>는 가측공간 <span class="math inline">\((\Omega,\sigma({\cal A}))\)</span>에서의 확률측도로 유일하게 확장가능한가? (질문에 대한 답과 함께 근거를 설명할 것)</p>
+<p><code>(2)</code> <span class="math inline">\(\Omega = \{1,2,3,4,5,6\}\)</span>이라고 하자. 내가 관심있는 집합의 모임은 아래와 같다.</p>
+<p><span class="math display">\[{\cal A} = \{\emptyset, \{1,2\}, \{3,4\}\}\]</span></p>
+<p>이러한 집합에서 아래와 같은 함수를 정의하자.</p>
 <ul>
-<li><span class="math inline">\(f(1) = 1\)</span></li>
-<li><span class="math inline">\(f(2) = 1\)</span></li>
-<li><span class="math inline">\(f(3) = 2\)</span></li>
-<li><span class="math inline">\(f(4) = 2\)</span></li>
+<li><span class="math inline">\(\tilde{m}(\emptyset) = 0\)</span></li>
+<li><span class="math inline">\(\tilde{m}(\{1,2,\}) = 1/4\)</span></li>
+<li><span class="math inline">\(\tilde{m}(\{3,4\}) = 1/4\)</span></li>
 </ul>
-<p>이 함수가 전사인지 아닌지, 단사인지 아닌지 판단하고 판단의 근거를 설명하라.</p>
-</section>
-<section id="카디널리티" class="level2">
-<h2 class="anchored" data-anchor-id="카디널리티">4. 카디널리티</h2>
-<p>짝수들의 집합 <span class="math inline">\(\mathbb{N}_{even}\)</span> 와 홀수들의 집합 <span class="math inline">\(\mathbb{N}_{odd}\)</span> 의 카디널리티가 동일함을 보여라.</p>
+<p><span class="math inline">\(\tilde{m}\)</span>는 가측공간 <span class="math inline">\((\Omega,\sigma({\cal A}))\)</span>에서의 측도로 유일하게 확장가능한가? (질문에 대한 답과 함께 근거를 설명할 것)</p>
+<p><code>(3)</code> <span class="math inline">\(\Omega = \{H,T\}\)</span>이라고 하자. 내가 관심있는 집합의 모임은 아래와 같다.</p>
+<p><span class="math display">\[{\cal A} = \{\{H\}\}\]</span></p>
+<p>이러한 집합에서 아래와 같은 함수를 정의하자.</p>
+<ul>
+<li><span class="math inline">\(\tilde{P}(\{H\}) = 1/2\)</span></li>
+</ul>
+<p>이 함수를 확장하여 <span class="math inline">\(\sigma({\cal A})=\{\emptyset,\{H\},\{T\},\Omega\}\)</span>에서의 함수를 아래와 같이 정의하였다.</p>
+<ul>
+<li><span class="math inline">\(P(\{\emptyset\}) = 0\)</span></li>
+<li><span class="math inline">\(P(\{H\}) = 1/2\)</span></li>
+<li><span class="math inline">\(P(\{T\}) = 1/2\)</span></li>
+<li><span class="math inline">\(P(\{\Omega\}) = 1\)</span></li>
+</ul>
+<p><span class="math inline">\(P\)</span>는 <span class="math inline">\((\Omega,\sigma({\cal A}))\)</span>에서의 확률측도의 정의를 만족하며 <span class="math inline">\(\tilde{P}\)</span>의 확장이다. <span class="math inline">\(\tilde{P}\)</span>를 확장하여 얻을수 있는 확률측도는 <span class="math inline">\(P\)</span>가 유일하다고 주장할 수 있는가? (질문에 대한 답과 함께 근거를 설명할 것)</p>
 
 
 </section>
